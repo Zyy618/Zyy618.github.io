@@ -32,7 +32,7 @@
     <div id="nav">
         <div class="nav-img" id="nav-img"></div>
         <div class="sentences">
-            我们要有最朴素的生活和最遥远的梦想，即使明天天寒地冻，路遥马亡。
+            云里写诗，泥里生活，岁月里洒脱。
         </div>
     </div>
 </header>
@@ -42,6 +42,314 @@
         <div class="clearfix">
     
     <div id="recent-posts">
+        
+            <div class="post-item">
+                <h1>
+                    <a href="/2021/04/06/《2021春招复习》Java基础《语法2》/">
+                        
+                    </a>
+                </h1>
+                <div class="create">
+                    <span>Created</span>
+                    
+                        <time datetime="2021-04-06T06:38:01.603Z">
+                            2021-04-06
+                        </time>
+                    
+                    
+                </div>
+                
+                    <h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="8-Comparable和Comparator的区别："><a href="#8-Comparable和Comparator的区别：" class="headerlink" title="8.Comparable和Comparator的区别："></a>8.Comparable和Comparator的区别：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span>&lt;<span class="title">T</span>&gt;</span>&#123;<span class="comment">//内部比较器，比较属性，静态绑定</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(T o)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparator</span>&lt;<span class="title">T</span>&gt;</span>&#123;<span class="comment">//外部比较器，比较器，动态绑定</span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(T o1,T o2)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>(1)关于Comparable</p>
+<blockquote>
+<p>Comparable对实现它的类的对象（可排序）进行整体排序，需要类本身去重写它的接口方法compareTo();</p>
+</blockquote>
+<p>(2)关于Comparator</p>
+<blockquote>
+<p>如果一个类已经没法修改，可以采用外部比较器Comparator。</p>
+</blockquote>
+<p>具体可以参考，我的博客浅谈<a target="_blank" rel="noopener" href="https://blog.csdn.net/Look_star/article/details/88735135">java自定义排序（多维排序）（数组，列表，set，map）</a>.</p>
+<h2 id="Java方法中参数传递机制（都是传递副本）"><a href="#Java方法中参数传递机制（都是传递副本）" class="headerlink" title="Java方法中参数传递机制（都是传递副本）"></a>Java方法中参数传递机制（都是传递副本）</h2><p><strong>Java编程语言只有值传递。</strong></p>
+<ol>
+<li>如果参数类型是基本数据类型，那么传过来的就是这个参数值的副本，也就是这个原始参数的值，如果在函数中改变了副本的值不会改变原始的值。</li>
+<li>如果参数类型是引用类型（对象的引用），那么传过来的就是这个引用参数的副本，这个副本存放的是<strong>参数的地址</strong>。如果在函数中没有改变这个副本的地址，而是改变了地址中的值，那么在函数内的改变会影响到传入的参数（比如：传入对象的引用，如果函数内对对象的属性进行修改，那么传入的对象属性发生改变）如果在函数中改变了副本的地址，如果new一个，那么副本就指向了一个新的地址，此时传入的参数还是指向原来的地址，所以会改变参数的值。</li>
+<li>总之，不管传递什么类型的参数，都是传递的副本，原始类型就传递值的副本，引用类型就是传递地址的副本。</li>
+</ol>
+<p><strong>详情请看[为什么说java只有值传递]</strong>(<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_26542493/article/details/103898866">https://blog.csdn.net/qq_26542493/article/details/103898866</a>).</p>
+<h2 id="9-Java中的浅拷贝和深拷贝。"><a href="#9-Java中的浅拷贝和深拷贝。" class="headerlink" title="9. Java中的浅拷贝和深拷贝。"></a>9. Java中的浅拷贝和深拷贝。</h2><h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><p>浅拷贝：在拷贝对象时，只对基本数据类型进行拷贝，或对于引用数据类型的只是进行了引用地址的传递，而没有真实的在创建一个新的对象。<br>深拷贝：在对引用类型进行拷贝时，<strong>创建了一个新的对象</strong>，并且复制其内部的成员对象。</p>
+<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><ol>
+<li>浅克隆：clone()：只能克隆对象的基本数据类型（包括基本数据类型的包装类）和String类型的属性，引用类型仍然实在传递引用。</li>
+<li>深克隆： 继续利用clone()方法：除了对当前对象的克隆，对其内的引用类型变量再进行一次克隆（即克隆对象持有的引用类型的class也实现Cloneable接口）。序列化这个对象，在反序列化回来，就可以得到一个新的对象，但是序列化规则需要我们写。</li>
+<li>实现Cloneable接口的方式，坐浅度克隆还可以，但要做深度克隆的话，需要手动地将对象的引用类型进行单独克隆，维护起来比较麻烦，不适合实际当中使用。</li>
+</ol>
+<h2 id="10-什么是序列化和反序列化？"><a href="#10-什么是序列化和反序列化？" class="headerlink" title="10.什么是序列化和反序列化？"></a>10.什么是序列化和反序列化？</h2><p>序列化：将对象写入到I/O流中，反序列化：从IO流中恢复对象。</p>
+<h3 id="意义："><a href="#意义：" class="headerlink" title="意义："></a>意义：</h3><p>序列化机制允许将实现序列化的Java对象转化为字节序列，这些字节序列可以保存在磁盘上，或通过网络传输，以达到以后恢复成原来的对象。序列化机制使得对象可以脱离程序的运行而独立存在。</p>
+<h3 id="使用场景："><a href="#使用场景：" class="headerlink" title="使用场景："></a>使用场景：</h3><p>所有可在网络上传输的对象都必须是可序列化的（引申：RPC机制），比如RMI（remote method invoke，即远程方法调用）、RPC调用，传入的参数或返回的对象都是可序列化的，否则会出错；所有需要保存到磁盘的Java对象都必须是可序列化的。</p>
+<ol>
+<li>所有需要网络传输的对象都需要实现序列化接口，通过建议所有的JavaBean都实现Serializable接口。</li>
+<li>对象的类名、实例变量（包括基本类型，数组，对其他对象的引用）都会被序列化；方法、类变量、transient实例变量都不会被序列化。如果想让某个变量不被序列化，使用transient修饰。</li>
+<li>序列化对象的引用类型成员变量，也必须是可序列化，否则，会报错。反序列化时必须有序列化对象的class文件。</li>
+<li>同一对象序列化多次，只有第一次序列化为二进制流，以后都只是保存序列化编号，不会重复序列化。</li>
+<li>建议所有可序列化的类加上serialVersionUID版本号，方便项目升级。（如果反序列化使用的class的版本号与序列化时使用的不一致，反序列化会报InvalidClassException异常）</li>
+</ol>
+<h2 id="13-String和StringBuilder、StringBuffer的区别"><a href="#13-String和StringBuilder、StringBuffer的区别" class="headerlink" title="13.String和StringBuilder、StringBuffer的区别"></a>13.String和StringBuilder、StringBuffer的区别</h2><p>String是不可变字符串对象（final的char数组），StringBuilder和StringBuffer（线程安全，是因为synchronized修饰了方法）是可变字符串对象（其内部的char数组长度可变）。（底层区别在是否是final修饰的char数组，推荐看下源码）<br>当字符串相加操作或者改动较少的情况下，建议使用String str=“hello”这种形式；<br>当字符串相加操作较多的情况下（2个以上），建议使用StringBuilder，如果采用了多线程，则使用StringBuffer（内部的方法是利用synchronized修饰的）。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/utopia_wen/article/details/99696303">具体可以参考：String、StringBuffer、StringBuilder源码解析</a></p>
+<h2 id="14-object类有哪些方法？"><a href="#14-object类有哪些方法？" class="headerlink" title="14.object类有哪些方法？"></a>14.object类有哪些方法？</h2><p><img src="https://img-blog.csdnimg.cn/20210330221049380.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb2tfc3Rhcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>1.getClass()</p>
+<p>final，native方法，获得运行时类型。</p>
+<p>2.hashCode()</p>
+<p>hashCode()方法主要用于hash表，比如HashMap，当集合要添加元素时，大致按如下步骤：</p>
+<ol>
+<li>先调用该元素的hashCode()方法获取hashCode，hashCode对数组取模定位到它应该放置的物理位置</li>
+<li>如果这个位置上没有元素，就直接存储在这个位置上</li>
+<li>如果这个位置上已经有元素，就调用equals()方法进行比较，相同的话就更新，不相同的话放到链表后面</li>
+</ol>
+<p>所以重写equals()方法时，也必须重写hashCode()方法。如果不这样做，就会违反Object.hashCode()的规范，导致无法结合所有基于hash的集合一起正常运作，这样的集合包括HashMap、HashSet和Hashtable</p>
+<p>那为什么不直接使用equals()进行操作呢？如果只使用equals()，意味着需要迭代整个集合进行比较操作，如果集合中有1万个元素，就需要进行1万次比较，这明显不可行</p>
+<p>3.equals(obj)</p>
+<p>该方法是非常重要的一个方法。一般equals和==是不一样的，但是在Object中两者是一样的。子类一般都要重写这个方法。</p>
+<p>4.clone()</p>
+<p>保护方法，实现对象的浅复制，只有实现了Cloneable接口才可以调用该方法，否则抛出CloneNotSupportedException异常。</p>
+<p>5.toString()</p>
+<p>该方法用得比较多，一般子类都有覆盖。</p>
+<p>6.notify()</p>
+<p>该方法唤醒在该对象上等待的某个线程。</p>
+<p>7.notifyAll()</p>
+<p>该方法唤醒在该对象上等待的所有线程。</p>
+<p>8.wait()</p>
+<p>wait方法就是使当前线程等待该对象的锁，当前线程必须是该对象的拥有者，也就是具有该对象的锁。wait()方法一直等待，直到获得锁或者被中断。</p>
+<p>调用该方法后当前线程进入睡眠状态，直到以下事件发生。</p>
+<ol>
+<li>其他线程调用了该对象的notify方法。</li>
+<li>其他线程调用了该对象的notifyAll方法。</li>
+<li>其他线程调用了interrupt中断该线程。</li>
+<li>时间间隔到了。</li>
+</ol>
+<p>此时该线程就可以被调度了，如果是被中断的话就抛出一个InterruptedException异常</p>
+<p>9.wait(long)</p>
+<p>wait(long timeout)设定一个超时间隔，如果在规定时间内没有获得锁就返回。</p>
+<p>10.wait(long, int)</p>
+<p>在纳秒级别进行更精细的等待控制，一般用不到。</p>
+<p>11.finalize()</p>
+<p>该方法用于释放资源。因为无法确定该方法什么时候被调用。如果你想使用这个方法，百度一下相关的内容，然后不要使用它</p>
+<p>wait，notify，notifyAll就是线程之间用来通信的工具</p>
+<h2 id="16-java异常体系"><a href="#16-java异常体系" class="headerlink" title="16. java异常体系"></a>16. java异常体系</h2><p><img src="https://img-blog.csdnimg.cn/20210330222201130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb2tfc3Rhcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>Java中的异常分为Exception和Error。</p>
+<h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><p>Java中的定义不可控制，无法预期的错误出现。比如说在系统中出现了内存溢出，系统崩溃，虚拟机错误，方法调用栈溢出等等。这里的错误通常都会导致程序的中断，同时仅仅靠程序本身它是无法恢复和预防的。也就是说Error这个级别，是在我们应用程序之上，通常是操作系统级别的，所以对于Error来说，通常的做法就是中断程序的运行。</p>
+<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p>异常<br>所谓异常通常是指可以被我们捕捉到的这部分错误。 例如：除法中出现了分母为0，我们就可以用try/catch进行捕捉和处理。同时对于异常来说，它通常都是可以被恢复的（也就是说对于程序是可控的）如果出现了异常我们可以对它进行补救。这便是异常和错误之间的区别。</p>
+<h3 id="Exception分为RuntimeException（运行时异常）和编译异常。"><a href="#Exception分为RuntimeException（运行时异常）和编译异常。" class="headerlink" title="Exception分为RuntimeException（运行时异常）和编译异常。"></a>Exception分为RuntimeException（运行时异常）和编译异常。</h3><p>两者区别：<br>运行时异常：RuntimeException及其子类表示JVM在运行期间可能出现的错误。比如试图使用空值对象的引用（NullPointerException）、数组下标越界（ArrayIndexOutBoundException）。此类异常属于不可查异常，一般是程序逻辑错误引起的，<strong>在程序中可以选择捕获处理，也可以不处理</strong>。<br>编译异常：RuntimeException之外的异常，如果程序出现此类异常，比如说IO异常，必须对该异常进行处理（try catch ，throw），否则编译不通过。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210330224249185.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb2tfc3Rhcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="17-Java的BIO，NIO，AIO"><a href="#17-Java的BIO，NIO，AIO" class="headerlink" title="17.Java的BIO，NIO，AIO"></a>17.Java的BIO，NIO，AIO</h2><h3 id="BIO-Blocking-IO-同步阻塞I-O"><a href="#BIO-Blocking-IO-同步阻塞I-O" class="headerlink" title="BIO(Blocking IO) 同步阻塞I/O"></a>BIO(Blocking IO) 同步阻塞I/O</h3><h3 id="NIO-New-I-O-同步非阻塞的I-O模型"><a href="#NIO-New-I-O-同步非阻塞的I-O模型" class="headerlink" title="NIO(New I/O)同步非阻塞的I/O模型"></a>NIO(New I/O)同步非阻塞的I/O模型</h3><h3 id="AIO-Asynchronous-I-O-异步非阻塞I-O模型"><a href="#AIO-Asynchronous-I-O-异步非阻塞I-O模型" class="headerlink" title="AIO(Asynchronous I/O)异步非阻塞I/O模型"></a>AIO(Asynchronous I/O)异步非阻塞I/O模型</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_38109046/article/details/89449305">Java面试常考的 BIO，NIO，AIO 总结</a></p>
+
+                
+                <div class="readmore">
+                    <a href="/2021/04/06/《2021春招复习》Java基础《语法2》/">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        
+            <div class="post-item">
+                <h1>
+                    <a href="/2021/04/06/《2021春招复习3》Java基础《面向对象》/">
+                        
+                    </a>
+                </h1>
+                <div class="create">
+                    <span>Created</span>
+                    
+                        <time datetime="2021-04-06T06:37:27.764Z">
+                            2021-04-06
+                        </time>
+                    
+                    
+                </div>
+                
+                    <h2 id="18-Java反射机制"><a href="#18-Java反射机制" class="headerlink" title="18.Java反射机制"></a>18.Java反射机制</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>（1）Java反射机制的核心是在程序运行时动态加载类并获取类的详细信息，从而操作类或对象的属性和方法。本质是JVM得到class对象之后，再通过class对象进行反编译，从而获取对象的各种信息。</p>
+<p>（2）Java属于先编译再运行的语言，程序中对象的类型在编译期就确定下来了，而当程序在运行时可能需要动态加载某些类，这些类因为之前用不到，所以没有被加载到JVM。通过反射，可以在运行时动态地创建对象并调用其属性，不需要提前在编译期知道运行的对象是谁。</p>
+<h3 id="优缺点："><a href="#优缺点：" class="headerlink" title="优缺点："></a>优缺点：</h3><p>1.优点：运行期类型的判断，动态加载类，提高代码灵活度。<br>2.缺点：（1）性能瓶颈，反射相当于一系列解释操作，通知JVM要做的事情，性能比直接的java代码要慢很多。<br>（2）反射调用方法时可以忽略权限检查，因此可能会破坏封装性而导致安全问题。</p>
+<h3 id="Class-forName和classloader的区别（结合JVM类加载）"><a href="#Class-forName和classloader的区别（结合JVM类加载）" class="headerlink" title="Class.forName和classloader的区别（结合JVM类加载）"></a>Class.forName和classloader的区别（结合JVM类加载）</h3><p>Class.forName除了将类的.class文件加载到JVM中之外，还会对类进行解释，执行类中的static块。而classloader只干了一件事情，就是将.class文件加载到JVM中，不会执行static中的内容，只有在newInstance才会去执行static块。forName()得到的class初始化工作已完成。<br>最重要的区别在于forName会初始化Class，而loadClass不会。因此如果要求加载时，类的静态变量被初始化或者静态块中的代码被执行就只能用forName，而用loadClass只有等创建类实例时才会进行这些初始化。</p>
+<h3 id="比较详细的介绍：Java基础篇：反射机制详解"><a href="#比较详细的介绍：Java基础篇：反射机制详解" class="headerlink" title="比较详细的介绍：Java基础篇：反射机制详解"></a>比较详细的介绍：<a target="_blank" rel="noopener" href="https://blog.csdn.net/a745233700/article/details/82893076">Java基础篇：反射机制详解</a></h3><h2 id="19、简述面向对象的三大特征-封装，继承，多态"><a href="#19、简述面向对象的三大特征-封装，继承，多态" class="headerlink" title="19、简述面向对象的三大特征(封装，继承，多态)"></a>19、简述面向对象的三大特征(封装，继承，多态)</h2><h3 id="封装："><a href="#封装：" class="headerlink" title="封装："></a>封装：</h3><p>在面向对象思想中，封装指数据（类成员属性）和对数据的操作（类的方法）捆绑到一起，形成对外界的隐藏，同时对外提供可以操作的接口（供外部访问的类成员）。<br>封装的意义在于保护或者防止代码被我们无意破坏，保护成员属性，不让类以外的程序直接访问或修改，隐藏方法细节。</p>
+<h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>继承是从已有的类中派生出一个新的类，新的类能吸收已有类的数据属性和行为，并能扩展新的能力。<br>为什么要继承：反应现实的真实关系，减少代码冗余，对父类的属性和方法进行扩展和重写。继承中，子类不可以选择性的继承父类的关系而是全部继承父类的属性和方法，其中父类又叫超类和基类，子类又叫派生类。父类是子类的具体化。java不支持父类的多继承，多继承是通过接口实现的。</p>
+<h3 id="多态：父类引用指向不同子类对象。"><a href="#多态：父类引用指向不同子类对象。" class="headerlink" title="多态：父类引用指向不同子类对象。"></a>多态：父类引用指向不同子类对象。</h3><p>Java实现多态有三个必要的条件：继承，重写，向上转型。</p>
+<ol>
+<li>继承：在多态中必须存在有继承关系的子类和父类。</li>
+<li>重写：子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。</li>
+<li>向上转型：在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够调用父类的方法和子类的方法。<br>实现方式：接口多态性，继承多态性，抽象类实现的多态性。<br>实现原理：动态绑定。</li>
+</ol>
+<h2 id="20、简述继承和组合的区别和选择"><a href="#20、简述继承和组合的区别和选择" class="headerlink" title="20、简述继承和组合的区别和选择"></a>20、简述继承和组合的区别和选择</h2><p>类继承和对象组合是代码复用的两种最常用的技术。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承是is-a的关系，比如说Student继承Person，那么student is a Person。继承的优点是子类可以重写父类的方法来方便地实现对父类的扩展。</p>
+<p>继承的优点：</p>
+<ol>
+<li>大部分代码继承，提高了代码复用率，并且容易进行新的实现。</li>
+<li>可以通过重写父类方法来扩展父类。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>父类的内部细节对子类可见的；</li>
+<li>子类从父类继承的方法在编译时就确定下来了，所以无法在运行期间改变从父类继承的方法。</li>
+<li>子类与父类是高耦合，违背了面向对象思想。若对父类方法做修改如增加了一个参数，则子类方法必须做出相应的修改。</li>
+</ol>
+<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><p>组合是has-a关系，组合就是设计类的时候把要组合的类的对象加入到该类中作为自己的成员变量。</p>
+<p>优点：</p>
+<ol>
+<li><p>当前对象只能通过所包含的那个对象去调用其方法，所以所包含的对象的内部细节对当前对象不可见。</p>
+</li>
+<li><p>组合的对象间低耦合。如果修改包含对象的类中代码不需要修改当前对象类的代码。</p>
+</li>
+<li><p>当前对象可以在运行时动态绑定所包含的对象。可以通过set方法给所包含对象赋值。</p>
+</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>容易产生过多对象。</li>
+<li>为了能组合多个对象必须仔细对接口进行定义。</li>
+</ol>
+<h3 id="组合和继承如何选择"><a href="#组合和继承如何选择" class="headerlink" title="组合和继承如何选择"></a>组合和继承如何选择</h3><p>组合比继承更具灵活性和稳定性，所以设计的时候优先使用组合。只有当下列条件满足时才考虑使用继承：</p>
+<ol>
+<li>子类是一种特殊类型（String类，Object类，包装类）;而不只是父类的一个角色。</li>
+<li>子类的实例不需要变成另一个类的对象。</li>
+<li>子类是父类的扩展。</li>
+</ol>
+<h3 id="为什么优先选择组合"><a href="#为什么优先选择组合" class="headerlink" title="为什么优先选择组合"></a>为什么优先选择组合</h3><p>扩展性：继承是静态复用，在编译后子类和父类的关系的关系就已经确定了。组合是动态复用，它们之间的关系是在运行时候才确定的，即在对对象没有创建运行前，整体类是不会知道自己将持有特定接口下的那个实现类。在扩展方面组合比继承更具广泛性。</p>
+<p>单一性：继承中父类定义了子类的部分实现，而子类又会重写这些实现，修改父类的实现，在设计模式中认为</p>
+<p>这是一种破坏了父类的封装性的表现。这个结构导致的结果是父类实现的任何变化，必然导致子类的改变。然而组合不会出现这种情况。对象的组合就是有助于保持每个类被封装，并被集中在单个任务上（符合类设计的单一原则）。这样类的层次不会扩大，一般不会出现不可控的庞然大类。而类的继承就可能出现这种问题。一般编码规范都要求类的层次结构不要超过3层，组合是大型系统软件实现即插即用时的首选方式。</p>
+<p>按需选择：”优先使用对象组合，而不是继承”是面向对象设计的第二原则。但是只是优先，而并非一定，这还得视情况而定。</p>
+<h2 id="21、Java-中重载与重写的区别"><a href="#21、Java-中重载与重写的区别" class="headerlink" title="21、Java 中重载与重写的区别"></a>21、Java 中重载与重写的区别</h2><p>Java 三大特性：封装，继承，多态。</p>
+<p>多态：</p>
+<h3 id="重载："><a href="#重载：" class="headerlink" title="重载："></a>重载：</h3><p>同一类中同名函数，具有不同参数个数或类型（返回值不参与）,是一个类中多态性的体现。是由静态类型确定，在类加载的时候就确定，属于静态分类。</p>
+<h3 id="重写："><a href="#重写：" class="headerlink" title="重写："></a>重写：</h3><p>子类中含有与父类相同的名字、返回类型和参数表，则是重写，实在继承中多态的表现，属于动态分类。</p>
+<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><p>方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。</p>
+<p>重载发生在一个类中，同名的方法如果有不同的参数列表，则视为重载。重载对返回类型没有特殊的要求，不能根据返回类型进行区分。</p>
+<p>重写发生在子类和父类之间，重写要求子类重写方法和父类被重写方法有相同的参数列表，有兼容的返回类型，比父类被重写方法更好访问，不能比父类被重写的方法声明更多的异常（里氏代换原则)。</p>
+<h3 id="构造器可以被重写吗？"><a href="#构造器可以被重写吗？" class="headerlink" title="构造器可以被重写吗？"></a>构造器可以被重写吗？</h3><p>构造器不能被继承，所以不能被重写Override，但可以被重载Overload(不同参数即可)。若父类有参数的构造器，则子类必须用super调用并加上相应参数，若父类有无参构造器，子类不用super，系统自动调用无参构造器。（隐藏了super（））</p>
+<h2 id="22、Java中静态属性和静态方法可以被继承吗？"><a href="#22、Java中静态属性和静态方法可以被继承吗？" class="headerlink" title="22、Java中静态属性和静态方法可以被继承吗？"></a>22、Java中静态属性和静态方法可以被继承吗？</h2><p>可以被继承，但是不能被重写，而是隐藏，只有非静态的方法可以被继承和重写。</p>
+<h3 id="表面原因："><a href="#表面原因：" class="headerlink" title="表面原因："></a>表面原因：</h3><ol>
+<li>静态方法和属性是属于类的，调用的时候直接通过类名.方法名完成对，不需要继承机制即可被调用。如果子类里定义了静态方法和属性，那么父类的静态方法和属性称之为“隐藏”。如果想要调用父类的静态方法和属性，直接通过父类名.方法或变量名完成，至于是否继承一说，子类可以继承静态方法和属性，但是跟非静态方法和属性不太一样，存在隐藏这种情况。</li>
+<li>静态属性和静态方法都可以被继承和隐藏而不能被重写，因此不能实现多态（父类引用指向不同的子类对象）。非静态方法可以被继承和重写，可以实现多态。</li>
+</ol>
+<h3 id="深入原因："><a href="#深入原因：" class="headerlink" title="深入原因："></a>深入原因：</h3><p>静态方法和属性是按“编译时期的类型”进行调用的，而不是按“运行时期的类型”进行调用，的，而非static方法，才是按“运行时期的类型”进行调用的。</p>
+<h3 id="JVM中的非虚方法和实方法的理解："><a href="#JVM中的非虚方法和实方法的理解：" class="headerlink" title="JVM中的非虚方法和实方法的理解："></a>JVM中的非虚方法和实方法的理解：</h3><p><strong>1、非虚方法</strong></p>
+<p>（1）如果方法在编译期确定了具体的调用版本，这个版本在运行时不可变</p>
+<p>（2）静态方法，私有方法，final方法，实例构造器，父类方法都是非虚方法</p>
+<p><strong>2、虚方法</strong></p>
+<p>不是非虚方法的都是虚方法</p>
+<p><strong>3、虚拟机提供了以下方法调用指令</strong></p>
+<p>（1）普通调用指令</p>
+<p>i）invokestatic：调用静态方法，解析阶段确定唯一方法</p>
+<p>ii）invokespecial：调用<init>方法，私有及父类方法，解析阶段确定唯一方法</p>
+<p>iii）invokevirtual：调用所有虚方法</p>
+<p>iv）invokeinterface：调用接口方法</p>
+<p>（2）动态调用指令</p>
+<p>invokedynamic：动态解析需要调用的方法，然后执行上述普通调用指令固化在虚拟机内部，方法的调用执行不可人为干预</p>
+<p>但是invokedynamic则支持由用户确定方法</p>
+<p>注意：</p>
+<p>（1）invokestatic和invokespecial 调用的方法都是非虚方法</p>
+<p>（2）invokevirtual和invokeinterface调用的方法都是虚方法（排除方法签名中带final）</p>
+<p>（3）invokedynamic指令在jdk7需要借助工具才可以查看到该字节码，在jdk8，使用Lambda表达式后，在字节码上会有invokedynamic指令的体现。</p>
+<h2 id="23-抽象类和接口的区别："><a href="#23-抽象类和接口的区别：" class="headerlink" title="23.抽象类和接口的区别："></a>23.抽象类和接口的区别：</h2><h3 id="1-抽象类：-为了继承而存在"><a href="#1-抽象类：-为了继承而存在" class="headerlink" title="1.抽象类：(为了继承而存在)"></a>1.抽象类：(为了继承而存在)</h3><p>（1）抽象方法必须为public或者protected（因为如果为private，则不能被子类继承，子类便无法实现该方法），默认为public。</p>
+<p>（2）抽象类不能用来创建对象；</p>
+<p>（3）如果一个类继承于一个抽象类，则子类 必须实现父类的抽象方法。如果子类没有实现父类的抽象方法，则必须将子类也定义为abstract类。</p>
+<h3 id="2-接口：-更加抽象"><a href="#2-接口：-更加抽象" class="headerlink" title="2.接口：(更加抽象)"></a>2.接口：(更加抽象)</h3><p>(1) 访问修饰符：只能是public 或者默认<br>(2) extends：接口支持多继承<br>(3) 接口中的属性只能是常量，默认就是<code>public static finnal</code><br>(4) 接口中的方法默认是<code>public abstract</code></p>
+<p><strong>要点：</strong></p>
+<p>1、接口不能实例化对象 可以用来声明引用变量的类型<br>2、一个类实现一个接口，那么必须实现这个接口中定义的所有方法，并且只能是<code>public</code><br>3、jdk1.7以及之前 接口中只能有方法的定义 ,jdk1.8之后可以有default（虚拟扩展方法）和静态方法</p>
+<h3 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h3><p>接口    抽象类</p>
+<ol>
+<li><p>不考虑java8中default方法的情况下，接口中是没有实现代码的实现；抽象类中可以有普通成员方法 ，并且可以定义变量。</p>
+</li>
+<li><p>接口中的方法修饰符号只能是public，抽象类中的抽象方法可以有public protected default。</p>
+</li>
+<li><p>接口中没有构造方法，抽象类中可以有构造方法。</p>
+</li>
+</ol>
+<h3 id="3-语法层面："><a href="#3-语法层面：" class="headerlink" title="3.语法层面："></a>3.语法层面：</h3><p>（1）抽象类可以提供成员方法的实现细节，而接口中只能存在public abstract方法。</p>
+<p>  (2)  抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是public static final类型的</p>
+<p>（3) 接口中不能含有静态代码块和静态方法，而抽象类可以有静态代码块和静态方法。</p>
+<p>  (4) 一个类只能继承一个抽象类，却可以继承多个接口。</p>
+<p>设计层面：</p>
+<p>（5）类是“是不是关系”，接口是“有没有关系”。</p>
+<p>抽象类作为很多子类的父类，它是一种模板式设计。而接口是一种行为规范，它是一种辐射式设计。</p>
+<h3 id="4-接口和抽象类如何选择"><a href="#4-接口和抽象类如何选择" class="headerlink" title="4.接口和抽象类如何选择:"></a>4.接口和抽象类如何选择:</h3><p>1、当我们需要一组规范的方法的时候，我们就可以用接口，在具体的业务中，来对接口进行实现，能达到以不变应对万变，多变的需求的情况我们只需要改变对应的实现类 。<br>2、如果多个实现类中有者相同可以复用的代码 这个时候就可以在实现类和接口之间，添加一个抽象类，把公共的代码抽出在抽象类中。然后要求不同实现过程的 子类可以重写抽象类中的方法，来完成各自的业务。</p>
+
+                
+                <div class="readmore">
+                    <a href="/2021/04/06/《2021春招复习3》Java基础《面向对象》/">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        
+            <div class="post-item">
+                <h1>
+                    <a href="/2021/03/28/《2021春招复习》Java基础《语法1》/">
+                        
+                    </a>
+                </h1>
+                <div class="create">
+                    <span>Created</span>
+                    
+                        <time datetime="2021-03-28T13:03:31.638Z">
+                            2021-03-28
+                        </time>
+                    
+                    
+                </div>
+                
+                    <h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="2-自动装箱与拆箱"><a href="#2-自动装箱与拆箱" class="headerlink" title="2.自动装箱与拆箱"></a>2.自动装箱与拆箱</h2><p>  基本类型都有对应的包装类：<br>  Byte,Short,Integer,Long,Float,Double,Character,Boolean;</p>
+<p> 装箱过程是通过调用包装器的<strong>valueOf</strong>方法实现的，而拆箱过程是通过调用包装器的<strong>xxxValue</strong>实现的。eg如intValue() (xxx代表对应的基本数据类型)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;=IntegerCache.low&amp;&amp;i&lt;=IntegerCache.high)</span><br><span class="line">		<span class="keyword">return</span> IntegerCache.cache[i+(-IntegerCache.low)];</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> Integer(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">intValue</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Integer比较大小"><a href="#Integer比较大小" class="headerlink" title="Integer比较大小"></a>Integer比较大小</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Integer i1=<span class="number">100</span>;</span><br><span class="line">Integer i2=<span class="number">100</span>;</span><br><span class="line">Integer i3=<span class="number">200</span>;</span><br><span class="line">Integer i4=<span class="number">200</span>;</span><br><span class="line">System.out.println(i1==i2);<span class="comment">//true</span></span><br><span class="line">System.out.println(i3==i4);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<p>解释：对于-128到127内（if(i&gt;=IntegerCache.low&amp;&amp;i&lt;=IntegerCache.high)中的判断）的Integer对象，值相同的Integer对象指向的同一块内存空间，但是超过这个范围就不等了。而==判断的是内存空间是否相同，而equals()判断的是对象的值是否相同。因而在对象的值不在-128到127内的,应该使用equals方法进行判断。</p>
+<h3 id="Integer-i-new-Integer（xxx）和Integer-i-xxx的区别。"><a href="#Integer-i-new-Integer（xxx）和Integer-i-xxx的区别。" class="headerlink" title="Integer i=new  Integer（xxx）和Integer i=xxx的区别。"></a>Integer i=new  Integer（xxx）和Integer i=xxx的区别。</h3><ol>
+<li>第一种方法不会触发自动装箱的过程，第二种方式会触发自动装箱的过程。</li>
+<li>在执行效率和资源占用上的区别。第二种方式的执行效率和资源占用在一般的情况下要由于第一种。<h3 id="看下面代码与结果，明白比较与拆箱的操作。"><a href="#看下面代码与结果，明白比较与拆箱的操作。" class="headerlink" title="看下面代码与结果，明白比较与拆箱的操作。"></a>看下面代码与结果，明白比较与拆箱的操作。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Integer a=<span class="number">1</span>;</span><br><span class="line">Integer b=<span class="number">2</span>;</span><br><span class="line">Integer c=<span class="number">3</span>;</span><br><span class="line">Integer d=<span class="number">3</span>;</span><br><span class="line">Integer e=<span class="number">321</span>;</span><br><span class="line">Integer f=<span class="number">321</span>;</span><br><span class="line">Long g=<span class="number">3L</span>;</span><br><span class="line"><span class="keyword">int</span> x=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">long</span> y=<span class="number">3L</span>;</span><br><span class="line"><span class="comment">//x，y虽然不是同一类型，但是可以直接进行数值比较</span></span><br><span class="line">System.out.println(x==y);<span class="comment">//true;//基本类型 小范围内存空间一致</span></span><br><span class="line"><span class="comment">//System.out.println(c==g);//提示出错，不可比较类型，说明此时并没有自动拆箱</span></span><br><span class="line">System.out.println(c==d);<span class="comment">//true</span></span><br><span class="line">System.out.println(e==f);<span class="comment">//false</span></span><br><span class="line">System.out.println(c==(a+b));<span class="comment">//true</span></span><br><span class="line">System.out.println(c.equals(a+b));<span class="comment">//true  这个就是调用Integer的equals()方法，先对a和b进行了自动拆箱的操作，然后将他们的和进行自动装箱操作，然后调用equals()方法比较，因为Integer的equals()方法已经重写过了，上面已经介绍过了，比较的是两个对象的值，所以返回true。</span></span><br><span class="line"><span class="comment">//遇到运算符才会自动拆箱</span></span><br><span class="line">System.out.println(g==(a+b));<span class="comment">//true 这个首先会像第4个一样，首先会对g进行自动拆箱，然后对a和b进行自动拆箱的操作，之后进行它们值的比较，这时候还会发生隐式类型转换，int → long。隐式类型转换发生的场景包括算术运算符和关系运算符，因为值一样，所以返回true。</span></span><br><span class="line">System.out.println(g.equals(a+b));<span class="comment">//false 这个调用Long的equals()方法，而a+b的类型是Integer，所以会返回false</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="4-final关键字："><a href="#4-final关键字：" class="headerlink" title="4. final关键字："></a>4. final关键字：</h2></li>
+<li>用来修饰数据：包括成员变量和局部变量，该变量只能被赋值一次且它的值无法被改变。对于成员变量来讲，修饰的类变量，必须在声明时初始化；修饰的实例变量，必须在声明时或者构造方法中对它赋值。</li>
+<li>用来修饰方法参数：表示在变量的生存期中它的值不能被改变；</li>
+<li>修饰方法：表示该方法无法被重写</li>
+<li>修饰类：表示该类无法被继承。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">//String类是被final修饰的 看源码</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">String</span> <span class="keyword">implements</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span>, <span class="title">Comparable</span>&lt;<span class="title">String</span>&gt;, <span class="title">CharSequence</span></span>&#123;</span><br><span class="line">  <span class="comment">/** The value is used for character storage. */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">char</span> value[];</span><br><span class="line">    </span><br><span class="line">  <span class="comment">/** Cache the hash code for the string */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> hash; <span class="comment">// Default to 0</span></span><br><span class="line"> </span><br><span class="line">  <span class="comment">/** use serialVersionUID from JDK 1.0.2 for interoperability */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID =-<span class="number">6849794470754667710L</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>补充:<br>成员变量和局部变量的区别</p>
+<blockquote>
+<p>成员变量：<br>          ①成员变量定义在类中，在整个类中都可以被访问。<br>          ②成员变量随着对象的建立而建立，随着对象的消失而消失，存在于对象所在的堆内存中。<br>          ③成员变量有默认初始化值。<br>      局部变量：<br>          ①局部变量只定义在局部范围内，如：函数内，语句内等，只在所属的区域有效。<br>          ②局部变量存在于栈内存中，作用的范围结束，变量空间会自动释放。<br>          ③局部变量没有默认初始化值<br>       在使用变量时需要遵循的原则为：就近原则<br>      首先在局部范围找，有就使用；接着在成员位置找。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20210328170229175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb2tfc3Rhcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>由static修饰的变量称为静态变量，其实质上就是一个全局变量。如果某个内容是被所有对象所共享，那么该内容就应该用静态修饰；没有被静态修饰的内容，其实是属于对象的特殊描述。(实例变量)<br>不同的对象的实例变量将被分配不同的内存空间， 如果类中的成员变量有类变量，那么所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量，也就是说对象共享类变量。<br>成员变量和类变量的区别：</p>
+<p>   1、两个变量的生命周期不同</p>
+<pre><code>  成员变量随着对象的创建而存在，随着对象的回收而释放。
+
+  静态变量随着类的加载而存在，随着类的消失而消失。
+</code></pre>
+<p>   2、调用方式不同</p>
+<pre><code>  成员变量只能被对象调用。
+
+  静态变量可以被对象调用，还可以被类名调用。
+</code></pre>
+<p>   3、别名不同</p>
+<pre><code>  成员变量也称为实例变量。
+
+  静态变量也称为类变量。
+</code></pre>
+<p>   4、数据存储位置不同</p>
+<pre><code>  成员变量存储在堆内存的对象中，所以也叫对象的特有数据。
+
+  静态变量数据存储在方法区（共享数据区）的静态区，所以也叫对象的共享数据。
+</code></pre>
+<h2 id="5-static-关键字的作用是什么？"><a href="#5-static-关键字的作用是什么？" class="headerlink" title="5.static 关键字的作用是什么？"></a>5.static 关键字的作用是什么？</h2><p>1.修饰变量：因为类加载紧方法区，所以多个对象是共享的。<br>2.修饰方法：工具类的方法，不需要建立对象，直接使用“类名.方法名”的方式调用。<br>3.修饰静态代码块：只会在类被初次加载的时候执行一次，可以用于初始化等操作。<br>4.静态内部类：注意：一般方法可以访问静态方法的，但是静态的必须访问静态的。<br>引申：静态属性和静态方法可以被继承吗？<br>父类的静态属性和方法可以被子类继承,但不可以被重写，原因：static修饰函数/变量时，其实是全局函数/变量，它与任何类都没有关系。靠这个类的好处就是这个类的成员函数调用static方法不用带类名。<br>注意：static关键字可以用修饰代码块.static代码块可以置于类中的任何一个位置，并可以有多个static代码块。在类初次被加载时，会按照静态代码块的顺序来执行，并且只会执行一次。</p>
+<h2 id="6-super与this的用法和区别"><a href="#6-super与this的用法和区别" class="headerlink" title="6.super与this的用法和区别"></a>6.super与this的用法和区别</h2><p>super可以理解为是指向自己超（父）类对象的一个指针，·而这个超类指的是离自己最近的一个父类。<br>this是自身的一个对象可以理解为指向自身的指针。</p>
+<h3 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h3><p>super（参数）：调用基类中的某一个构造函数；<br>super:引用当前对象的直接父类中的成员。<br>this（参数）:调用本类中另一个构造方法，（构造方法可以有很多种 有参，无参）<br>this;代表当前对象名。</p>
+<h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h3><ol>
+<li>super()和this()均需放在构造方法内第一行。</li>
+<li>this()和super()不能同时出现在一个构造函数中，因为this必然会调用其它<br>构造函数，其它构造函数也必然会有super语句的存在，但在同一个构造函数中有相同的语句，就失去了语句的意义，编辑器也不会通过。</li>
+<li>this()和super都指的是对象，均不可以在static环境中出现。</li>
+</ol>
+
+                
+                <div class="readmore">
+                    <a href="/2021/03/28/《2021春招复习》Java基础《语法1》/">
+                        Read More
+                    </a>
+                </div>
+            </div>
         
             <div class="post-item">
                 <h1>
@@ -147,7 +455,7 @@
 <aside id="acchives">
     <h2>Archives</h2>
     
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
     
 </aside>
 

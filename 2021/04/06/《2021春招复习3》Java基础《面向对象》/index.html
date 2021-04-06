@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="18.Java反射机制定义：（1）Java反射机制的核心是在程序运行时动态加载类并获取类的详细信息，从而操作类或对象的属性和方法。本质是JVM得到class对象之后，再通过class对象进行反编译，从而获取对象的各种信息。
+（2）Java属于先编译再运行的语言，程序中对象的类型在编译期就确定下来了，而当程序在运行时可能需要动态加载某些类，这些类因为之前用不到，所以没有被加载到JVM。通过反射，可以在运行时动态地创建对象并调用其属性，不需要提前在编译期知道运行的对象是谁。
+优缺点：1.优点：运行期类型的判断，动态加载类，提高代码灵活度。2.缺点：（1）性能瓶颈，反射相当于一系列解释操作，通知JVM要做的事情，性能比直接的j...">
+    
+        <link rel="icon" href="/favicon.ico">
+    
+    
+        
+            <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+        
+            <link rel="stylesheet" href="/css/stage.css">
+        
+            <link rel="stylesheet" href="/css/avatar-bg.css">
+        
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+<header id="header">
+    <div class="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="header-main">
+        <h1><a href="/">Hexo</a></h1>
+    </div>
+    <div id="nav">
+        <div class="nav-img" id="nav-img"></div>
+        <div class="sentences">
+            云里写诗，泥里生活，岁月里洒脱。
+        </div>
+    </div>
+</header>
+
+<div id="content-outer">
+    <div id="content-inner">
+        <div class="clearfix">
+    <article id="post">
+        <h1></h1>
+        <div class="create">
+            <span>Created</span>
+            
+                <time datetime="2021-04-06T06:37:27.764Z">
+                    2021-04-06
+                </time>
+            
+            
+        </div>
+        <h2 id="18-Java反射机制"><a href="#18-Java反射机制" class="headerlink" title="18.Java反射机制"></a>18.Java反射机制</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>（1）Java反射机制的核心是在程序运行时动态加载类并获取类的详细信息，从而操作类或对象的属性和方法。本质是JVM得到class对象之后，再通过class对象进行反编译，从而获取对象的各种信息。</p>
+<p>（2）Java属于先编译再运行的语言，程序中对象的类型在编译期就确定下来了，而当程序在运行时可能需要动态加载某些类，这些类因为之前用不到，所以没有被加载到JVM。通过反射，可以在运行时动态地创建对象并调用其属性，不需要提前在编译期知道运行的对象是谁。</p>
+<h3 id="优缺点："><a href="#优缺点：" class="headerlink" title="优缺点："></a>优缺点：</h3><p>1.优点：运行期类型的判断，动态加载类，提高代码灵活度。<br>2.缺点：（1）性能瓶颈，反射相当于一系列解释操作，通知JVM要做的事情，性能比直接的java代码要慢很多。<br>（2）反射调用方法时可以忽略权限检查，因此可能会破坏封装性而导致安全问题。</p>
+<h3 id="Class-forName和classloader的区别（结合JVM类加载）"><a href="#Class-forName和classloader的区别（结合JVM类加载）" class="headerlink" title="Class.forName和classloader的区别（结合JVM类加载）"></a>Class.forName和classloader的区别（结合JVM类加载）</h3><p>Class.forName除了将类的.class文件加载到JVM中之外，还会对类进行解释，执行类中的static块。而classloader只干了一件事情，就是将.class文件加载到JVM中，不会执行static中的内容，只有在newInstance才会去执行static块。forName()得到的class初始化工作已完成。<br>最重要的区别在于forName会初始化Class，而loadClass不会。因此如果要求加载时，类的静态变量被初始化或者静态块中的代码被执行就只能用forName，而用loadClass只有等创建类实例时才会进行这些初始化。</p>
+<h3 id="比较详细的介绍：Java基础篇：反射机制详解"><a href="#比较详细的介绍：Java基础篇：反射机制详解" class="headerlink" title="比较详细的介绍：Java基础篇：反射机制详解"></a>比较详细的介绍：<a target="_blank" rel="noopener" href="https://blog.csdn.net/a745233700/article/details/82893076">Java基础篇：反射机制详解</a></h3><h2 id="19、简述面向对象的三大特征-封装，继承，多态"><a href="#19、简述面向对象的三大特征-封装，继承，多态" class="headerlink" title="19、简述面向对象的三大特征(封装，继承，多态)"></a>19、简述面向对象的三大特征(封装，继承，多态)</h2><h3 id="封装："><a href="#封装：" class="headerlink" title="封装："></a>封装：</h3><p>在面向对象思想中，封装指数据（类成员属性）和对数据的操作（类的方法）捆绑到一起，形成对外界的隐藏，同时对外提供可以操作的接口（供外部访问的类成员）。<br>封装的意义在于保护或者防止代码被我们无意破坏，保护成员属性，不让类以外的程序直接访问或修改，隐藏方法细节。</p>
+<h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>继承是从已有的类中派生出一个新的类，新的类能吸收已有类的数据属性和行为，并能扩展新的能力。<br>为什么要继承：反应现实的真实关系，减少代码冗余，对父类的属性和方法进行扩展和重写。继承中，子类不可以选择性的继承父类的关系而是全部继承父类的属性和方法，其中父类又叫超类和基类，子类又叫派生类。父类是子类的具体化。java不支持父类的多继承，多继承是通过接口实现的。</p>
+<h3 id="多态：父类引用指向不同子类对象。"><a href="#多态：父类引用指向不同子类对象。" class="headerlink" title="多态：父类引用指向不同子类对象。"></a>多态：父类引用指向不同子类对象。</h3><p>Java实现多态有三个必要的条件：继承，重写，向上转型。</p>
+<ol>
+<li>继承：在多态中必须存在有继承关系的子类和父类。</li>
+<li>重写：子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。</li>
+<li>向上转型：在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够调用父类的方法和子类的方法。<br>实现方式：接口多态性，继承多态性，抽象类实现的多态性。<br>实现原理：动态绑定。</li>
+</ol>
+<h2 id="20、简述继承和组合的区别和选择"><a href="#20、简述继承和组合的区别和选择" class="headerlink" title="20、简述继承和组合的区别和选择"></a>20、简述继承和组合的区别和选择</h2><p>类继承和对象组合是代码复用的两种最常用的技术。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承是is-a的关系，比如说Student继承Person，那么student is a Person。继承的优点是子类可以重写父类的方法来方便地实现对父类的扩展。</p>
+<p>继承的优点：</p>
+<ol>
+<li>大部分代码继承，提高了代码复用率，并且容易进行新的实现。</li>
+<li>可以通过重写父类方法来扩展父类。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>父类的内部细节对子类可见的；</li>
+<li>子类从父类继承的方法在编译时就确定下来了，所以无法在运行期间改变从父类继承的方法。</li>
+<li>子类与父类是高耦合，违背了面向对象思想。若对父类方法做修改如增加了一个参数，则子类方法必须做出相应的修改。</li>
+</ol>
+<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><p>组合是has-a关系，组合就是设计类的时候把要组合的类的对象加入到该类中作为自己的成员变量。</p>
+<p>优点：</p>
+<ol>
+<li><p>当前对象只能通过所包含的那个对象去调用其方法，所以所包含的对象的内部细节对当前对象不可见。</p>
+</li>
+<li><p>组合的对象间低耦合。如果修改包含对象的类中代码不需要修改当前对象类的代码。</p>
+</li>
+<li><p>当前对象可以在运行时动态绑定所包含的对象。可以通过set方法给所包含对象赋值。</p>
+</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>容易产生过多对象。</li>
+<li>为了能组合多个对象必须仔细对接口进行定义。</li>
+</ol>
+<h3 id="组合和继承如何选择"><a href="#组合和继承如何选择" class="headerlink" title="组合和继承如何选择"></a>组合和继承如何选择</h3><p>组合比继承更具灵活性和稳定性，所以设计的时候优先使用组合。只有当下列条件满足时才考虑使用继承：</p>
+<ol>
+<li>子类是一种特殊类型（String类，Object类，包装类）;而不只是父类的一个角色。</li>
+<li>子类的实例不需要变成另一个类的对象。</li>
+<li>子类是父类的扩展。</li>
+</ol>
+<h3 id="为什么优先选择组合"><a href="#为什么优先选择组合" class="headerlink" title="为什么优先选择组合"></a>为什么优先选择组合</h3><p>扩展性：继承是静态复用，在编译后子类和父类的关系的关系就已经确定了。组合是动态复用，它们之间的关系是在运行时候才确定的，即在对对象没有创建运行前，整体类是不会知道自己将持有特定接口下的那个实现类。在扩展方面组合比继承更具广泛性。</p>
+<p>单一性：继承中父类定义了子类的部分实现，而子类又会重写这些实现，修改父类的实现，在设计模式中认为</p>
+<p>这是一种破坏了父类的封装性的表现。这个结构导致的结果是父类实现的任何变化，必然导致子类的改变。然而组合不会出现这种情况。对象的组合就是有助于保持每个类被封装，并被集中在单个任务上（符合类设计的单一原则）。这样类的层次不会扩大，一般不会出现不可控的庞然大类。而类的继承就可能出现这种问题。一般编码规范都要求类的层次结构不要超过3层，组合是大型系统软件实现即插即用时的首选方式。</p>
+<p>按需选择：”优先使用对象组合，而不是继承”是面向对象设计的第二原则。但是只是优先，而并非一定，这还得视情况而定。</p>
+<h2 id="21、Java-中重载与重写的区别"><a href="#21、Java-中重载与重写的区别" class="headerlink" title="21、Java 中重载与重写的区别"></a>21、Java 中重载与重写的区别</h2><p>Java 三大特性：封装，继承，多态。</p>
+<p>多态：</p>
+<h3 id="重载："><a href="#重载：" class="headerlink" title="重载："></a>重载：</h3><p>同一类中同名函数，具有不同参数个数或类型（返回值不参与）,是一个类中多态性的体现。是由静态类型确定，在类加载的时候就确定，属于静态分类。</p>
+<h3 id="重写："><a href="#重写：" class="headerlink" title="重写："></a>重写：</h3><p>子类中含有与父类相同的名字、返回类型和参数表，则是重写，实在继承中多态的表现，属于动态分类。</p>
+<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><p>方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。</p>
+<p>重载发生在一个类中，同名的方法如果有不同的参数列表，则视为重载。重载对返回类型没有特殊的要求，不能根据返回类型进行区分。</p>
+<p>重写发生在子类和父类之间，重写要求子类重写方法和父类被重写方法有相同的参数列表，有兼容的返回类型，比父类被重写方法更好访问，不能比父类被重写的方法声明更多的异常（里氏代换原则)。</p>
+<h3 id="构造器可以被重写吗？"><a href="#构造器可以被重写吗？" class="headerlink" title="构造器可以被重写吗？"></a>构造器可以被重写吗？</h3><p>构造器不能被继承，所以不能被重写Override，但可以被重载Overload(不同参数即可)。若父类有参数的构造器，则子类必须用super调用并加上相应参数，若父类有无参构造器，子类不用super，系统自动调用无参构造器。（隐藏了super（））</p>
+<h2 id="22、Java中静态属性和静态方法可以被继承吗？"><a href="#22、Java中静态属性和静态方法可以被继承吗？" class="headerlink" title="22、Java中静态属性和静态方法可以被继承吗？"></a>22、Java中静态属性和静态方法可以被继承吗？</h2><p>可以被继承，但是不能被重写，而是隐藏，只有非静态的方法可以被继承和重写。</p>
+<h3 id="表面原因："><a href="#表面原因：" class="headerlink" title="表面原因："></a>表面原因：</h3><ol>
+<li>静态方法和属性是属于类的，调用的时候直接通过类名.方法名完成对，不需要继承机制即可被调用。如果子类里定义了静态方法和属性，那么父类的静态方法和属性称之为“隐藏”。如果想要调用父类的静态方法和属性，直接通过父类名.方法或变量名完成，至于是否继承一说，子类可以继承静态方法和属性，但是跟非静态方法和属性不太一样，存在隐藏这种情况。</li>
+<li>静态属性和静态方法都可以被继承和隐藏而不能被重写，因此不能实现多态（父类引用指向不同的子类对象）。非静态方法可以被继承和重写，可以实现多态。</li>
+</ol>
+<h3 id="深入原因："><a href="#深入原因：" class="headerlink" title="深入原因："></a>深入原因：</h3><p>静态方法和属性是按“编译时期的类型”进行调用的，而不是按“运行时期的类型”进行调用，的，而非static方法，才是按“运行时期的类型”进行调用的。</p>
+<h3 id="JVM中的非虚方法和实方法的理解："><a href="#JVM中的非虚方法和实方法的理解：" class="headerlink" title="JVM中的非虚方法和实方法的理解："></a>JVM中的非虚方法和实方法的理解：</h3><p><strong>1、非虚方法</strong></p>
+<p>（1）如果方法在编译期确定了具体的调用版本，这个版本在运行时不可变</p>
+<p>（2）静态方法，私有方法，final方法，实例构造器，父类方法都是非虚方法</p>
+<p><strong>2、虚方法</strong></p>
+<p>不是非虚方法的都是虚方法</p>
+<p><strong>3、虚拟机提供了以下方法调用指令</strong></p>
+<p>（1）普通调用指令</p>
+<p>i）invokestatic：调用静态方法，解析阶段确定唯一方法</p>
+<p>ii）invokespecial：调用<init>方法，私有及父类方法，解析阶段确定唯一方法</p>
+<p>iii）invokevirtual：调用所有虚方法</p>
+<p>iv）invokeinterface：调用接口方法</p>
+<p>（2）动态调用指令</p>
+<p>invokedynamic：动态解析需要调用的方法，然后执行上述普通调用指令固化在虚拟机内部，方法的调用执行不可人为干预</p>
+<p>但是invokedynamic则支持由用户确定方法</p>
+<p>注意：</p>
+<p>（1）invokestatic和invokespecial 调用的方法都是非虚方法</p>
+<p>（2）invokevirtual和invokeinterface调用的方法都是虚方法（排除方法签名中带final）</p>
+<p>（3）invokedynamic指令在jdk7需要借助工具才可以查看到该字节码，在jdk8，使用Lambda表达式后，在字节码上会有invokedynamic指令的体现。</p>
+<h2 id="23-抽象类和接口的区别："><a href="#23-抽象类和接口的区别：" class="headerlink" title="23.抽象类和接口的区别："></a>23.抽象类和接口的区别：</h2><h3 id="1-抽象类：-为了继承而存在"><a href="#1-抽象类：-为了继承而存在" class="headerlink" title="1.抽象类：(为了继承而存在)"></a>1.抽象类：(为了继承而存在)</h3><p>（1）抽象方法必须为public或者protected（因为如果为private，则不能被子类继承，子类便无法实现该方法），默认为public。</p>
+<p>（2）抽象类不能用来创建对象；</p>
+<p>（3）如果一个类继承于一个抽象类，则子类 必须实现父类的抽象方法。如果子类没有实现父类的抽象方法，则必须将子类也定义为abstract类。</p>
+<h3 id="2-接口：-更加抽象"><a href="#2-接口：-更加抽象" class="headerlink" title="2.接口：(更加抽象)"></a>2.接口：(更加抽象)</h3><p>(1) 访问修饰符：只能是public 或者默认<br>(2) extends：接口支持多继承<br>(3) 接口中的属性只能是常量，默认就是<code>public static finnal</code><br>(4) 接口中的方法默认是<code>public abstract</code></p>
+<p><strong>要点：</strong></p>
+<p>1、接口不能实例化对象 可以用来声明引用变量的类型<br>2、一个类实现一个接口，那么必须实现这个接口中定义的所有方法，并且只能是<code>public</code><br>3、jdk1.7以及之前 接口中只能有方法的定义 ,jdk1.8之后可以有default（虚拟扩展方法）和静态方法</p>
+<h3 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h3><p>接口    抽象类</p>
+<ol>
+<li><p>不考虑java8中default方法的情况下，接口中是没有实现代码的实现；抽象类中可以有普通成员方法 ，并且可以定义变量。</p>
+</li>
+<li><p>接口中的方法修饰符号只能是public，抽象类中的抽象方法可以有public protected default。</p>
+</li>
+<li><p>接口中没有构造方法，抽象类中可以有构造方法。</p>
+</li>
+</ol>
+<h3 id="3-语法层面："><a href="#3-语法层面：" class="headerlink" title="3.语法层面："></a>3.语法层面：</h3><p>（1）抽象类可以提供成员方法的实现细节，而接口中只能存在public abstract方法。</p>
+<p>  (2)  抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是public static final类型的</p>
+<p>（3) 接口中不能含有静态代码块和静态方法，而抽象类可以有静态代码块和静态方法。</p>
+<p>  (4) 一个类只能继承一个抽象类，却可以继承多个接口。</p>
+<p>设计层面：</p>
+<p>（5）类是“是不是关系”，接口是“有没有关系”。</p>
+<p>抽象类作为很多子类的父类，它是一种模板式设计。而接口是一种行为规范，它是一种辐射式设计。</p>
+<h3 id="4-接口和抽象类如何选择"><a href="#4-接口和抽象类如何选择" class="headerlink" title="4.接口和抽象类如何选择:"></a>4.接口和抽象类如何选择:</h3><p>1、当我们需要一组规范的方法的时候，我们就可以用接口，在具体的业务中，来对接口进行实现，能达到以不变应对万变，多变的需求的情况我们只需要改变对应的实现类 。<br>2、如果多个实现类中有者相同可以复用的代码 这个时候就可以在实现类和接口之间，添加一个抽象类，把公共的代码抽出在抽象类中。然后要求不同实现过程的 子类可以重写抽象类中的方法，来完成各自的业务。</p>
+
+        <div>
+            
+        </div>
+        <div class="bottom-line"></div>
+        
+    <nav id="article-nav">
+        
+            <a href="/2021/04/06/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A0%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E8%AF%AD%E6%B3%952%E3%80%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+        <span class="article-nav-title">
+            
+                no title
+            
+        </span>
+                <strong class="article-nav-caption">&gt;</strong>
+            </a>
+        
+        
+            <a href="/2021/03/28/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A0%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E8%AF%AD%E6%B3%951%E3%80%8B/" id="article-nav-older" class="article-nav-link-wrap">
+                <strong class="article-nav-caption">&lt;</strong>
+                <span class="article-nav-title">
+                    
+                    no title
+                
+            </a>
+        
+    </nav>
+
+
+        
+    </article>
+    <div id="toc">
+        
+            <h2>Table of Contents</h2>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#18-Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6"><span class="toc-number">1.</span> <span class="toc-text">18.Java反射机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">优缺点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-forName%E5%92%8Cclassloader%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88%E7%BB%93%E5%90%88JVM%E7%B1%BB%E5%8A%A0%E8%BD%BD%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">Class.forName和classloader的区别（结合JVM类加载）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%AF%A6%E7%BB%86%E7%9A%84%E4%BB%8B%E7%BB%8D%EF%BC%9AJava%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.4.</span> <span class="toc-text">比较详细的介绍：Java基础篇：反射机制详解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19%E3%80%81%E7%AE%80%E8%BF%B0%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81-%E5%B0%81%E8%A3%85%EF%BC%8C%E7%BB%A7%E6%89%BF%EF%BC%8C%E5%A4%9A%E6%80%81"><span class="toc-number">2.</span> <span class="toc-text">19、简述面向对象的三大特征(封装，继承，多态)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">封装：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">继承：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%EF%BC%9A%E7%88%B6%E7%B1%BB%E5%BC%95%E7%94%A8%E6%8C%87%E5%90%91%E4%B8%8D%E5%90%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E3%80%82"><span class="toc-number">2.3.</span> <span class="toc-text">多态：父类引用指向不同子类对象。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20%E3%80%81%E7%AE%80%E8%BF%B0%E7%BB%A7%E6%89%BF%E5%92%8C%E7%BB%84%E5%90%88%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E9%80%89%E6%8B%A9"><span class="toc-number">3.</span> <span class="toc-text">20、简述继承和组合的区别和选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">3.1.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88"><span class="toc-number">3.2.</span> <span class="toc-text">组合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E5%92%8C%E7%BB%A7%E6%89%BF%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9"><span class="toc-number">3.3.</span> <span class="toc-text">组合和继承如何选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%98%E5%85%88%E9%80%89%E6%8B%A9%E7%BB%84%E5%90%88"><span class="toc-number">3.4.</span> <span class="toc-text">为什么优先选择组合</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21%E3%80%81Java-%E4%B8%AD%E9%87%8D%E8%BD%BD%E4%B8%8E%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.</span> <span class="toc-text">21、Java 中重载与重写的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">重载：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%86%99%EF%BC%9A"><span class="toc-number">4.2.</span> <span class="toc-text">重写：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">4.3.</span> <span class="toc-text">区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E5%8F%AF%E4%BB%A5%E8%A2%AB%E9%87%8D%E5%86%99%E5%90%97%EF%BC%9F"><span class="toc-number">4.4.</span> <span class="toc-text">构造器可以被重写吗？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22%E3%80%81Java%E4%B8%AD%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E8%A2%AB%E7%BB%A7%E6%89%BF%E5%90%97%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">22、Java中静态属性和静态方法可以被继承吗？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E9%9D%A2%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">表面原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="toc-number">5.2.</span> <span class="toc-text">深入原因：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM%E4%B8%AD%E7%9A%84%E9%9D%9E%E8%99%9A%E6%96%B9%E6%B3%95%E5%92%8C%E5%AE%9E%E6%96%B9%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-number">5.3.</span> <span class="toc-text">JVM中的非虚方法和实方法的理解：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">6.</span> <span class="toc-text">23.抽象类和接口的区别：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%9A-%E4%B8%BA%E4%BA%86%E7%BB%A7%E6%89%BF%E8%80%8C%E5%AD%98%E5%9C%A8"><span class="toc-number">6.1.</span> <span class="toc-text">1.抽象类：(为了继承而存在)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8E%A5%E5%8F%A3%EF%BC%9A-%E6%9B%B4%E5%8A%A0%E6%8A%BD%E8%B1%A1"><span class="toc-number">6.2.</span> <span class="toc-text">2.接口：(更加抽象)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">6.3.</span> <span class="toc-text">接口和抽象类的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AF%AD%E6%B3%95%E5%B1%82%E9%9D%A2%EF%BC%9A"><span class="toc-number">6.4.</span> <span class="toc-text">3.语法层面：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9"><span class="toc-number">6.5.</span> <span class="toc-text">4.接口和抽象类如何选择:</span></a></li></ol></li></ol>
+        
+    </div>
+</div>
+
+    </div>
+</div>
+<footer id="footer">
+    <div id="copyright">&copy; John Doe  2021</div>
+    <div id="theme">
+        Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>. Theme by <a target="_blank" rel="noopener" href="https://github.com/markyong/hexo-theme-stage">Stage</a>
+    </div>
+</footer>
+<script src="/lib/js/waterrippleeffect.min.js"></script>
+<script src="/js/header-bg.main.js"></script>
+
+    <script src="/lib/js/smooth-scroll.min.js"></script>
+    <script src="/js/toc.main.js"></script>
+
+</body>
+</html>
