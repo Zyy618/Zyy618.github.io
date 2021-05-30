@@ -6,17 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Zyy‘s blog</title>
+  <title>《2021春招复习12》操作系统《操作系统》 | Zyy‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面朝大海，春暖花开">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zyy‘s blog">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="1、线程，进程和协程的区别☆线程是指进程内的一个执行单元，也是进程内可调度的实体。 1、线程和进程的区别    线程 进程    拥有资源 不拥有资源，但是可以访问隶属进程的资源 资源分配的基本单位   调度 独立调度的基本单位，比进程更小的独立运行基本单位 cpu调度和分派的基本单位   系统开销 开销小，线程切换只需保存和设置少量寄存器内容。 开销大，创建和撤销时，都需要为之分配资源或回收资源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《2021春招复习12》操作系统《操作系统》">
+<meta property="og:url" content="http://example.com/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/index.html">
 <meta property="og:site_name" content="Zyy‘s blog">
-<meta property="og:description" content="面朝大海，春暖花开">
+<meta property="og:description" content="1、线程，进程和协程的区别☆线程是指进程内的一个执行单元，也是进程内可调度的实体。 1、线程和进程的区别    线程 进程    拥有资源 不拥有资源，但是可以访问隶属进程的资源 资源分配的基本单位   调度 独立调度的基本单位，比进程更小的独立运行基本单位 cpu调度和分派的基本单位   系统开销 开销小，线程切换只需保存和设置少量寄存器内容。 开销大，创建和撤销时，都需要为之分配资源或回收资源">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140522.jpeg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140530.jpeg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140535.jpeg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140540.jpeg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140544.jpeg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140549.jpeg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140553.jpeg">
+<meta property="og:image" content="http://www.52im.net/data/attachment/forum/201809/05/213459mmmhohhgwom24uoj.jpeg">
+<meta property="article:published_time" content="2021-05-20T13:12:19.000Z">
+<meta property="article:modified_time" content="2021-05-30T13:44:17.718Z">
 <meta property="article:author" content="Eric">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="2021春招复习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140522.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="Zyy‘s blog" type="application/atom+xml">
   
@@ -158,93 +171,380 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-《2021春招复习12》操作系统《操作系统》" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A015%E3%80%8B%E5%9C%BA%E6%99%AF%E9%A2%98%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:15:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A015%E3%80%8B%E5%9C%BA%E6%99%AF%E9%A2%98%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E3%80%8B/">《2021春招复习15》场景题《大数据》</a>
+    <h1 class="article-title" itemprop="name">
+      《2021春招复习12》操作系统《操作系统》
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/" class="archive-article-date">
+        
+        <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/" class="archive-article-date">
   	<time datetime="2021-05-20T13:12:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/">《2021春招复习12》操作系统《操作系统》</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、线程，进程和协程的区别☆"><a href="#1、线程，进程和协程的区别☆" class="headerlink" title="1、线程，进程和协程的区别☆"></a>1、线程，进程和协程的区别☆</h2><p>线程是指进程内的一个执行单元，也是进程内可调度的实体。</p>
+<h3 id="1、线程和进程的区别"><a href="#1、线程和进程的区别" class="headerlink" title="1、线程和进程的区别"></a>1、线程和进程的区别</h3><table>
+<thead>
+<tr>
+<th></th>
+<th align="center">线程</th>
+<th align="center">进程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>拥有资源</td>
+<td align="center">不拥有资源，但是可以访问隶属进程的资源</td>
+<td align="center">资源分配的基本单位</td>
+</tr>
+<tr>
+<td>调度</td>
+<td align="center">独立调度的基本单位，比进程更小的独立运行基本单位</td>
+<td align="center">cpu调度和分派的基本单位</td>
+</tr>
+<tr>
+<td>系统开销</td>
+<td align="center">开销小，线程切换只需保存和设置少量寄存器内容。</td>
+<td align="center">开销大，创建和撤销时，都需要为之分配资源或回收资源如内存空间，I/O资源等，进行进程切换时，涉及当前执行进程CPU环境的保存及新调度进程CPU环境的设置</td>
+</tr>
+<tr>
+<td>通信方面</td>
+<td align="center">可以直接读写同一进程中的数据进行通信</td>
+<td align="center"><strong>需要借助IPC（Inter-Process Communication）进程间通信</strong></td>
+</tr>
+</tbody></table>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h3 id="2、协程和线程进行比较"><a href="#2、协程和线程进行比较" class="headerlink" title="2、协程和线程进行比较"></a>2、协程和线程进行比较</h3><p>协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文切换非常的快。</p>
+<p>1）一个线程可以有多个协程，一个进程也可以单独拥有多个协程。</p>
+<p>2）线程进程都是同步机制，而协程是异步机制。</p>
+<p>3）协程能够保留上一次调用的状态，每次过程重入时，就相当于进入上一次调用的状态实例：项目使用到了多个进程的和每个进程下有多个线程，线程之间通信方便，而进程之间需要共享内存、消息队列等方式。</p>
+<h2 id="2、进程间的通信方式有哪些？☆"><a href="#2、进程间的通信方式有哪些？☆" class="headerlink" title="2、进程间的通信方式有哪些？☆"></a>2、进程间的通信方式有哪些？☆</h2><p>消息队列，共享内存，无名管道，命名管道，信号量，socket</p>
+<h3 id="1-父子进程关系通道pipe："><a href="#1-父子进程关系通道pipe：" class="headerlink" title="1.父子进程关系通道pipe："></a>1.父子进程关系通道pipe：</h3><p>管道是一种半双工的通信方式，数据只能单向流动，而且只能在具有亲缘关系的进程中使用。进程的亲缘关系通常是指父子进程的关系。</p>
+<h3 id="2-命名管道FIFO："><a href="#2-命名管道FIFO：" class="headerlink" title="2.命名管道FIFO："></a>2.命名管道FIFO：</h3><p>有名管道也是半双工的通信方式，但是它允许无亲缘关系进程间的通信。</p>
+<h3 id="3-消息队列："><a href="#3-消息队列：" class="headerlink" title="3.消息队列："></a>3.消息队列：</h3><p>消息队列是由消息的链表，存放在内核中并由消息队列标识符标识。消息队列克服了信号传递信息少，管道只能承载无格式字节流以及缓冲区大小受限等缺点。</p>
+<h3 id="4-共享内存："><a href="#4-共享内存：" class="headerlink" title="4.共享内存："></a>4.共享内存：</h3><p>共享内存就是映射一段能被其它进程所访问的内存,这段共享内存由一个进程创建，但是多个进程都可以访问。共享内存是最快的IPC方式，它是针对其它进程间通信方式效率低而专门设计的，它往往与其他通信机制，如信号量，配合使用，来实现进程间的同步和通信。</p>
+<h3 id="5-信号量semaphore："><a href="#5-信号量semaphore：" class="headerlink" title="5.信号量semaphore："></a>5.信号量semaphore：</h3><p>信号量是一个计数器，可以用来控制多个进程对共享资源的访问。它常作为一种锁机制，防止某进程正在访问资源的时候，其他进程也访问该资源。因此主要作为进程间以及同一进程内不同线程之间的同步机制。</p>
+<h3 id="6-套接字-Socket"><a href="#6-套接字-Socket" class="headerlink" title="6.套接字 Socket"></a>6.套接字 Socket</h3><p>与其他通信机制不同的是，它可用于不同机器间的进程通信。</p>
+<h3 id="7-信号（signal）："><a href="#7-信号（signal）：" class="headerlink" title="7.信号（signal）："></a>7.信号（signal）：</h3><p>信号是一种比较复杂的通信方式，用于通知接收进程某个事件已发生。</p>
+<h2 id="3-进程调度算法"><a href="#3-进程调度算法" class="headerlink" title="3.进程调度算法"></a>3.进程调度算法</h2><h3 id="进程调度任务过程："><a href="#进程调度任务过程：" class="headerlink" title="进程调度任务过程："></a>进程调度任务过程：</h3><p>（1）首先保存当前进程的处理机的现场信息。</p>
+<p>（2）按照算法选取进程。</p>
+<p>（3）把处理器分配给进程。（将选中的进程的进程控制块内有关处理机现场的信息装入处理机相应寄存器中，进程控制处理机，使之从上次的断点处恢复运行）</p>
+<h3 id="1、先来先服务和短作业（进程）优先调度算法。"><a href="#1、先来先服务和短作业（进程）优先调度算法。" class="headerlink" title="1、先来先服务和短作业（进程）优先调度算法。"></a>1、先来先服务和短作业（进程）优先调度算法。</h3><p>批处理系统没有太多的用户操作，在该系统中，调度算法目标是保证吞吐量和周转时间（从提交到终止的时间）。</p>
+<h4 id="1、FCFS（first-come-first-servered）："><a href="#1、FCFS（first-come-first-servered）：" class="headerlink" title="1、FCFS（first-come first-servered）："></a>1、FCFS（first-come first-servered）：</h4><p>优点：易于实现，且相对公平。</p>
+<p>缺点：比较有利于长进程，而不利于短进程。</p>
+<h4 id="2、SJF（shortest-job-first）："><a href="#2、SJF（shortest-job-first）：" class="headerlink" title="2、SJF（shortest job first）："></a>2、SJF（shortest job first）：</h4><p>优点：平均周转时间最短，进程等待时间缩短，可以增大系统吞吐量。</p>
+<p>缺点：难以准确预估进程执行时间，开销较大，不利于长进程，有可能出现“饥饿”现象。</p>
+<h4 id="3、最短剩余时间优先SRTN-shortest-remaining-time-next"><a href="#3、最短剩余时间优先SRTN-shortest-remaining-time-next" class="headerlink" title="3、最短剩余时间优先SRTN(shortest remaining time next):"></a>3、最短剩余时间优先SRTN(shortest remaining time next):</h4><p>按估计剩余时间最短的顺序进行调度。</p>
+<h3 id="2、高优先权优先调度算法"><a href="#2、高优先权优先调度算法" class="headerlink" title="2、高优先权优先调度算法"></a>2、高优先权优先调度算法</h3><p>为了照顾紧迫型作业，使之在进入系统后便获得优先处理，引入了最高优先权优先(FPF)调度算法。当把该算法用于作业调度时，系统将从后备队列中选择若干个优先权最高的作业装入内存。当用于进程调度时，该算法是把处理机分配给就绪队列中优先权最高的进程，这时又可以进一步把算法分为以下两种：</p>
+<p>1、非抢占式优先权算法。</p>
+<p>主要用于批处理系统， 也可用于一些某些对实时性要求不高的实时系统。</p>
+<p>2、抢占式优先权调度算法。</p>
+<p>可以更好的满足紧迫作业的要求，故而常用于要求比较严格实时系统中，以及对性能要求比较高的批处理和分时系统。</p>
+<h3 id="3、高响应比优先调度算法"><a href="#3、高响应比优先调度算法" class="headerlink" title="3、高响应比优先调度算法:"></a>3、高响应比优先调度算法:</h3><p>//例题</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhizhizhizhiya/p/12768728.html"><strong>计算在单CPU环境下,采用高响应比优先调度算法时的平均周转时间和平均带权周转时间,并指出它们的调度顺序。</strong></a></p>
+<p>批处理系统：</p>
+<p><strong>等待时间=上一个的完成时间-该作业到达的时刻</strong></p>
+<p><strong>响应比=（等待时间+服务时间）/服务时间=等待时间/服务时间+1</strong></p>
+<p><strong>周转时间 =(作业完成的时间 - 作业提交时间)；</strong></p>
+<p><strong>带权周转时间 = 作业周转时间 / 作业运行时间；</strong></p>
+<p><strong>平均周转时间 = (周转时间1+周转时间2+…+周转时间n)/ n；</strong></p>
+<p><strong>平均带权周转时间 = (带权周转时间1+带权周转时间2+…+带权周转时间n)/ n；</strong></p>
+<p>(1)如果作业等待时间相同，则服务时间越短，其优先权越高，因而该算法有利于短作业。</p>
+<p>(2)当要求服务的时间相同时，作业的优先权决定于其等待时间，等待时间越长，其优先权越高，因而它实现的是先来先服务。</p>
+<p>(3)对于长作业，作业的优先级可以随等待时间的增加而提高，当其等待时间足够长时，其优先级便可提高，从而也可获得处理机。简言之，就是该算法既照顾了短作业，又考虑了作业到达的先后顺序，也不会使长作业长期得不到服务。因此，该算法实现了一种比较好的折衷。当然，再利用该算法时，没要进行调度之前，都须先做响应比的计算，这会增加系统开销。</p>
+<h3 id="4、基于时间片的轮转调度算法："><a href="#4、基于时间片的轮转调度算法：" class="headerlink" title="4、基于时间片的轮转调度算法："></a>4、基于时间片的轮转调度算法：</h3><p>交互式系统有大量的用户交互操作，在该系统中调度算法的目标是快速的进行响应。</p>
+<h4 id="（1）时间片轮转（RR）"><a href="#（1）时间片轮转（RR）" class="headerlink" title="（1）时间片轮转（RR）"></a>（1）时间片轮转（RR）</h4><h5 id="一-轮转法的基本原理："><a href="#一-轮转法的基本原理：" class="headerlink" title="一.轮转法的基本原理："></a>一.轮转法的基本原理：</h5><p>​        根据先来先服务的原则，将需要执行的所有进程按照到达时间的大小排成一个升序的序列，每次都给一个进程同样大小的时间片，在这个时间片内如果进程执行结束了，那么把进程从进程队列中删去，如果进程        没有结束，那么把该进程停止然后改为等待状态，放到进程队列的尾部，直到所有的进程都已执行完毕</p>
+<h5 id="二-进程的切换"><a href="#二-进程的切换" class="headerlink" title="二.进程的切换"></a>二.进程的切换</h5><p>​        时间片够用：意思就是在该时间片内，进程可以运行至结束，进程运行结束之后，将进程从进程队列中删除，然后启动新的时间片</p>
+<p>​        时间片不够用：意思是在该时间片内，进程只能完成它的一部分任务，在时间片用完之后，将进程的状态改为等待状态，将进程放到进程队列的尾部，等待cpu的调用</p>
+<h5 id="三-关于时间片大小的选择"><a href="#三-关于时间片大小的选择" class="headerlink" title="三.关于时间片大小的选择"></a>三.关于时间片大小的选择</h5><p>​        时间片过小，则进程频繁切换，会造成cpu资源的浪费</p>
+<p>​        时间片过大，则轮转调度算法就退化成了先来先服务算法</p>
+<h4 id="（2）多级反馈队列（比较先进调度算法）"><a href="#（2）多级反馈队列（比较先进调度算法）" class="headerlink" title="（2）多级反馈队列（比较先进调度算法）"></a>（2）多级反馈队列（比较先进调度算法）</h4><h5 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h5><p>多级反馈队列调度算法是一种根据先来先服务原则给就绪队列排序，为就绪队列赋予不同的优先级数，不同的时间片，按照优先级抢占CPU的调度算法。算法的实施过程如下：</p>
+<ol>
+<li>按照先来先服务原则排序，设置N个就绪队列为Q1，Q2…QN，每个队列中都可以放很多作业；</li>
+<li>为这N个就绪队列赋予不同的优先级，第一个队列的优先级最高，第二个队列次之，其余各队列的优先权逐个降低；</li>
+<li>设置每个就绪队列的时间片，优先权越高，算法赋予队列的时间片越小。时间片大小的设定按照实际作业（进程）的需要调整；</li>
+<li>进程在进入待调度的队列等待时，首先进入优先级最高的Q1等待。</li>
+<li>首先调度优先级高的队列中的进程。若高优先级中队列中已没有调度的进程，则调度次优先级队列中的进程。例如：Q1,Q2,Q3三个队列，只有在Q1中没有进程等待时才去调度Q2，同理，只有Q1,Q2都为空时才会去调度Q3。</li>
+<li>对于同一个队列中的各个进程，按照时间片轮转法调度。比如Q1队列的时间片为N，那么Q1中的作业在经历了时间片为N的时间后，若还没有完成，则进入Q2队列等待，若Q2的时间片用完后作业还不能完成，一直进入下一级队列，直至完成。</li>
+<li>在低优先级的队列中的进程在运行时，又有新到达的作业，那么在运行完这个时间片后，CPU马上分配给新到达的作业即抢占式调度CPU。</li>
+</ol>
+<h5 id="应用范围"><a href="#应用范围" class="headerlink" title="应用范围"></a>应用范围</h5><p>此算法应用于同一个资源的多个使用者可分优先级使用资源的情况。</p>
+<h5 id="使用方法及步骤"><a href="#使用方法及步骤" class="headerlink" title="使用方法及步骤"></a>使用方法及步骤</h5><p>假设系统中有3个就绪队列Q1,Q2,Q3，时间片分别为2，4，8。</p>
+<p>现在有3个作业J1,J2,J3分别在时间 0 ，1，3时刻到达。而它们所需要的CPU时间分别是3，2，1个时间片。</p>
+<p>1、时刻0： J1到达。于是进入到队列1 ， 运行1个时间片 ， 时间片还未到，此时J2到达。</p>
+<p>2、时刻1： J2到达。 由于时间片仍然由J1掌控，于是等待。 J1在运行了1个时间片后，已经完成了在Q1中的2个时间片的限制，于是J1置于Q2等待被调度。现在处理机分配给J2。</p>
+<p>3、时刻2： J1进入Q2等待调度，J2获得CPU开始运行。</p>
+<p>4、时刻3：J3到达，由于J2的时间片未到，故J3在Q1等待调度，J1也在Q2等待调度。</p>
+<p>5、时刻4：J2处理完成，由于J3，J1都在等待调度，但是J3所在的队列比J1所在的队列的优先级要高，于是J3被调度，J1继续在Q2等待。</p>
+<p>6、时刻5：J3经过1个时间片，完成。</p>
+<p>7、时刻6：由于Q1已经空闲，于是开始调度Q2中的作业，则J1得到处理器开始运行。</p>
+<p>8、时刻7：J1再经过一个时间片，完成了任务。于是整个调度过程结束。</p>
+<h2 id="4、死锁和处理方法"><a href="#4、死锁和处理方法" class="headerlink" title="4、死锁和处理方法"></a>4、死锁和处理方法</h2><h3 id="死锁必要条件：（可以引用Java并发）"><a href="#死锁必要条件：（可以引用Java并发）" class="headerlink" title="死锁必要条件：（可以引用Java并发）"></a>死锁必要条件：（可以引用Java并发）</h3><p>互斥：每个资源要么已经分配给了一个进程，要么就是可用的，</p>
+<p>占有和等待：已经得到了某个资源的进程可以再请求新的资源。</p>
+<p>不可抢占：已经分配给一个进程的资源不能强制性的被抢占，它只能被占有它的进程显示地释放。</p>
+<p>环路等待：有两个或者两个以上的进程组成一条环路，该环路中的每个进程都在等待下一个进程所占有的资源。</p>
+<h3 id="处理方法："><a href="#处理方法：" class="headerlink" title="处理方法："></a>处理方法：</h3><p>鸵鸟策略：处理死锁问题的方法仅仅是忽略它。</p>
+<p>死锁检测与死锁恢复：不试图阻止死锁，而是当检测到死锁发生时，采取措施进行恢复，利用抢占恢复，回滚恢复，通过杀死进程恢复。</p>
+<p>死锁预防：破坏死锁必要条件。</p>
+<p>死锁避免：程序运行期间避免死锁。</p>
+<h3 id="3、什么是活锁？"><a href="#3、什么是活锁？" class="headerlink" title="3、什么是活锁？"></a>3、什么是活锁？</h3><p>​    活锁恰恰与死锁相反，死锁是大家都拿不到资源都占用着对方的资源，而活锁是拿到资源却又相互释放不执行，当多线程中出现了相互谦让，都主动将资源释放给别的线程使用，这样这个资源在多个线程之间跳动而又得不到执行，这就是活锁。</p>
+<h2 id="5、内存管理☆"><a href="#5、内存管理☆" class="headerlink" title="5、内存管理☆"></a>5、内存管理☆</h2><h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhenbianshu/p/10300769.html">虚拟内存</a></h3><h3 id="1-Linux虚拟内存技术："><a href="#1-Linux虚拟内存技术：" class="headerlink" title="1.Linux虚拟内存技术："></a>1.Linux虚拟内存技术：</h3><h4 id="（1）虚拟内存，物理内存，页表，内存管理单元。"><a href="#（1）虚拟内存，物理内存，页表，内存管理单元。" class="headerlink" title="（1）虚拟内存，物理内存，页表，内存管理单元。"></a>（1）虚拟内存，物理内存，页表，内存管理单元。</h4><p>​        操作系统将内存抽象成虚拟的地址空间，每个程序拥有自己的地址空间，这个地址空间被分割成多个块，每个块称为一页，这些页被映射到物理内存中(页框)，同时，就必须把页码和存放该页映像的页框填入一个叫做页表的表项中，其中，页表的表项中设置一些访问控制字段，用于指明对应页面中的内容允许何种操作，从而禁止非法访问。内存管理单元（MMU）管理着虚拟内存的地址和物理内存的转换，其中页表(page table)存储着页（程序地址空间）和页框（物理内存空间）的映射表。</p>
+<h5 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h5><h6 id="进程内存管理"><a href="#进程内存管理" class="headerlink" title="进程内存管理"></a>进程内存管理</h6><p>它有助于进程进行内存管理，主要体现在：</p>
+<ul>
+<li><strong>内存完整性：</strong>由于虚拟内存对进程的”欺骗”，每个进程都认为自己获取的内存是一块连续的地址。我们在编写应用程序时，就不用考虑大块地址的分配，总是认为系统有足够的大块内存即可。</li>
+<li><strong>安全：</strong>由于进程访问内存时，都要通过页表来寻址，操作系统在页表的各个项目上添加各种访问权限标识位，就可以实现内存的权限控制。</li>
+</ul>
+<h6 id="数据共享"><a href="#数据共享" class="headerlink" title="数据共享"></a>数据共享</h6><p><strong>通过虚拟内存更容易实现内存和数据的共享。</strong></p>
+<p>在进程加载系统库时，总是先分配一块内存，将磁盘中的库文件加载到这块内存中，在直接使用物理内存时，由于物理内存地址唯一，即使系统发现同一个库在系统内加载了两次，但每个进程指定的加载内存不一样，系统也无能为力。而在使用虚拟内存时，系统只需要将进程的虚拟内存地址指向库文件所在的物理内存地址即可。如上文图中所示，进程 P1 和 P2 的 B 地址都指向了物理地址 C。</p>
+<p>而通过使用虚拟内存使用共享内存也很简单，系统只需要将各个进程的虚拟内存地址指向系统分配的共享内存地址即可。</p>
+<h6 id="SWAP"><a href="#SWAP" class="headerlink" title="SWAP"></a>SWAP</h6><p><strong>虚拟内存可以让帮进程”扩充”内存。</strong></p>
+<p>我们前文提到了虚拟内存通过缺页中断为进程分配物理内存，内存总是有限的，如果所有的物理内存都被占用了怎么办呢？Linux 提出 SWAP 的概念，Linux 中可以使用 SWAP 分区，在分配物理内存，但可用内存不足时，将暂时不用的内存数据先放到磁盘上，让有需要的进程先使用，等进程再需要使用这些数据时，再将这些数据加载到内存中，通过这种”交换”技术，Linux 可以让进程使用更多的内存。</p>
+<h5 id="附加："><a href="#附加：" class="headerlink" title="附加："></a>附加：</h5><h6 id="虚拟内存-1"><a href="#虚拟内存-1" class="headerlink" title="虚拟内存"></a>虚拟内存</h6><p>毋庸置疑，虚拟内存绝对是操作系统中最重要的概念之一。我想主要是由于内存的重要”战略地位”。CPU太快，但容量小且功能单一，其他 I/O 硬件支持各种花式功能，可是相对于 CPU，它们又太慢。于是它们之间就需要一种润滑剂来作为缓冲，这就是内存大显身手的地方。</p>
+<p>而在现代操作系统中，多任务已是标配。多任务并行，大大提升了 CPU 利用率，但却引出了多个进程对内存操作的冲突问题，虚拟内存概念的提出就是为了解决这个问题。</p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140522.jpeg" alt="img"></p>
+<p>上图是虚拟内存最简单也是最直观的解释。</p>
+<p>操作系统有一块物理内存（中间的部分），有两个进程（实际会更多）P1 和 P2，操作系统偷偷地分别告诉 P1 和 P2，我的整个内存都是你的，随便用，管够。可事实上呢，操作系统只是给它们画了个大饼，这些内存说是都给了 P1 和 P2，实际上只给了它们一个序号而已。只有当 P1 和 P2 真正开始使用这些内存时，系统才开始使用辗转挪移，拼凑出各个块给进程用，P2 以为自己在用 A 内存，实际上已经被系统悄悄重定向到真正的 B 去了，甚至，当 P1 和 P2 共用了 C 内存，他们也不知道。</p>
+<p>操作系统的这种欺骗进程的手段，就是虚拟内存。对 P1 和 P2 等进程来说，它们都以为自己占用了整个内存，而自己使用的物理内存的哪段地址，它们并不知道也无需关心。</p>
+<h6 id="分页和页表"><a href="#分页和页表" class="headerlink" title="分页和页表"></a>分页和页表</h6><p>虚拟内存是操作系统里的概念，对操作系统来说，虚拟内存就是一张张的对照表，P1 获取 A 内存里的数据时应该去物理内存的 A 地址找，而找 B 内存里的数据应该去物理内存的 C 地址。</p>
+<p>我们知道系统里的基本单位都是 Byte 字节，如果将每一个虚拟内存的 Byte 都对应到物理内存的地址，每个条目最少需要 8字节（32位虚拟地址-&gt;32位物理地址），在 4G 内存的情况下，就需要 32GB 的空间来存放对照表，那么这张表就大得真正的物理地址也放不下了，于是操作系统引入了 <code>页（Page）</code>的概念。</p>
+<p><strong>在系统启动时，操作系统将整个物理内存以 4K 为单位，划分为各个页。之后进行内存分配时，都以页为单位，那么虚拟内存页对应物理内存页的映射表就大大减小了，4G 内存，只需要 8M 的映射表即可，一些进程没有使用到的虚拟内存，也并不需要保存映射关系，而且Linux 还为大内存设计了多级页表，可以进一页减少了内存消耗。操作系统虚拟内存到物理内存的映射表，就被称为<code>页表</code>。</strong></p>
+<h6 id="内存寻址和分配"><a href="#内存寻址和分配" class="headerlink" title="内存寻址和分配"></a>内存寻址和分配</h6><p>我们知道通过虚拟内存机制，每个进程都以为自己占用了全部内存，进程访问内存时，操作系统都会把进程提供的虚拟内存地址转换为物理地址，再去对应的物理地址上获取数据。CPU 中有一种硬件，<code>内存管理单元 MMU（Memory Management Unit）</code>专门用来将翻译虚拟内存地址。CPU 还为页表寻址设置了缓存策略，由于程序的局部性，其缓存命中率能达到 98%。</p>
+<p>以上情况是页表内存在虚拟地址到物理地址的映射，而如果进程访问的物理地址还没有被分配，系统则会产生一个<code>缺页中断</code>，在中断处理时，系统切到内核态为进程虚拟地址分配物理地址。</p>
+<h4 id="（2）请页和交换"><a href="#（2）请页和交换" class="headerlink" title="（2）请页和交换"></a>（2）请页和交换</h4><h5 id="请页："><a href="#请页：" class="headerlink" title="请页："></a>请页：</h5><p>​        当处理器试图访问一个虚存页面时，首先到页表中去查询该页是否已映射到物理页框中，并记录在页表中。如果在，则MMU会把页码转换成页框码，如果不在，MMU就会通知操作系统：发生了一个页面访问错误，接下来系统会启动所谓的请表机制，即调用相应的系统操作函数，判断该虚拟地址是否为有效地址。</p>
+<p>​        如果是有效地址，就从虚拟内存中将该地址指向的页面读入到内存中的一个空闲页框中，并在页表中添加上相对应的表项，最后处理器将从发生页面错误的地方重新开始运行。如果是无效的地址，则表明进程在试图访问一个不存在的虚拟地址，此时操作系统将终止此次访问。</p>
+<h5 id="交换（SWAP）："><a href="#交换（SWAP）：" class="headerlink" title="交换（SWAP）："></a>交换（SWAP）：</h5><p>​        请页成功后，存在已没有空闲物理页框的情况，启动所谓地“交换”机制，即调用相应的内核操作函数，在物理页框中寻找一个当前不在使用或者近期可能不会用到的页面所占据的页框。找到后，就把其中的页移出，以装载新的页面。如果该页未被修改过，则删除它；如果该页曾经被修改过（脏页），则系统必须将该页写回磁盘。</p>
+<h4 id="（3）页面置换算法"><a href="#（3）页面置换算法" class="headerlink" title="（3）页面置换算法"></a>（3）页面置换算法</h4><p>页面置换算法，就是要选出最合适的一个物理页框，将其淘汰或者存储到磁盘中，使得置换的效率最高。</p>
+<p>​        置换算法有：最佳置换算法OPT、先进先出算法FIFO、<strong>近期最久未用过算法LRU、</strong> CLOCK置换算法NRU，页面缓冲算法PBA、近期少使用算法LFU。</p>
+<p>​        和缓存淘汰策略类似，可以将内存看成磁盘的缓存。在缓存系统中，缓存的大小有限，当有新的缓存到达时，需要淘汰一部分已经存在的缓存，这样才有空间新的缓存数据。（LRU缓存淘汰算法）为了实现LRU，需要在内存中维护一个所有页面的链表（leetcode中有个题，实现LRU，利用HashMap+双向链表，map的key值表示着链表中的每个节点的位置）。当一个页面被访问时，将这个页面移到链表表头。这样就能保证链表表尾的页面是最近最久未访问的。</p>
+<h4 id="（4）加快分页过程"><a href="#（4）加快分页过程" class="headerlink" title="（4）加快分页过程"></a>（4）加快分页过程</h4><h5 id="如何提高虚拟内存和物理地址的映射速度？（快表）"><a href="#如何提高虚拟内存和物理地址的映射速度？（快表）" class="headerlink" title="如何提高虚拟内存和物理地址的映射速度？（快表）"></a>如何提高虚拟内存和物理地址的映射速度？（快表）</h5><p>​        系统一旦访问了某个页面，那么系统就会在一段时间内稳定地工作在这个页上。所以，为了提高访问页表的速度，系统还配备了一组正好能容纳一个页表的<strong>硬件寄存器</strong>，这样当系统再访问虚存时，就首先到这组硬件寄存器中去访问，系统速度就快多了。这组存放在当前页表的寄存器叫做快表。</p>
+<h5 id="如果页表很大怎么解决？"><a href="#如果页表很大怎么解决？" class="headerlink" title="如果页表很大怎么解决？"></a>如果页表很大怎么解决？</h5><p>​        采用多级页表，对页表也进行分页存储，在程序运行时只把需要的页复制到内存，而暂时不需要的页就让它留在辅存中。</p>
+<h3 id="2、分页与分段的比较"><a href="#2、分页与分段的比较" class="headerlink" title="2、分页与分段的比较"></a>2、分页与分段的比较</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>分页</th>
+<th>分段</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对程序员是否透明</td>
+<td>透明</td>
+<td>需要程序员显示划分每个段</td>
+</tr>
+<tr>
+<td>地址空间维度</td>
+<td>一维地址空间</td>
+<td>二维，程序员在标识一个地址的时候，段名和段内地址都需要给出。</td>
+</tr>
+<tr>
+<td>大小是否可改变</td>
+<td>不可变</td>
+<td>可动态改变</td>
+</tr>
+<tr>
+<td>出现原因</td>
+<td>实现虚拟内存，从而获得更大地址空间</td>
+<td>使程序和数据可以被划分为逻辑上独立的地址空间并且有助于共享和保护。</td>
+</tr>
+</tbody></table>
+<h2 id="6、IO管理☆"><a href="#6、IO管理☆" class="headerlink" title="6、IO管理☆"></a>6、IO管理☆</h2><h3 id="一文读懂高性能网络编程中的I-O模型"><a href="#一文读懂高性能网络编程中的I-O模型" class="headerlink" title="一文读懂高性能网络编程中的I/O模型"></a><a target="_blank" rel="noopener" href="http://www.52im.net/thread-1935-1-1.html"><strong>一文读懂高性能网络编程中的I/O模型</strong></a></h3><h3 id="1、网络请求处理过程"><a href="#1、网络请求处理过程" class="headerlink" title="1、网络请求处理过程"></a>1、网络请求处理过程</h3><p>​        第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。</p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140530.jpeg" alt="高性能网络编程(五)：一文读懂高性能网络编程中的I/O模型_1.jpeg"></p>
+<h3 id="2、IO模型（与java的IO、NIO、AIO一起学习）"><a href="#2、IO模型（与java的IO、NIO、AIO一起学习）" class="headerlink" title="2、IO模型（与java的IO、NIO、AIO一起学习）"></a>2、IO模型（与java的IO、NIO、AIO一起学习）</h3><h4 id="介绍操作系统的-I-O-模型之前，先了解一下几个概念："><a href="#介绍操作系统的-I-O-模型之前，先了解一下几个概念：" class="headerlink" title="介绍操作系统的 I/O 模型之前，先了解一下几个概念："></a>介绍操作系统的 I/O 模型之前，先了解一下几个概念：</h4><h5 id="阻塞、非阻塞"><a href="#阻塞、非阻塞" class="headerlink" title="阻塞、非阻塞"></a>阻塞、非阻塞</h5><ul>
+<li><p>1）阻塞调用与非阻塞调用；</p>
+</li>
+<li><p>2）阻塞调用是指调用结果返回之前，当前线程会被挂起，调用线程只有在得到结果之后才会返回；</p>
+</li>
+<li><p>3）非阻塞调用指在不能立刻得到结果之前，该调用不会阻塞当前线程。</p>
+</li>
+</ul>
+<p>  两者的最大区别在于被调用方在收到请求到返回结果之前的这段时间内，调用方是否一直在等待。</p>
+<p>  <strong>阻塞</strong>是指调用方一直在等待而且别的事情什么都不做；<strong>非阻塞</strong>是指调用方先去忙别的事情。</p>
+<h5 id="同步处理与异步处理："><a href="#同步处理与异步处理：" class="headerlink" title="同步处理与异步处理："></a><strong>同步处理与异步处理：</strong></h5><p>​        同步处理是指被调用方得到最终结果之后才返回给调用方；异步处理是指被调用方先返回应答，然后再计算调用结果，计算完最终结果后再通知并返回给调用方。</p>
+<h5 id="阻塞、非阻塞和同步、异步的区别（阻塞、非阻塞和同步、异步其实针对的对象是不一样的）："><a href="#阻塞、非阻塞和同步、异步的区别（阻塞、非阻塞和同步、异步其实针对的对象是不一样的）：" class="headerlink" title="阻塞、非阻塞和同步、异步的区别（阻塞、非阻塞和同步、异步其实针对的对象是不一样的）："></a><strong>阻塞、非阻塞和同步、异步的区别（</strong>阻塞、非阻塞和同步、异步其实针对的对象是不一样的）<strong>：</strong></h5><ul>
+<li>1）阻塞、非阻塞的讨论对象是调用者；</li>
+<li>2）同步、异步的讨论对象是被调用者。</li>
+</ul>
+<h5 id="recvfrom-函数："><a href="#recvfrom-函数：" class="headerlink" title="recvfrom 函数："></a><strong>recvfrom 函数：</strong></h5><p>​        recvfrom 函数(经 Socket 接收数据)，这里把它视为系统调用。</p>
+<h5 id="一个输入操作通常包括两个不同的阶段："><a href="#一个输入操作通常包括两个不同的阶段：" class="headerlink" title="一个输入操作通常包括两个不同的阶段："></a><strong>一个输入操作通常包括两个不同的阶段：</strong></h5><ul>
+<li>1）等待数据准备好；</li>
+<li>2）从内核向进程复制数据。</li>
+</ul>
+<p>​        对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待分组到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。</p>
+<p>​        实际应用程序在系统调用完成上面的 2 步操作时，调用方式的阻塞、非阻塞，操作系统在处理应用程序请求时，处理方式的同步、异步处理的不同，可以分为 5 种 I/O 模型（下面的章节将逐个展开介绍）。（参考《<a target="_blank" rel="noopener" href="http://www.52im.net/thread-1015-1-1.html">UNIX网络编程卷1</a>》）</p>
+<h3 id="3、分类："><a href="#3、分类：" class="headerlink" title="3、分类："></a>3、分类：</h3><h4 id="1、I-O模型1：阻塞式-I-O-模型-blocking-I-O）"><a href="#1、I-O模型1：阻塞式-I-O-模型-blocking-I-O）" class="headerlink" title="1、I/O模型1：阻塞式 I/O 模型(blocking I/O）"></a>1、I/O模型1：阻塞式 I/O 模型(blocking I/O）</h4><p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140535.jpeg" alt="高性能网络编程(五)：一文读懂高性能网络编程中的I/O模型_2.jpeg"></p>
+<p>在阻塞式 I/O 模型中，应用程序在从调用 recvfrom 开始到它返回有数据报准备好这段时间是阻塞的，recvfrom 返回成功后，应用进程开始处理数据报。</p>
+<p><strong>比喻：</strong>一个人在钓鱼，当没鱼上钩时，就坐在岸边一直等。<br><strong>优点：</strong>程序简单，在阻塞等待数据期间进程/线程挂起，基本不会占用 CPU 资源。<br><strong>缺点：</strong>每个连接需要独立的进程/线程单独处理，当并发请求量大时为了维护程序，内存、线程切换开销较大，这种模型在实际生产中很少使用。</p>
+<h4 id="2、I-O模型2：非阻塞式-I-O-模型-non-blocking-I-O）"><a href="#2、I-O模型2：非阻塞式-I-O-模型-non-blocking-I-O）" class="headerlink" title="2、I/O模型2：非阻塞式 I/O 模型(non-blocking I/O）"></a>2、I/O模型2：非阻塞式 I/O 模型(non-blocking I/O）</h4><p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140540.jpeg" alt="高性能网络编程(五)：一文读懂高性能网络编程中的I/O模型_3.jpeg"></p>
+<p>在非阻塞式 I/O 模型中，应用程序把一个套接口设置为非阻塞，就是告诉内核，当所请求的 I/O 操作无法完成时，不要将进程睡眠。</p>
+<p>而是返回一个错误，应用程序基于 I/O 操作函数将不断的轮询数据是否已经准备好，如果没有准备好，继续轮询，直到数据准备好为止。</p>
+<p><strong>比喻：</strong>边钓鱼边玩手机，隔会再看看有没有鱼上钩，有的话就迅速拉杆。<br><strong>优点：</strong>不会阻塞在内核的等待数据过程，每次发起的 I/O 请求可以立即返回，不用阻塞等待，实时性较好。<br><strong>缺点：</strong>轮询将会不断地询问内核，这将占用大量的 CPU 时间，系统资源利用率较低，所以一般 Web 服务器不使用这种 I/O 模型。</p>
+<h4 id="3、I-O模型3：I-O-复用模型-I-O-multiplexing）"><a href="#3、I-O模型3：I-O-复用模型-I-O-multiplexing）" class="headerlink" title="3、I/O模型3：I/O 复用模型(I/O multiplexing）"></a>3、I/O模型3：I/O 复用模型(I/O multiplexing）</h4><p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140544.jpeg" alt="高性能网络编程(五)：一文读懂高性能网络编程中的I/O模型_4.jpeg"></p>
+<p>在 I/O 复用模型中，会用到 Select 或 Poll 函数或 Epoll 函数(Linux 2.6 以后的内核开始支持)，这两个函数也会使进程阻塞，但是和阻塞 I/O 有所不同。</p>
+<p>这两个函数可以同时阻塞多个 I/O 操作，而且可以同时对多个读操作，多个写操作的 I/O 函数进行检测，直到有数据可读或可写时，才真正调用 I/O 操作函数。</p>
+<p><strong>比喻：</strong>放了一堆鱼竿，在岸边一直守着这堆鱼竿，没鱼上钩就玩手机。<br><strong>优点：</strong>可以基于一个阻塞对象，同时在多个描述符上等待就绪，而不是使用多个线程(每个文件描述符一个线程)，这样可以大大节省系统资源。<br><strong>缺点：</strong>当连接数较少时效率相比多线程+阻塞 I/O 模型效率较低，可能延迟更大，因为单个连接处理需要 2 次系统调用，占用时间会有增加。<br>众所周之，Nginx这样的高性能互联网反向代理服务器大获成功的关键就是得益于Epoll。</p>
+<h4 id="4、I-O模型4：信号驱动式-I-O-模型（signal-driven-I-O"><a href="#4、I-O模型4：信号驱动式-I-O-模型（signal-driven-I-O" class="headerlink" title="4、I/O模型4：信号驱动式 I/O 模型（signal-driven I/O)"></a>4、I/O模型4：信号驱动式 I/O 模型（signal-driven I/O)</h4><p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140549.jpeg" alt="高性能网络编程(五)：一文读懂高性能网络编程中的I/O模型_5.jpeg"></p>
+<p>在信号驱动式 I/O 模型中，应用程序使用套接口进行信号驱动 I/O，并安装一个信号处理函数，进程继续运行并不阻塞。</p>
+<p>当数据准备好时，进程会收到一个 SIGIO 信号，可以在信号处理函数中调用 I/O 操作函数处理数据。</p>
+<p><strong>比喻：</strong>鱼竿上系了个铃铛，当铃铛响，就知道鱼上钩，然后可以专心玩手机。<br><strong>优点：</strong>线程并没有在等待数据时被阻塞，可以提高资源的利用率。<br><strong>缺点：</strong>信号 I/O 在大量 IO 操作时可能会因为信号队列溢出导致没法通知。</p>
+<p>信号驱动 I/O 尽管对于处理 UDP 套接字来说有用，即这种信号通知意味着到达一个数据报，或者返回一个异步错误。但是，对于 TCP 而言，信号驱动的 I/O 方式近乎无用，因为导致这种通知的条件为数众多，每一个来进行判别会消耗很大资源，与前几种方式相比优势尽失。</p>
+<h4 id="5、I-O模型5：异步-I-O-模型（即AIO，全称asynchronous-I-O）"><a href="#5、I-O模型5：异步-I-O-模型（即AIO，全称asynchronous-I-O）" class="headerlink" title="5、I/O模型5：异步 I/O 模型（即AIO，全称asynchronous I/O）"></a>5、I/O模型5：异步 I/O 模型（即AIO，全称asynchronous I/O）</h4><p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210525140553.jpeg" alt="高性能网络编程(五)：一文读懂高性能网络编程中的I/O模型_6.jpeg"></p>
+<p>由 POSIX 规范定义，应用程序告知内核启动某个操作，并让内核在整个操作（包括将数据从内核拷贝到应用程序的缓冲区）完成后通知应用程序。</p>
+<p>这种模型与信号驱动模型的主要区别在于：信号驱动 I/O 是由内核通知应用程序何时启动一个 I/O 操作，而异步 I/O 模型是由内核通知应用程序 I/O 操作何时完成。</p>
+<p><strong>优点：</strong>异步 I/O 能够充分利用 DMA 特性，让 I/O 操作与计算重叠。<br><strong>缺点：</strong>要实现真正的异步 I/O，操作系统需要做大量的工作。目前 Windows 下通过 IOCP 实现了真正的异步 I/O。</p>
+<p>而在 Linux 系统下，Linux 2.6才引入，目前 AIO 并不完善，因此在 Linux 下实现高并发网络编程时都是以 IO 复用模型模式为主。</p>
+<p>关于AOI的介绍，请见：《<a target="_blank" rel="noopener" href="http://www.52im.net/thread-306-1-1.html">Java新一代网络编程模型AIO原理及Linux系统AIO介绍</a>》。</p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p><img src="http://www.52im.net/data/attachment/forum/201809/05/213459mmmhohhgwom24uoj.jpeg" alt="高性能网络编程(五)：一文读懂高性能网络编程中的I/O模型_7.jpeg"></p>
+<p>（1）阻塞式I/O:应用进程被阻塞，直到数据从内核缓冲区复制到应用进程缓冲区中才返回。</p>
+<p>（2）非阻塞是I/O:应用进程可以继续执行，但是需要不断的执行系统调用来获知I/O是否完成，这种方式称为轮询（polling）。</p>
+<p>（3）I/O 复用（select，poll，epoll):单个进程具有处理多个I/O事件的能力（Java中NIO的能力）。</p>
+<p>（4）信号驱动式I/O(SIGIO):内核在数据到达时向应用进程发送SIGIO信号。</p>
+<p>（5）异步I/O(AIO):内核完成所有操作后向应用进程发送信号。（Linux2.6才引入，目前AIO并不完善，因此在Linux下实现高并发网络编程时都是以I/O复用模型模式为主。）</p>
+<p>从上图中我们可以看出，越往后，阻塞越少，理论上效率也是最优。这五种 I/O 模型中，前四种属于同步 I/O，因为其中真正的 I/O 操作(recvfrom)将阻塞进程/线程，只有异步 I/O 模型才与 POSIX 定义的异步 I/O 相匹配。（POSIX定义：应用程序告知内核启动某个操作，并让内核在整个操作，包括将数据从内核拷贝到应用程序的缓冲区，完成后通知应用程序。）</p>
+<h3 id="4、I-O复用技术详解"><a href="#4、I-O复用技术详解" class="headerlink" title="4、I/O复用技术详解"></a>4、I/O复用技术详解</h3><p>​    <strong>多个描述符的I/O操作都能在一个线程内并发交替地顺序完成，这就叫I/O多路复用，这里的复用是指复用同一个进程/线程。</strong></p>
+<h4 id="IO多路复用的三种机制Select，Poll，Epoll"><a href="#IO多路复用的三种机制Select，Poll，Epoll" class="headerlink" title="IO多路复用的三种机制Select，Poll，Epoll"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/397449cadc9a">IO多路复用的三种机制Select，Poll，Epoll</a></h4><h4 id="（1）Select："><a href="#（1）Select：" class="headerlink" title="（1）Select："></a>（1）Select：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">select</span><span class="params">(<span class="keyword">int</span> maxfdp1,fd_set *readset,fd_set *writeset,fd_set *exceptset,<span class="keyword">const</span> struct timeval *timeout)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h5><p><strong>int maxfdp1</strong> 指定待测试的文件描述字个数，它的值是待测试的最大描述字加1。<br> <strong>fd_set *readset , fd_set *writeset , fd_set *exceptset</strong><br> <code>fd_set</code>可以理解为一个集合，这个集合中存放的是文件描述符(file descriptor)，即文件句柄。中间的三个参数指定我们要让内核测试读、写和异常条件的文件描述符集合。如果对某一个的条件不感兴趣，就可以把它设为空指针。<br> <strong>const struct timeval *timeout</strong> <code>timeout</code>告知内核等待所指定文件描述符集合中的任何一个就绪可花多少时间。其timeval结构用于指定这段时间的秒数和微秒数。</p>
+<h5 id="【返回值】"><a href="#【返回值】" class="headerlink" title="【返回值】"></a><strong>【返回值】</strong></h5><p> <strong>int</strong> 若有就绪描述符返回其数目，若超时则为0，若出错则为-1</p>
+<h5 id="select运行机制"><a href="#select运行机制" class="headerlink" title="select运行机制"></a>select运行机制</h5><p>select()的机制中提供一种<code>fd_set</code>的数据结构，实际上是一个long类型的数组，每一个数组元素都能与一打开的文件句柄（不管是Socket句柄,还是其他文件或命名管道或设备句柄）建立联系，建立联系的工作由程序员完成，当调用select()时，由内核根据IO状态修改fd_set的内容，由此来通知执行了select()的进程哪一Socket或文件可读。</p>
+<p>从流程上来看，使用select函数进行IO请求和同步阻塞模型没有太大的区别，甚至还多了添加监视socket，以及调用select函数的额外操作，效率更差。但是，使用select以后最大的优势是用户可以在一个线程内同时处理多个socket的IO请求。用户可以注册多个socket，然后不断地调用select读取被激活的socket，即可达到在同一个线程内同时处理多个IO请求的目的。而在同步阻塞模型中，必须通过多线程的方式才能达到这个目的。</p>
+<h5 id="select机制的问题"><a href="#select机制的问题" class="headerlink" title="select机制的问题"></a>select机制的问题</h5><ol>
+<li>每次调用select，都需要把<code>fd_set</code>集合从用户态拷贝到内核态，如果<code>fd_set</code>集合很大时，那这个开销也很大</li>
+<li>同时每次调用select都需要在内核遍历传递进来的所有<code>fd_set</code>，如果<code>fd_set</code>集合很大时，那这个开销也很大</li>
+<li>为了减少数据拷贝带来的性能损坏，内核对被监控的<code>fd_set</code>集合大小做了限制，并且这个是通过宏控制的，大小不可改变(限制为1024)</li>
+</ol>
+<h4 id="（2）Poll"><a href="#（2）Poll" class="headerlink" title="（2）Poll"></a>（2）Poll</h4><p>poll的机制与select类似，与select在本质上没有多大差别，管理多个描述符也是进行轮询，根据描述符的状态进行处理，但是poll没有最大文件描述符数量的限制。也就是说，poll只解决了上面的问题3，并没有解决问题1，2的性能开销问题。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">poll</span>(<span class="params"><span class="keyword">struct</span> pollfd *fds, nfds_t nfds, <span class="built_in">int</span> timeout</span>)</span>;</span><br><span class="line"></span><br><span class="line">typedef <span class="keyword">struct</span> pollfd &#123;</span><br><span class="line">        <span class="built_in">int</span> fd;                         <span class="comment">// 需要被检测或选择的文件描述符</span></span><br><span class="line">        <span class="built_in">short</span> events;                   <span class="comment">// 对文件描述符fd上感兴趣的事件</span></span><br><span class="line">        <span class="built_in">short</span> revents;                  <span class="comment">// 文件描述符fd上当前实际发生的事件</span></span><br><span class="line">&#125; pollfd_t;</span><br></pre></td></tr></table></figure>
+
+<p>poll改变了文件描述符集合的描述方式，使用了<code>pollfd</code>结构而不是select的<code>fd_set</code>结构，使得poll支持的文件描述符集合限制远大于select的1024</p>
+<h5 id="【参数说明】"><a href="#【参数说明】" class="headerlink" title="【参数说明】"></a>【参数说明】</h5><p><strong>struct pollfd *fds</strong> <code>fds</code>是一个<code>struct pollfd</code>类型的数组，用于存放需要检测其状态的socket描述符，并且调用poll函数之后<code>fds</code>数组不会被清空；一个<code>pollfd</code>结构体表示一个被监视的文件描述符，通过传递<code>fds</code>指示 poll() 监视多个文件描述符。其中，结构体的<code>events</code>域是监视该文件描述符的事件掩码，由用户来设置这个域，结构体的<code>revents</code>域是文件描述符的操作结果事件掩码，内核在调用返回时设置这个域</p>
+<p><strong>nfds_t nfds</strong> 记录数组<code>fds</code>中描述符的总数量</p>
+<p>【返回值】</p>
+<p> <strong>int</strong> 函数返回fds集合中就绪的读、写，或出错的描述符数量，返回0表示超时，返回-1表示出错；</p>
+<h4 id="3-Epoll"><a href="#3-Epoll" class="headerlink" title="(3)Epoll"></a>(3)Epoll</h4><p>epoll在Linux2.6内核正式提出，是基于事件驱动的I/O方式，相对于select来说，epoll没有描述符个数限制，使用一个文件描述符管理多个描述符，将用户关心的文件描述符的事件存放到内核的一个事件表中，这样在用户空间和内核空间的copy只需一次。</p>
+<h5 id="Linux中提供的epoll相关函数如下："><a href="#Linux中提供的epoll相关函数如下：" class="headerlink" title="Linux中提供的epoll相关函数如下："></a>Linux中提供的epoll相关函数如下：</h5><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">epoll_create</span>(<span class="params"><span class="built_in">int</span> size</span>)</span>;</span><br><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">epoll_ctl</span>(<span class="params"><span class="built_in">int</span> epfd, <span class="built_in">int</span> op, <span class="built_in">int</span> fd, <span class="keyword">struct</span> epoll_event *<span class="keyword">event</span></span>)</span>;</span><br><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">epoll_wait</span>(<span class="params"><span class="built_in">int</span> epfd, <span class="keyword">struct</span> epoll_event * events, <span class="built_in">int</span> maxevents, <span class="built_in">int</span> timeout</span>)</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>1. epoll_create</strong>函数创建一个epoll句柄，参数<code>size</code>表明内核要监听的描述符数量。调用成功时返回一个epoll句柄描述符，失败时返回-1。</p>
+<p><strong>2. epoll_ctl</strong> 函数注册要监听的事件类型。四个参数解释如下：</p>
+<ul>
+<li><code>epfd</code> 表示epoll句柄</li>
+<li>op表示fd操作类型，有如下3种<ul>
+<li>EPOLL_CTL_ADD   注册新的fd到epfd中</li>
+<li>EPOLL_CTL_MOD 修改已注册的fd的监听事件</li>
+<li>EPOLL_CTL_DEL 从epfd中删除一个fd</li>
+</ul>
+</li>
+<li><code>fd</code> 是要监听的描述符</li>
+<li><code>event</code> 表示要监听的事件</li>
+</ul>
+<p>epoll_event 结构体定义如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">epoll_event</span> &#123;</span></span><br><span class="line">    <span class="keyword">__uint32_t</span> events;  <span class="comment">/* Epoll events */</span></span><br><span class="line">    <span class="keyword">epoll_data_t</span> data;  <span class="comment">/* User data variable */</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">union</span> <span class="title">epoll_data</span> &#123;</span></span><br><span class="line">    <span class="keyword">void</span> *ptr;</span><br><span class="line">    <span class="keyword">int</span> fd;</span><br><span class="line">    <span class="keyword">__uint32_t</span> u32;</span><br><span class="line">    <span class="keyword">__uint64_t</span> u64;</span><br><span class="line">&#125; <span class="keyword">epoll_data_t</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. epoll_wait</strong> 函数等待事件的就绪，成功时返回就绪的事件数目，调用失败时返回 -1，等待超时返回 0。</p>
+<ul>
+<li><code>epfd</code> 是epoll句柄</li>
+<li><code>events</code> 表示从内核得到的就绪事件集合</li>
+<li><code>maxevents</code> 告诉内核events的大小</li>
+<li><code>timeout</code> 表示等待的超时事件</li>
+</ul>
+<p>epoll是Linux内核为处理大批量文件描述符而作了改进的poll，是Linux下多路复用IO接口select/poll的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率。原因就是获取事件的时候，它无须遍历整个被侦听的描述符集，只要遍历那些被内核IO事件异步唤醒而加入Ready队列的描述符集合就行了。</p>
+<p>epoll除了提供select/poll那种IO事件的水平触发（Level Triggered）外，还提供了边缘触发（Edge Triggered），这就使得用户空间程序有可能缓存IO状态，减少epoll_wait/epoll_pwait的调用，提高应用程序效率。</p>
+<ul>
+<li><strong>水平触发（LT）：</strong>默认工作模式，即当epoll_wait检测到某描述符事件就绪并通知应用程序时，应用程序可以不立即处理该事件；下次调用epoll_wait时，会再次通知此事件</li>
+<li><strong>边缘触发（ET）：</strong> 当epoll_wait检测到某描述符事件就绪并通知应用程序时，应用程序必须立即处理该事件。如果不处理，下次调用epoll_wait时，不会再次通知此事件。（直到你做了某些操作导致该描述符变成未就绪状态了，也就是说边缘触发只在状态由未就绪变为就绪时只通知一次）。</li>
+</ul>
+<p>LT和ET原本应该是用于脉冲信号的，可能用它来解释更加形象。Level和Edge指的就是触发点，Level为只要处于水平，那么就一直触发，而Edge则为上升沿和下降沿的时候触发。比如：0-&gt;1 就是Edge，1-&gt;1 就是Level。</p>
+<p>ET模式很大程度上减少了epoll事件的触发次数，因此效率比LT模式下高。</p>
+<h4 id="总结：-1"><a href="#总结：-1" class="headerlink" title="总结："></a>总结：</h4><p>一张图总结一下select,poll,epoll的区别：</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">select</th>
+<th align="center">poll</th>
+<th align="center">epoll</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">操作方式</td>
+<td align="center">遍历</td>
+<td align="center">遍历</td>
+<td align="center">回调</td>
+</tr>
+<tr>
+<td align="left">底层实现</td>
+<td align="center">数组</td>
+<td align="center">链表</td>
+<td align="center">红黑树</td>
+</tr>
+<tr>
+<td align="left">IO效率</td>
+<td align="center">每次调用都进行线性遍历，时间复杂度为O(n)</td>
+<td align="center">每次调用都进行线性遍历，时间复杂度为O(n)</td>
+<td align="center">事件通知方式，每当fd就绪，系统注册的回调函数就会被调用，将就绪fd放到readyList里面，时间复杂度O(1)</td>
+</tr>
+<tr>
+<td align="left">最大连接数</td>
+<td align="center">1024（x86）或2048（x64）</td>
+<td align="center">无上限</td>
+<td align="center">无上限</td>
+</tr>
+<tr>
+<td align="left">fd拷贝</td>
+<td align="center">每次调用select，都需要把fd集合从用户态拷贝到内核态</td>
+<td align="center">每次调用poll，都需要把fd集合从用户态拷贝到内核态</td>
+<td align="center">调用epoll_ctl时拷贝进内核并保存，之后每次epoll_wait不拷贝</td>
+</tr>
+</tbody></table>
+<p>epoll是Linux目前大规模网络并发程序开发的首选模型。在绝大多数情况下性能远超select和poll。目前流行的高性能web服务器Nginx正式依赖于epoll提供的高效网络套接字轮询服务。但是，在并发连接不高的情况下，多线程+阻塞I/O方式可能性能更好。</p>
+<h4 id="无聊趣闻："><a href="#无聊趣闻：" class="headerlink" title="无聊趣闻："></a>无聊趣闻：</h4><p><em>既然select，poll，epoll都是I/O多路复用的具体的实现，之所以现在同时存在，其实他们也是不同历史时期的产物</em></p>
+<ul>
+<li><em>select出现是1984年在BSD里面实现的</em></li>
+<li><em>14年之后也就是1997年才实现了poll，其实拖那么久也不是效率问题， 而是那个时代的硬件实在太弱，一台服务器处理1千多个链接简直就是神一样的存在了，select很长段时间已经满足需求</em></li>
+<li><em>2002, 大神 Davide Libenzi 实现了epoll</em></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinPay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -260,7 +560,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -277,476 +577,125 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A011%E3%80%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:11:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A015%E3%80%8B%E5%9C%BA%E6%99%AF%E9%A2%98%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E3%80%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          《2021春招复习15》场景题《大数据》
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A011%E3%80%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《2021春招复习11》计算机网络《计算机网络》</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A011%E3%80%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B/">《2021春招复习11》计算机网络《计算机网络》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%BA%BF%E7%A8%8B%EF%BC%8C%E8%BF%9B%E7%A8%8B%E5%92%8C%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E2%98%86"><span class="toc-number">1.</span> <span class="toc-text">1、线程，进程和协程的区别☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.</span> <span class="toc-text">1、线程和进程的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8D%8F%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E8%BF%9B%E8%A1%8C%E6%AF%94%E8%BE%83"><span class="toc-number">1.2.</span> <span class="toc-text">2、协程和线程进行比较</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%BF%9B%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E2%98%86"><span class="toc-number">2.</span> <span class="toc-text">2、进程间的通信方式有哪些？☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%88%B6%E5%AD%90%E8%BF%9B%E7%A8%8B%E5%85%B3%E7%B3%BB%E9%80%9A%E9%81%93pipe%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">1.父子进程关系通道pipe：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%91%BD%E5%90%8D%E7%AE%A1%E9%81%93FIFO%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">2.命名管道FIFO：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">3.消息队列：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">4.共享内存：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BF%A1%E5%8F%B7%E9%87%8Fsemaphore%EF%BC%9A"><span class="toc-number">2.5.</span> <span class="toc-text">5.信号量semaphore：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%A5%97%E6%8E%A5%E5%AD%97-Socket"><span class="toc-number">2.6.</span> <span class="toc-text">6.套接字 Socket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E4%BF%A1%E5%8F%B7%EF%BC%88signal%EF%BC%89%EF%BC%9A"><span class="toc-number">2.7.</span> <span class="toc-text">7.信号（signal）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">3.进程调度算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">进程调度任务过程：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%85%88%E6%9D%A5%E5%85%88%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%9F%AD%E4%BD%9C%E4%B8%9A%EF%BC%88%E8%BF%9B%E7%A8%8B%EF%BC%89%E4%BC%98%E5%85%88%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E3%80%82"><span class="toc-number">3.2.</span> <span class="toc-text">1、先来先服务和短作业（进程）优先调度算法。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81FCFS%EF%BC%88first-come-first-servered%EF%BC%89%EF%BC%9A"><span class="toc-number">3.2.1.</span> <span class="toc-text">1、FCFS（first-come first-servered）：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81SJF%EF%BC%88shortest-job-first%EF%BC%89%EF%BC%9A"><span class="toc-number">3.2.2.</span> <span class="toc-text">2、SJF（shortest job first）：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E6%9C%80%E7%9F%AD%E5%89%A9%E4%BD%99%E6%97%B6%E9%97%B4%E4%BC%98%E5%85%88SRTN-shortest-remaining-time-next"><span class="toc-number">3.2.3.</span> <span class="toc-text">3、最短剩余时间优先SRTN(shortest remaining time next):</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%AB%98%E4%BC%98%E5%85%88%E6%9D%83%E4%BC%98%E5%85%88%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">2、高优先权优先调度算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%AB%98%E5%93%8D%E5%BA%94%E6%AF%94%E4%BC%98%E5%85%88%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-number">3.4.</span> <span class="toc-text">3、高响应比优先调度算法:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%9F%BA%E4%BA%8E%E6%97%B6%E9%97%B4%E7%89%87%E7%9A%84%E8%BD%AE%E8%BD%AC%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="toc-number">3.5.</span> <span class="toc-text">4、基于时间片的轮转调度算法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%97%B6%E9%97%B4%E7%89%87%E8%BD%AE%E8%BD%AC%EF%BC%88RR%EF%BC%89"><span class="toc-number">3.5.1.</span> <span class="toc-text">（1）时间片轮转（RR）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80-%E8%BD%AE%E8%BD%AC%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">3.5.1.1.</span> <span class="toc-text">一.轮转法的基本原理：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C-%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">3.5.1.2.</span> <span class="toc-text">二.进程的切换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89-%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E7%89%87%E5%A4%A7%E5%B0%8F%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-number">3.5.1.3.</span> <span class="toc-text">三.关于时间片大小的选择</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%A4%9A%E7%BA%A7%E5%8F%8D%E9%A6%88%E9%98%9F%E5%88%97%EF%BC%88%E6%AF%94%E8%BE%83%E5%85%88%E8%BF%9B%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-number">3.5.2.</span> <span class="toc-text">（2）多级反馈队列（比较先进调度算法）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">3.5.2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-number">3.5.2.2.</span> <span class="toc-text">应用范围</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%8F%8A%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.5.2.3.</span> <span class="toc-text">使用方法及步骤</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%AD%BB%E9%94%81%E5%92%8C%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">4、死锁和处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6%EF%BC%9A%EF%BC%88%E5%8F%AF%E4%BB%A5%E5%BC%95%E7%94%A8Java%E5%B9%B6%E5%8F%91%EF%BC%89"><span class="toc-number">4.1.</span> <span class="toc-text">死锁必要条件：（可以引用Java并发）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">4.2.</span> <span class="toc-text">处理方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E6%B4%BB%E9%94%81%EF%BC%9F"><span class="toc-number">4.3.</span> <span class="toc-text">3、什么是活锁？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E2%98%86"><span class="toc-number">5.</span> <span class="toc-text">5、内存管理☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="toc-number">5.1.</span> <span class="toc-text">虚拟内存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Linux%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="toc-number">5.2.</span> <span class="toc-text">1.Linux虚拟内存技术：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%EF%BC%8C%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98%EF%BC%8C%E9%A1%B5%E8%A1%A8%EF%BC%8C%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%8D%95%E5%85%83%E3%80%82"><span class="toc-number">5.2.1.</span> <span class="toc-text">（1）虚拟内存，物理内存，页表，内存管理单元。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-number">5.2.1.1.</span> <span class="toc-text">功能：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-number">5.2.1.1.1.</span> <span class="toc-text">进程内存管理</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB"><span class="toc-number">5.2.1.1.2.</span> <span class="toc-text">数据共享</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#SWAP"><span class="toc-number">5.2.1.1.3.</span> <span class="toc-text">SWAP</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%99%84%E5%8A%A0%EF%BC%9A"><span class="toc-number">5.2.1.2.</span> <span class="toc-text">附加：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98-1"><span class="toc-number">5.2.1.2.1.</span> <span class="toc-text">虚拟内存</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%86%E9%A1%B5%E5%92%8C%E9%A1%B5%E8%A1%A8"><span class="toc-number">5.2.1.2.2.</span> <span class="toc-text">分页和页表</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%AF%BB%E5%9D%80%E5%92%8C%E5%88%86%E9%85%8D"><span class="toc-number">5.2.1.2.3.</span> <span class="toc-text">内存寻址和分配</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%AF%B7%E9%A1%B5%E5%92%8C%E4%BA%A4%E6%8D%A2"><span class="toc-number">5.2.2.</span> <span class="toc-text">（2）请页和交换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%B7%E9%A1%B5%EF%BC%9A"><span class="toc-number">5.2.2.1.</span> <span class="toc-text">请页：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%EF%BC%88SWAP%EF%BC%89%EF%BC%9A"><span class="toc-number">5.2.2.2.</span> <span class="toc-text">交换（SWAP）：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="toc-number">5.2.3.</span> <span class="toc-text">（3）页面置换算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%8A%A0%E5%BF%AB%E5%88%86%E9%A1%B5%E8%BF%87%E7%A8%8B"><span class="toc-number">5.2.4.</span> <span class="toc-text">（4）加快分页过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E5%92%8C%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E7%9A%84%E6%98%A0%E5%B0%84%E9%80%9F%E5%BA%A6%EF%BC%9F%EF%BC%88%E5%BF%AB%E8%A1%A8%EF%BC%89"><span class="toc-number">5.2.4.1.</span> <span class="toc-text">如何提高虚拟内存和物理地址的映射速度？（快表）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E9%A1%B5%E8%A1%A8%E5%BE%88%E5%A4%A7%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="toc-number">5.2.4.2.</span> <span class="toc-text">如果页表很大怎么解决？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%86%E9%A1%B5%E4%B8%8E%E5%88%86%E6%AE%B5%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">5.3.</span> <span class="toc-text">2、分页与分段的比较</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81IO%E7%AE%A1%E7%90%86%E2%98%86"><span class="toc-number">6.</span> <span class="toc-text">6、IO管理☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E6%96%87%E8%AF%BB%E6%87%82%E9%AB%98%E6%80%A7%E8%83%BD%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E4%B8%AD%E7%9A%84I-O%E6%A8%A1%E5%9E%8B"><span class="toc-number">6.1.</span> <span class="toc-text">一文读懂高性能网络编程中的I&#x2F;O模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B"><span class="toc-number">6.2.</span> <span class="toc-text">1、网络请求处理过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81IO%E6%A8%A1%E5%9E%8B%EF%BC%88%E4%B8%8Ejava%E7%9A%84IO%E3%80%81NIO%E3%80%81AIO%E4%B8%80%E8%B5%B7%E5%AD%A6%E4%B9%A0%EF%BC%89"><span class="toc-number">6.3.</span> <span class="toc-text">2、IO模型（与java的IO、NIO、AIO一起学习）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84-I-O-%E6%A8%A1%E5%9E%8B%E4%B9%8B%E5%89%8D%EF%BC%8C%E5%85%88%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-number">6.3.1.</span> <span class="toc-text">介绍操作系统的 I&#x2F;O 模型之前，先了解一下几个概念：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E3%80%81%E9%9D%9E%E9%98%BB%E5%A1%9E"><span class="toc-number">6.3.1.1.</span> <span class="toc-text">阻塞、非阻塞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E5%A4%84%E7%90%86%E4%B8%8E%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-number">6.3.1.2.</span> <span class="toc-text">同步处理与异步处理：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E3%80%81%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%92%8C%E5%90%8C%E6%AD%A5%E3%80%81%E5%BC%82%E6%AD%A5%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88%E9%98%BB%E5%A1%9E%E3%80%81%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%92%8C%E5%90%8C%E6%AD%A5%E3%80%81%E5%BC%82%E6%AD%A5%E5%85%B6%E5%AE%9E%E9%92%88%E5%AF%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%98%AF%E4%B8%8D%E4%B8%80%E6%A0%B7%E7%9A%84%EF%BC%89%EF%BC%9A"><span class="toc-number">6.3.1.3.</span> <span class="toc-text">阻塞、非阻塞和同步、异步的区别（阻塞、非阻塞和同步、异步其实针对的对象是不一样的）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#recvfrom-%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="toc-number">6.3.1.4.</span> <span class="toc-text">recvfrom 函数：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E8%BE%93%E5%85%A5%E6%93%8D%E4%BD%9C%E9%80%9A%E5%B8%B8%E5%8C%85%E6%8B%AC%E4%B8%A4%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E9%98%B6%E6%AE%B5%EF%BC%9A"><span class="toc-number">6.3.1.5.</span> <span class="toc-text">一个输入操作通常包括两个不同的阶段：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">6.4.</span> <span class="toc-text">3、分类：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81I-O%E6%A8%A1%E5%9E%8B1%EF%BC%9A%E9%98%BB%E5%A1%9E%E5%BC%8F-I-O-%E6%A8%A1%E5%9E%8B-blocking-I-O%EF%BC%89"><span class="toc-number">6.4.1.</span> <span class="toc-text">1、I&#x2F;O模型1：阻塞式 I&#x2F;O 模型(blocking I&#x2F;O）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81I-O%E6%A8%A1%E5%9E%8B2%EF%BC%9A%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F-I-O-%E6%A8%A1%E5%9E%8B-non-blocking-I-O%EF%BC%89"><span class="toc-number">6.4.2.</span> <span class="toc-text">2、I&#x2F;O模型2：非阻塞式 I&#x2F;O 模型(non-blocking I&#x2F;O）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81I-O%E6%A8%A1%E5%9E%8B3%EF%BC%9AI-O-%E5%A4%8D%E7%94%A8%E6%A8%A1%E5%9E%8B-I-O-multiplexing%EF%BC%89"><span class="toc-number">6.4.3.</span> <span class="toc-text">3、I&#x2F;O模型3：I&#x2F;O 复用模型(I&#x2F;O multiplexing）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81I-O%E6%A8%A1%E5%9E%8B4%EF%BC%9A%E4%BF%A1%E5%8F%B7%E9%A9%B1%E5%8A%A8%E5%BC%8F-I-O-%E6%A8%A1%E5%9E%8B%EF%BC%88signal-driven-I-O"><span class="toc-number">6.4.4.</span> <span class="toc-text">4、I&#x2F;O模型4：信号驱动式 I&#x2F;O 模型（signal-driven I&#x2F;O)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81I-O%E6%A8%A1%E5%9E%8B5%EF%BC%9A%E5%BC%82%E6%AD%A5-I-O-%E6%A8%A1%E5%9E%8B%EF%BC%88%E5%8D%B3AIO%EF%BC%8C%E5%85%A8%E7%A7%B0asynchronous-I-O%EF%BC%89"><span class="toc-number">6.4.5.</span> <span class="toc-text">5、I&#x2F;O模型5：异步 I&#x2F;O 模型（即AIO，全称asynchronous I&#x2F;O）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">6.4.6.</span> <span class="toc-text">总结：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81I-O%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF%E8%AF%A6%E8%A7%A3"><span class="toc-number">6.5.</span> <span class="toc-text">4、I&#x2F;O复用技术详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E6%9C%BA%E5%88%B6Select%EF%BC%8CPoll%EF%BC%8CEpoll"><span class="toc-number">6.5.1.</span> <span class="toc-text">IO多路复用的三种机制Select，Poll，Epoll</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89Select%EF%BC%9A"><span class="toc-number">6.5.2.</span> <span class="toc-text">（1）Select：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-number">6.5.2.1.</span> <span class="toc-text">参数：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E3%80%90%E8%BF%94%E5%9B%9E%E5%80%BC%E3%80%91"><span class="toc-number">6.5.2.2.</span> <span class="toc-text">【返回值】</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#select%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-number">6.5.2.3.</span> <span class="toc-text">select运行机制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#select%E6%9C%BA%E5%88%B6%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">6.5.2.4.</span> <span class="toc-text">select机制的问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89Poll"><span class="toc-number">6.5.3.</span> <span class="toc-text">（2）Poll</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E3%80%90%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E%E3%80%91"><span class="toc-number">6.5.3.1.</span> <span class="toc-text">【参数说明】</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Epoll"><span class="toc-number">6.5.4.</span> <span class="toc-text">(3)Epoll</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Linux%E4%B8%AD%E6%8F%90%E4%BE%9B%E7%9A%84epoll%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">6.5.4.1.</span> <span class="toc-text">Linux中提供的epoll相关函数如下：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A-1"><span class="toc-number">6.5.5.</span> <span class="toc-text">总结：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E8%81%8A%E8%B6%A3%E9%97%BB%EF%BC%9A"><span class="toc-number">6.5.6.</span> <span class="toc-text">无聊趣闻：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A010%E3%80%8BRedis%E3%80%8ARedis%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:10:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A010%E3%80%8BRedis%E3%80%8ARedis%E3%80%8B/">《2021春招复习10》Redis《Redis》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:09:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/">《2021春招复习9》数据库《MySql》</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A08%E3%80%8BJUC%EF%BC%88java%20util%20concurrent%EF%BC%89%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A08%E3%80%8BJUC%EF%BC%88java%20util%20concurrent%EF%BC%89%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习8》JUC（java util concurrent）《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A07%E3%80%8B%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A07%E3%80%8B%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习7》线程同步的几种方式《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A06%E3%80%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A06%E3%80%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习6》基础概念《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:07:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/">《2021春招复习5》JVM《JVM》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A04%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E9%9B%86%E5%90%88%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:07:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A04%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E9%9B%86%E5%90%88%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC/">《2021春招复习4》Java基础《集合》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -770,8 +719,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

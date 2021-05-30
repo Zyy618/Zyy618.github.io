@@ -6,17 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Zyy‘s blog</title>
+  <title>《2021春招复习9》数据库《MySql》 | Zyy‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面朝大海，春暖花开">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zyy‘s blog">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="1、数据库的ACID特性（1）原子性（Atomicity） 事务被视为不可分割的最小单元，事务的所有操作要么全部提交成功，要么全被失败回滚。 回滚可以用回滚日志来实现，回滚日志记录着事务所执行的修改操作，在回滚时反向执行这些操作即可。 （2）一致性（Consistency） 数据库在事务执行前后都保持一致性状态。在一致性状态下，所有事务对一个数据的读取结果都是相同的。 （3）隔离性(Isolati">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《2021春招复习9》数据库《MySql》">
+<meta property="og:url" content="http://example.com/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/index.html">
 <meta property="og:site_name" content="Zyy‘s blog">
-<meta property="og:description" content="面朝大海，春暖花开">
+<meta property="og:description" content="1、数据库的ACID特性（1）原子性（Atomicity） 事务被视为不可分割的最小单元，事务的所有操作要么全部提交成功，要么全被失败回滚。 回滚可以用回滚日志来实现，回滚日志记录着事务所执行的修改操作，在回滚时反向执行这些操作即可。 （2）一致性（Consistency） 数据库在事务执行前后都保持一致性状态。在一致性状态下，所有事务对一个数据的读取结果都是相同的。 （3）隔离性(Isolati">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210511220937.png">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210511220948.png">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/aHR0cDovL2hpLmNzZG4ubmV0L2F0dGFjaG1lbnQvMjAxMjAyLzI4LzBfMTMzMDQzOTAxMFA3bEkuZ2lm">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210511221448551.png">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/image-20210413191830534.png">
+<meta property="article:published_time" content="2021-05-20T13:09:19.000Z">
+<meta property="article:modified_time" content="2021-05-30T13:43:51.403Z">
 <meta property="article:author" content="Eric">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="2021春招复习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210511220937.png">
   
     <link rel="alternative" href="/atom.xml" title="Zyy‘s blog" type="application/atom+xml">
   
@@ -158,264 +168,502 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-《2021春招复习9》数据库《MySql》" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A015%E3%80%8B%E5%9C%BA%E6%99%AF%E9%A2%98%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:15:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A015%E3%80%8B%E5%9C%BA%E6%99%AF%E9%A2%98%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E3%80%8B/">《2021春招复习15》场景题《大数据》</a>
+    <h1 class="article-title" itemprop="name">
+      《2021春招复习9》数据库《MySql》
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:12:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/">《2021春招复习12》操作系统《操作系统》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A011%E3%80%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:11:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A011%E3%80%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B/">《2021春招复习11》计算机网络《计算机网络》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A010%E3%80%8BRedis%E3%80%8ARedis%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:10:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A010%E3%80%8BRedis%E3%80%8ARedis%E3%80%8B/">《2021春招复习10》Redis《Redis》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/" class="archive-article-date">
+        
+        <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/" class="archive-article-date">
   	<time datetime="2021-05-20T13:09:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/">《2021春招复习9》数据库《MySql》</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、数据库的ACID特性"><a href="#1、数据库的ACID特性" class="headerlink" title="1、数据库的ACID特性"></a>1、数据库的ACID特性</h2><p>（1）原子性（Atomicity）</p>
+<p>事务被视为不可分割的最小单元，事务的所有操作要么全部提交成功，要么全被失败回滚。</p>
+<p>回滚可以用回滚日志来实现，回滚日志记录着事务所执行的修改操作，在回滚时反向执行这些操作即可。</p>
+<p>（2）一致性（Consistency）</p>
+<p>数据库在事务执行前后都保持一致性状态。在一致性状态下，所有事务对一个数据的读取结果都是相同的。</p>
+<p>（3）隔离性(Isolation)</p>
+<p>一个事务所做的修改在最终提交之前，对其它事务不可见。</p>
+<p>（4）持久性（Durability）</p>
+<p>一旦事务提交，则其所做的修改将会永远保存在数据库中。即使系统发生崩溃，事务执行的结果也不能丢失。</p>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="2、四大隔离级别和不可重复读和幻影读的出现原因。"><a href="#2、四大隔离级别和不可重复读和幻影读的出现原因。" class="headerlink" title="2、四大隔离级别和不可重复读和幻影读的出现原因。"></a>2、四大隔离级别和不可重复读和幻影读的出现原因。</h2><h3 id="隔离级别"><a href="#隔离级别" class="headerlink" title="隔离级别"></a>隔离级别</h3><p>01：Read uncommitted（读未提交）：最低级别，任何情况都会发生。</p>
+<p>02：Read Committed（读已提交）：可避免脏读的发生。</p>
+<p>03：Repeatable read(可重复读)：可避免脏读、不可重复读的发生。（mysql默认级别）</p>
+<p>04：Serializable（串行化）：避免脏读，不可重复读，幻读的发生。</p>
+<h3 id="脏读（dirty-read）："><a href="#脏读（dirty-read）：" class="headerlink" title="脏读（dirty read）："></a>脏读（dirty read）：</h3><p>A事务读取了B事务尚未提交的更改数据，并在这个数据基础上操作。如果B事务回滚，那么A事务读到的数据是不合法的，称为脏读。Oracle由于有version设置不会出现脏读。</p>
+<h3 id="不可重复读（unrepeatable-read）："><a href="#不可重复读（unrepeatable-read）：" class="headerlink" title="不可重复读（unrepeatable read）："></a>不可重复读（unrepeatable read）：</h3><p>A事务读取B事务已经提交的更改（或删除）数据。比如A事务第一次读取数据，然后B事务更改该数据并提交，A事务再次读取数据，两次读取的数据不一样。</p>
+<h3 id="幻读（phantom-read）："><a href="#幻读（phantom-read）：" class="headerlink" title="幻读（phantom read）："></a>幻读（phantom read）：</h3><p>A事务读取了B事务已经提交的新增数据。注意和不可重复读的区别是<strong>新增</strong>，而不可重复读是<strong>更改或删除</strong>。这两种情况的对策不一样：对于不可重复读，只需要采取<strong>行级锁</strong>防止该记录数据被更改或删除，然而对于幻读必须增加<strong>表级锁</strong>，防止在这个表中新增一条数据。</p>
+<h2 id="3、封锁的粒度、锁的类型、MVCC"><a href="#3、封锁的粒度、锁的类型、MVCC" class="headerlink" title="3、封锁的粒度、锁的类型、MVCC"></a>3、封锁的粒度、锁的类型、MVCC</h2><h3 id="1、封锁粒度"><a href="#1、封锁粒度" class="headerlink" title="1、封锁粒度"></a>1、封锁粒度</h3><p>​    行级锁以及表级锁。在选择封锁粒度时，需要在锁开销和并发程度之前做一个权衡。（应尽量只锁定需要修改的那部分内容，而非所有资源。锁定数据量越小，发生锁争用的可能性越小，锁的并发程度就越高，但是加锁需要消耗资源，锁的各种操作（包括获取锁，释放锁，以及检查锁的状态）都会增加系统开销。因此锁的粒度越小，系统开销越大。）</p>
+<h3 id="2、三级封锁协议（理论上的）"><a href="#2、三级封锁协议（理论上的）" class="headerlink" title="2、三级封锁协议（理论上的）"></a>2、三级封锁协议（理论上的）</h3><h4 id="一级封锁协议："><a href="#一级封锁协议：" class="headerlink" title="一级封锁协议："></a>一级封锁协议：</h4><p>事务T中如果对数据R有写操作，必须在这个事务中对R的第一次读操作前对他加X锁，直到事务结束后才释放。事务结束包括正常结束（COMMIT）和非正常结束（ROLLBACK）。</p>
+<h4 id="二级封锁协议："><a href="#二级封锁协议：" class="headerlink" title="二级封锁协议："></a>二级封锁协议：</h4><p>一级封锁协议加上事务T在读取数据R之前必须先对其加S锁，读完后方可释放S锁。</p>
+<h4 id="三级封锁协议："><a href="#三级封锁协议：" class="headerlink" title="三级封锁协议："></a>三级封锁协议：</h4><p>一级封锁协议加上事务T在读取数据R之前必须先对其加S锁，事务结束后，可释放S锁。</p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210511220937.png" alt="image-20210409112110947"></p>
+<h3 id="3、锁的种类："><a href="#3、锁的种类：" class="headerlink" title="3、锁的种类："></a>3、锁的种类：</h3><h4 id="（1）读写锁："><a href="#（1）读写锁：" class="headerlink" title="（1）读写锁："></a>（1）读写锁：</h4><p>在数据库的三级封锁协议中分为两种锁</p>
+<p>​    排他锁(exclusive lock,X锁),又称为写锁<br>​    共享锁(shared lock,S锁),又称为读锁</p>
+<h5 id="排他锁-X锁-："><a href="#排他锁-X锁-：" class="headerlink" title="排他锁(X锁)："></a>排他锁(X锁)：</h5><p>排他锁,又称为写锁,可以对数据进行读取和修改操作.当一个事务对数据添加X锁时,其他事务都不能对该数据添加锁,即同一时间只有一条事务可以对数据进行修改操作.其他事务只能等待该事务完成后才能对数据进行修改操作.所以我们通常把这类对数据进行修改操作的锁称为写锁.</p>
+<h5 id="共享锁-S锁-："><a href="#共享锁-S锁-：" class="headerlink" title="共享锁(S锁)："></a>共享锁(S锁)：</h5><p>共享锁,也可以称为读锁.当一个事务对数据添加S锁时,其他事务也可以对数据添加S锁,即所有添加了S锁的事务都可以同时读取数据内容,但是无法对数据进行修改.</p>
+<h5 id="处理："><a href="#处理：" class="headerlink" title="处理："></a>处理：</h5><p>在存在行级锁和表级锁的情况下，事务T要对表A加X锁，就要对表A的每一行都进行检测，以防止其它事务对表A或者表A中的任意一行加了锁，这十分耗时。</p>
+<h4 id="（2）意向锁："><a href="#（2）意向锁：" class="headerlink" title="（2）意向锁："></a>（2）意向锁：</h4><p>在原来的X/S锁基础上引入IX/IS,IX/IS锁都是表锁，用来表示一个事务想要在表中的某个数据行加上X锁或者S锁。有以下两个规定：</p>
+<ol>
+<li>一个事务在获得某个数据行对象的S锁之前，必须先获得表的IS锁或者更强的锁。</li>
+<li>一个事务在获得某个数据行对象的X锁之前，必须先获得表的IX锁。</li>
+</ol>
+<p>通过引入意向锁，事务T想要对表A加X锁，只需要先检验是否有其他事务对表A加了X/IX/S/IS锁，如果加了就表示有其他事务正在使用这个表或者表中的某一行的锁，因此事务T加X锁失败</p>
+<h4 id="（3）悲观锁和乐观锁："><a href="#（3）悲观锁和乐观锁：" class="headerlink" title="（3）悲观锁和乐观锁："></a>（3）悲观锁和乐观锁：</h4><p>悲观锁：它指的是对数据被外界（包括本系统当前的其它事务，以及来自外部系统的事务处理）修改持保守态度。因此，<strong>在整个数据处理的过程中，将数据处于锁定状态。悲观锁的实现，往往依靠数据库提供的锁机制。</strong></p>
+<p>乐观锁假设认为数据一般情况下不会造成冲突，所以只有在数据提交更新的时候，才会正式对数据冲突与否进行检测，如果发现冲突了，则返回用户错误信息，让用户决定如何去做。</p>
+<p>乐观锁的实现：使用版本号：当我们提交更新的时候，判断数据库表对应记录的当前版本信息与第一次取出来的version值进行对比，如果数据库表当前版本号与第一次取出来的version值相同，则予以更新，否则就认为是过期数据，实际就是并发控制中CAS理论。</p>
+<h3 id="4、MVCC版本控制协议：Mysql-的InnoDB事务方面的-多版本并发控制如何实现-MVCC"><a href="#4、MVCC版本控制协议：Mysql-的InnoDB事务方面的-多版本并发控制如何实现-MVCC" class="headerlink" title="4、MVCC版本控制协议：Mysql 的InnoDB事务方面的 多版本并发控制如何实现 MVCC"></a>4、MVCC版本控制协议：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/aspirant/p/6920987.html">Mysql 的InnoDB事务方面的 多版本并发控制如何实现 MVCC</a></h3><p>多版本并发控制（Multi-Version Concurrency Control，MVCC）是MYSQL的InnoDB存储引擎实现隔离级别的一种具体方式。用于实现提交读和可重复读这两种隔离级别。而未提交读隔离级别总是读取最新的数据行，无需使用MVCC。可串行化隔离级别需要对所有读取的行进行加锁，单纯使用MVCC无法实现。</p>
+<p>实现了对读的非阻塞，读不加锁，读写不冲突。缺点是每行记录都需要额外的存储空间，需要做更多的行维护和检查工作。</p>
+<h4 id="主要存储结构与实现过程："><a href="#主要存储结构与实现过程：" class="headerlink" title="主要存储结构与实现过程："></a>主要存储结构与实现过程：</h4><h5 id="（1）版本号："><a href="#（1）版本号：" class="headerlink" title="（1）版本号："></a>（1）版本号：</h5><p>系统版本号：是一个递增的数字，每开始一个新事物，系统版本号就会自动递增。</p>
+<p>事务版本号：事务开始时的系统版本号。</p>
+<h5 id="（2）隐藏的列"><a href="#（2）隐藏的列" class="headerlink" title="（2）隐藏的列"></a>（2）隐藏的列</h5><p>MVCC在每行记录的后面都保存着两个隐藏的列，用来存储两个版本号：</p>
+<p>创建版本号：指示创建一个数据行的快照时的系统版本号</p>
+<p>删除版本号：如果该快照的删除版本号大于当前事务版本号表示该快照有效，否则表示该快照已经被删除了。</p>
+<h5 id="（3）Undo-日志"><a href="#（3）Undo-日志" class="headerlink" title="（3）Undo 日志"></a>（3）Undo 日志</h5><p>MVCC使用到的快照存储在Undo日志中，该日志通过回滚指针把一个数据行（Record）的所有快照连接起来。</p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/20210511220948.png"></p>
+<h5 id="（4）实现过程"><a href="#（4）实现过程" class="headerlink" title="（4）实现过程"></a>（4）实现过程</h5><p>以下实现过程针对可重复读隔离级别。</p>
+<p><strong>当开始新一个事务时，该事务的版本号肯定会大于当前所有数据行快照的创建版本号。</strong></p>
+<h5 id="SELECT："><a href="#SELECT：" class="headerlink" title="SELECT："></a>SELECT：</h5><p>多个事务必须读取到同一个数据行的快照，并且这个快照是距离现在最近的一个有效快照。但是也有例外，如果一个事务正在修改该数据行，那么它可以读取事务本身所做的修改，而不用和其它事务读取结果一致。</p>
+<p>把没有对一个数据行做的修改的事务称为T，T所要读取的数据行快照的创建版本号必须小于T的版本号，因为如果大于或等于T的版本号，那么表示该数据行快照是其它事务的最新修改，因此不能去读取它。除此之外，T所要读取的数据行快照的删除版本号必须大于T的版本号，因为如果小于或等于T的版本号，那么表示该数据行快照是已经被删除的，不应该去读取它。</p>
+<h5 id="INSERT："><a href="#INSERT：" class="headerlink" title="INSERT："></a>INSERT：</h5><p>将当前系统版本号作为数据行快照的创建版本号。</p>
+<h5 id="DELETE："><a href="#DELETE：" class="headerlink" title="DELETE："></a>DELETE：</h5><p>将当前系统版本号作为数据行快照的删除版本号。</p>
+<h5 id="UPDATA："><a href="#UPDATA：" class="headerlink" title="UPDATA："></a>UPDATA：</h5><p>将当前系统版本号作为更新前的数据行快照的删除版本号，并将当前系统版本号作为更新后的数据行快照创建版本号。可以理解为先执行DELETE后执行INSERT。</p>
+<h2 id="4、B-B-Tree原理、与其他查找树的比较。"><a href="#4、B-B-Tree原理、与其他查找树的比较。" class="headerlink" title="4、B/B+Tree原理、与其他查找树的比较。"></a>4、B/B+Tree原理、与其他查找树的比较。</h2><h3 id="参考博客：MySQL索引底层实现原理"><a href="#参考博客：MySQL索引底层实现原理" class="headerlink" title="参考博客：MySQL索引底层实现原理"></a>参考博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/boothsun/p/8970952.html">MySQL索引底层实现原理</a></h3><p>数据库索引是存储在磁盘上的，当数据量大时，就不能把整个索引全部加载到内存了，只能逐一加载到每一个磁盘页（对应索引树的节点）。所以我们要减少IO次数，对于树来说，IO次数就是树的高度，而“矮胖”就是b树的特征之一。它的每个节点最多只包括m个孩子，m是b树的阶，m的大小取决于磁盘页的大小。</p>
+<h3 id="1、B树"><a href="#1、B树" class="headerlink" title="1、B树"></a>1、B树</h3><p>关键词（包括数据）集合分布在整棵树中；</p>
+<p>任何一个关键词出现且只出现在一个结点中；</p>
+<p>搜索有可能在非叶子节点结束；</p>
+<p>其搜索性能等价于在关键字全集内做一次二分查找。</p>
+<h3 id="2、B-树"><a href="#2、B-树" class="headerlink" title="2、B+树"></a>2、B+树</h3><p>关键词不保存数据，只用来索引，所有数据·都保存在叶子节点（b树是每个关键字都保存数据）</p>
+<p>所有的叶子节点中包括了全部关键字的信息，及指向含这些关键词记录的指针，且叶子节点本身依关键词的大小自小而大顺序连接</p>
+<p>所有的非叶子结点可以看成是索引部分，节点中仅含其子树最大（或最小）关键字。通常在B+树上有两个头指针，一个指向根节点，一个指向关键字最小的叶子节点</p>
+<p>同一个数字会在不同节点中重复出现，根节点的最大元素就是b+树的最大元素。</p>
+<h3 id="3、B-树相比于B树的查询优势："><a href="#3、B-树相比于B树的查询优势：" class="headerlink" title="3、B+树相比于B树的查询优势："></a>3、B+树相比于B树的查询优势：</h3><p>（1）B+树空间利用率更高，可减少I/O次数。</p>
+<p>一般来说，索引本身也很大，不可能全部存储在内存中，因此索引往往以索引文件的形式存储在磁盘上。这样的话，索引查找过程中就要产生磁盘I/O消耗。而因为B+树的内部节点只是作为索引使用，而不像B树那样每个节点都要存储硬盘指针。也就是说：B+树中每个非叶节点没有指向某个关键字具体信息的指针，所以每个节点可以存储更多的关键字数量，即<strong>一次性读入内存的关键字也就越多，减少了I/O操作。</strong></p>
+<p>e.g.假设磁盘中的一个盘块容纳16bytes，而一个关键词2bytes，一个关键词具体信息指针2bytes,一棵九阶B-Tree（一个结点最多8个关键字）的内部节点需要2个盘块，而B+树内部节点只需要1个盘块。当需要把内部节点读入内存时，B树就比B+树多一次盘块查找时间（磁盘中是盘片旋转的时间）。</p>
+<p>（2）赠删文件（节点）时，效率更高。</p>
+<p>因为B+树的叶子节点包含所有关键词，并以有序的链表结构存储，这样可以很好提高赠删效率，基于范围的查询要多。</p>
+<p>（3）B+树的查询效率更加稳定</p>
+<p>因为B+树的每次查询过程中，都需要遍历从根节点和叶子节点的某条路径。所有关键字的查询路径长度相同，导致每一次的查询效率相当。</p>
+<h3 id="4、与红黑树的比较"><a href="#4、与红黑树的比较" class="headerlink" title="4、与红黑树的比较"></a>4、与红黑树的比较</h3><p>红黑树等平衡树也可以用来实现索引，但是文件系统及数据库系统普遍采用B+Tree作为索引结构，主要有以下两个原因：</p>
+<p>（1）更少的查找次数</p>
+<p>平衡树查找操作的时间复杂度和树高h相关，O（h）=O（logd（N）），其中d为每个节点的初度。红黑树的初度为2，而B+树的初度一般都非常大，所以红黑树的树高h很明显比B+树大许多，查找时间也更长。</p>
+<p>（2）利用磁盘预读的特性</p>
+<p>为了减少磁盘I/O操作，磁盘往往不是严格的按需存取，而是每次都会预读。预读过程中，磁盘进行顺序读取，顺序读取不需要进行磁盘寻道，并且只需要很短的旋转时间，速度会非常快。操作系统一般将内存和磁盘分割成固定大小的块，每一块称为一页，内存与磁盘以页为单位交换数据。<strong>数据库系统将索引的一个节点的大小设置为页的大小，使得一次I/O就能完全载入一个节点。</strong>并且可以利用预读特性，相邻节点可以被预先载入。</p>
+<h2 id="5、B-树索引和hash索引的比较。"><a href="#5、B-树索引和hash索引的比较。" class="headerlink" title="5、B+树索引和hash索引的比较。"></a>5、B+树索引和hash索引的比较。</h2><p>B+树索引和哈希索引的明显区别是：</p>
+<ol>
+<li><p>如果是等值查询，那么哈希索引明显有绝对优势，因为只需要经过一次算法即可找到相应的键值，当然了，这个前提是，键值都是唯一的。若键值不是唯一的，就需要先找到该键所在位置，然后再根据链表往后扫描，直到找到相应的数据。</p>
+</li>
+<li><p>如果是范围查询，原先是有序的键值，经过hash算法后，有可能变成不连续的了，就没办法再利用索引完成范围查询检索；同理，哈希索引也没办法利用索引完成排序，以及like ‘xxx%’，这样的部分模糊索引（这种部分模糊查询，其实本质上也是范围查询）;</p>
+</li>
+<li><p>哈希索引也不支持多列联合查询的最左匹配规则。</p>
+</li>
+<li><p>B+树索引的关键字检索效率比较平均，不想B树那样波动幅度大，在有大量重复键值情况下，哈希索引的效率也是极低的，因为存在所谓的哈希碰撞问题。</p>
+</li>
+</ol>
+<h2 id="6、MySQL索引优缺点（逻辑角度看索引-。"><a href="#6、MySQL索引优缺点（逻辑角度看索引-。" class="headerlink" title="6、MySQL索引优缺点（逻辑角度看索引)。"></a>6、MySQL索引优缺点（逻辑角度看索引)。</h2><h3 id="一、什么是索引？"><a href="#一、什么是索引？" class="headerlink" title="一、什么是索引？"></a><strong>一、什么是索引？</strong></h3><p>　　索引是对数据库表中的一列或多列值进行排序的一种结构，使用索引可以快速访问数据库表中的特定信息。</p>
+<h3 id="二、索引的作用？"><a href="#二、索引的作用？" class="headerlink" title="二、索引的作用？"></a><strong>二、索引的作用？</strong></h3><p>　　索引相当于图书上的目录，可以根据目录上的页码快速找到所需的内容，提高性能（查询速度）</p>
+<h3 id="三、优点："><a href="#三、优点：" class="headerlink" title="三、优点："></a><strong>三、优点：</strong></h3><ol>
+<li>通过创建唯一性索引，可以保证数据库表中的每一行数据的唯一性。</li>
+<li>可以加快数据的检索速度</li>
+<li>可以加速表与表之间的连接</li>
+<li>在使用分组和排序进行检索的时候，可以减少查询中分组和排序的时间</li>
+</ol>
+<h3 id="四、缺点"><a href="#四、缺点" class="headerlink" title="四、缺点"></a><strong>四、缺点</strong></h3><ol>
+<li>创建索引和维护索引要耗费时间，这种时间随着数据量的增加而增加。</li>
+<li>索引需要占用物理空间，数据量越大，占用空间越大</li>
+<li>会降低表的增删改的效率，因为每次增删改索引，都需要进行动态维护</li>
+</ol>
+<h3 id="五、什么时候需要创建索引"><a href="#五、什么时候需要创建索引" class="headerlink" title="五、什么时候需要创建索引"></a><strong>五、什么时候需要创建索引</strong></h3><ol>
+<li> 主键自动建立唯一索引</li>
+<li> 频繁作为查询条件的字段应该创建索引</li>
+<li> 查询中排序的字段创建索引将大大提高排序的速度（索引就是排序加快速查找</li>
+<li> 查询中统计或者分组的字段；</li>
+</ol>
+<h3 id="六、什么时候不需要创建索引"><a href="#六、什么时候不需要创建索引" class="headerlink" title="六、什么时候不需要创建索引"></a><strong>六、什么时候不需要创建索引</strong></h3><ol>
+<li>频繁更新的字段不适合创建索引，因为每次更新不单单是更新记录，还会更新索引，保存索引文件</li>
+<li>where条件里用不到的字段，不创建索引；</li>
+<li>表记录太少，不需要创建索引；</li>
+<li>经常增删改的表；</li>
+<li>数据重复且分布平均的字段，因此为经常查询的和经常排序的字段建立索引。注意某些数据包含大量重复数据，因此他建立索引就没有太大的效果，例如性别字段，只有男女，不适合建立索引。</li>
+</ol>
+<h3 id="七、索引的分类："><a href="#七、索引的分类：" class="headerlink" title="七、索引的分类："></a><strong>七、索引的分类：</strong></h3><ol>
+<li>普通索引：最基本的索引，它没有任何限制</li>
+<li>唯一索引：索引列的值必须唯一，且不能为空，如果是组合索引，则列值的组合必须唯一。</li>
+<li>主键索引：特殊的索引，唯一的标识一条记录，不能为空，一般用primary key来约束。</li>
+<li>联合索引：在多个字段上建立索引，能够加速查询到速度</li>
+</ol>
+<p> <strong>八、索引和sql语句的优化</strong></p>
+<p><strong>1、前导模糊查询不能使用索引，</strong></p>
+<p>　　如name like ‘%静’</p>
+<p><strong>2、Union、in、or可以命中索引，建议使用in</strong></p>
+<p><strong>3、负条件查询不能使用索引，可以优化为in查询，</strong></p>
+<p>　　其中负条件有！=、&lt;&gt;、not in、not exists、not like等</p>
+<p><strong>4、联合索引最左前缀原则，又叫最左侧查询，</strong></p>
+<p>　　如果在（a，b，c）三个字段上建立联合索引，那么它能够加快a|（a，b）|（a，b，c）三组的查询速度。 </p>
+<p><strong>5、建立联合查询时，区分度最高的字段在最左边</strong></p>
+<p><strong>6、如果建立了（a，b）联合索引，就不必再单独建立a索引。</strong></p>
+<p>　　同理，如果建立了（a，b，c）索引就不必再建立a，（a，b）索引</p>
+<p><strong>7、存在非等号和等号混合判断条件时，在建索引时，要把等号条件的列前置</strong></p>
+<p><strong>8、范围列可以用到索引，但是范围列后面的列无法用到索引。</strong></p>
+<p>　　索引最多用于一个范围列，如果查询条件中有两个范围列则无法全用到索引。范围条件有：&lt;、&lt;=、&gt;、&gt;=、between等。</p>
+<p><strong>9、把计算放到业务层而不是数据库层。</strong></p>
+<p>　　在字段上计算不能命中索引，</p>
+<p><strong>10、强制类型转换会全表扫描，</strong></p>
+<p>　　如果phone字段是varcher类型，则下面的SQL不能命中索引。Select * fromuser where phone=13800001234</p>
+<p><strong>11、更新十分频繁、数据区分度不高的字段上不宜建立索引。</strong></p>
+<p>　　更新会变更B+树，更新频繁的字段建立索引会大大降低数据库性能。</p>
+<p>　　“性别”这种区分度不太大的属性，建立索引是没有什么意义的，不能有效过滤数据，性能与全表扫描类似。</p>
+<p>　　一般区分度在80%以上就可以建立索引。区分度可以使用count（distinct（列名））/count（*）来计算。</p>
+<p><strong>12、利用覆盖索引来进行查询操作，避免回表。</strong></p>
+<p>　　被查询的列，数据能从索引中取得，而不是通过定位符row-locator再到row上获取，即“被查询列要被所建的索引覆盖”，这能够加速度查询。</p>
+<p><strong>13、建立索引的列不能为null，使用not null约束及默认值</strong></p>
+<p><strong>14、利用延迟关联或者子查询优化超多分页场景，</strong></p>
+<p>　　MySQL并不是跳过offset行，而是取offset+N行，然后放弃前offset行，返回N行，那当offset特别大的时候，效率非常低下，要么控制返回的总数，要么对超过特定阈值的页进行SQL改写。</p>
+<p><strong>15、业务上唯一特性的字段，即使是多个字段的组合，也必须建成唯一索引。</strong></p>
+<p><strong>16、超过三个表最好不要用join，</strong></p>
+<p>　　需要join的字段，数据类型必须一致，多表关联查询时，保证被关联的字段需要有索引。</p>
+<p><strong>17、如果明确知道查询结果只要一条，limit 1能够提高效率，比如验证登录的时候。</strong></p>
+<p><strong>18、Select语句务必指明字段名称</strong></p>
+<p><strong>19、如果排序字段没有用到索引，就尽量少排序</strong></p>
+<p><strong>20、尽量用union all 代替 union。</strong></p>
+<p>　　Union需要将集合合并后在进行唯一性过滤操作，这会涉及到排序，大量的cpu运算，加大资源消耗及延迟，当然，使用union all的前提条件是两个结果集没有重复数据。</p>
+<p><strong>21、使用合理的分页提高效率。</strong></p>
+<p>　　select id,name from product limit 866613, 20</p>
+<p>使用上述SQL语句做分页的时候，可能有人会发现，随着表数据量的增加，直接使用limit分页查询会越来越慢。</p>
+<p>优化的方法如下：</p>
+<p>可以取前一页的最大行数的id，然后根据这个最大的id来限制下一页的起点。</p>
+<p>比如此列中，上一页最大的id是866612。</p>
+<p>SQL可以采用如下的写法：select id,name from product where id&gt; 866612 limit 20。</p>
+<h2 id="7、MYSQL优化"><a href="#7、MYSQL优化" class="headerlink" title="7、MYSQL优化"></a>7、MYSQL优化</h2><h3 id="1、索引优化"><a href="#1、索引优化" class="headerlink" title="1、索引优化"></a>1、索引优化</h3><h4 id="1-建立聚集索引"><a href="#1-建立聚集索引" class="headerlink" title="(1)建立聚集索引"></a>(1)建立聚集索引</h4><p>首先聚合索引是提升查询速度的最有效的手段。基于聚合索引的性质，我们可以了解到，数据库的物理存储顺序是按照聚合索引顺序排列的，而通过聚合索引的B+树，我们可以迅速的查找到任何一行的全部信息。</p>
+<h4 id="2-常查询数据建立索引或者组合索引"><a href="#2-常查询数据建立索引或者组合索引" class="headerlink" title="(2)常查询数据建立索引或者组合索引"></a>(2)常查询数据建立索引或者组合索引</h4><h4 id="3-最左前缀原则"><a href="#3-最左前缀原则" class="headerlink" title="(3)最左前缀原则"></a>(3)最左前缀原则</h4><p>建立组合索引优化查询语句时，一定要考虑到最左前缀原则，否则索引建立无意义。</p>
+<h4 id="4-较长的数据列建立前缀索引"><a href="#4-较长的数据列建立前缀索引" class="headerlink" title="(4)较长的数据列建立前缀索引"></a>(4)较长的数据列建立前缀索引</h4><h4 id="5-不要建立无意义的索引"><a href="#5-不要建立无意义的索引" class="headerlink" title="(5)不要建立无意义的索引"></a>(5)不要建立无意义的索引</h4><p>对于·查询次数很少的语句中的字段的索引、备注描述和大字段的索引等。</p>
+<h3 id="2、查询优化"><a href="#2、查询优化" class="headerlink" title="2、查询优化"></a>2、查询优化</h3><h4 id="（1）使用Explain进行分析"><a href="#（1）使用Explain进行分析" class="headerlink" title="（1）使用Explain进行分析"></a>（1）使用Explain进行分析</h4><p>Explain用来分析SELECT查询语句，开发人员可以通过分析·Explain结果来优化查询语句。比较重要的字段是：</p>
+<p>select_type:查询类型，有简单查询，联合查询，子查询等。</p>
+<p>key：使用的索引</p>
+<p>rows:扫描的行数</p>
+<h4 id="（2）优化数据访问"><a href="#（2）优化数据访问" class="headerlink" title="（2）优化数据访问"></a>（2）优化数据访问</h4><h5 id="1）减少请求的数据量"><a href="#1）减少请求的数据量" class="headerlink" title="1）减少请求的数据量"></a>1）减少请求的数据量</h5><p>只返回必要的列：最好不要使用SELECT查询语句</p>
+<p>只返回必要的行：使用LIMIT语句来限制返回的数据</p>
+<p>缓存重复查询的数据：使用缓存可以避免在数据库中进行查询，特别在要查询的数据经常被重复查询时，缓存带来的查询性能提升将会非常明显。</p>
+<h5 id="2-减少服务端的扫描的行数"><a href="#2-减少服务端的扫描的行数" class="headerlink" title="2) 减少服务端的扫描的行数"></a>2) 减少服务端的扫描的行数</h5><p>最有效的方式是使用索引来覆盖查询。</p>
+<h4 id="3-重构查询方式。"><a href="#3-重构查询方式。" class="headerlink" title="(3)重构查询方式。"></a>(3)重构查询方式。</h4><h5 id="1-切分大查询"><a href="#1-切分大查询" class="headerlink" title="1)切分大查询"></a>1)切分大查询</h5><p>一个大查询如果一次性执行的话，可能一次锁住很多数据，占满整个事务日志、耗尽系统资源、阻塞很多小的但重要的查询。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> messages <span class="keyword">WHERE</span> <span class="keyword">create</span><span class="operator">&lt;</span>DATE_SUB(NOW(),<span class="type">INTERVAL</span> <span class="number">3</span> <span class="keyword">MONTH</span>);</span><br><span class="line">rows_affected<span class="operator">=</span><span class="number">0</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>分解查询</span><br><span class="line">do&#123;</span><br><span class="line">	rows_affected<span class="operator">=</span>do_query(</span><br><span class="line">		&quot;DELETE FROM messages WHERE create &lt;DATE_SUB(NOW(),INTERVAL 3 MONTH) LIMIT 10000&quot;</span><br><span class="line">	)</span><br><span class="line">&#125;while rows_affected&gt;0;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-分解大连接查询"><a href="#2-分解大连接查询" class="headerlink" title="2)分解大连接查询"></a>2)分解大连接查询</h5><p>将一个大连接查询分解成对每一个表进行一次单表查询，然后在应用程序中进行关联，好处有：</p>
+<p>1.让缓存更高效。对于连接查询，如果其中一个表发生变化，那么整个查询缓存就无法使用。而分解后的多个查询，即使其中一个表发生变化，对其他表的查询缓存依然可以使用。分解成多个单表查询，这些单表查询的缓存就更可能被其它查询使用到，从而减少冗余记录的查询。</p>
+<h2 id="8、MySQL存储引擎MyISAM与InnoDB区别"><a href="#8、MySQL存储引擎MyISAM与InnoDB区别" class="headerlink" title="8、MySQL存储引擎MyISAM与InnoDB区别"></a>8、MySQL存储引擎MyISAM与InnoDB区别</h2><h3 id="存储引擎Storage-engine："><a href="#存储引擎Storage-engine：" class="headerlink" title="存储引擎Storage engine："></a>存储引擎Storage engine：</h3><p>MySQL中的数据、·索引以及其他对象是如何存储的，是一套文件系统的实现。</p>
+<h3 id="常用的存储引擎有以下："><a href="#常用的存储引擎有以下：" class="headerlink" title="常用的存储引擎有以下："></a>常用的存储引擎有以下：</h3><ul>
+<li>Innodb引擎：Innodb引擎提供了对数据库ACID事务的支持。并且还提供了行级锁和外键的约束。它的设计的目标就是处理大数据容量的数据库系统。</li>
+<li>MyIASM引擎(原本Mysql的默认引擎)：不提供事务的支持，也不支持行级锁和外键。</li>
+<li>MEMORY引擎：所有的数据都在内存中，数据的处理速度快，但是安全性不高。<br>MyISAM与InnoDB区别</li>
+</ul>
+<h3 id="MyISAM索引与InnoDB索引的区别？"><a href="#MyISAM索引与InnoDB索引的区别？" class="headerlink" title="MyISAM索引与InnoDB索引的区别？"></a>MyISAM索引与InnoDB索引的区别？</h3><p>​        </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">MyISAM</th>
+<th align="center">InnoDB</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>存储结构</td>
+<td align="center">每张表被存放在三个文件：frm-表格定义、MYD(MYData)-数据文件、MYI(MYIndex)-索引文件</td>
+<td align="center">每张表被存放在三个文件：frm-表格定义、MYD(MYData)-数据文件、MYI(MYIndex)-索引文件</td>
+</tr>
+<tr>
+<td>存储空间</td>
+<td align="center">MyISAM可被压缩，存储空间较小</td>
+<td align="center">InnoDB的表需要更多的内存和存储，它会在主内存中建立其专用的缓冲池用于高速缓冲数据和索引</td>
+</tr>
+<tr>
+<td>可移植性、备份及恢复</td>
+<td align="center">由于MyISAM的数据是以文件的形式存储，所以在跨平台的数据转移中会很方便。在备份和恢复时可单独针对某个表进行操作</td>
+<td align="center">免费的方案可以是拷贝数据文件、备份 binlog，或者用 mysqldump，在数据量达到几十G的时候就相对痛苦了</td>
+</tr>
+<tr>
+<td>文件格式</td>
+<td align="center">数据和索引是分别存储的，数据<code>.MYD</code>，索引<code>.MYI</code></td>
+<td align="center">数据和索引是集中存储的，<code>.ibd</code></td>
+</tr>
+<tr>
+<td>记录存储顺序</td>
+<td align="center">按记录插入顺序保存</td>
+<td align="center">按主键大小有序插入</td>
+</tr>
+<tr>
+<td>外键</td>
+<td align="center">不支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td>事务</td>
+<td align="center">不支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td>锁支持（锁是避免资源争用的一个机制，MySQL锁对用户几乎是透明的）</td>
+<td align="center">表级锁定</td>
+<td align="center">行级锁定、表级锁定，锁定力度小并发能力高</td>
+</tr>
+<tr>
+<td>SELECT</td>
+<td align="center">MyISAM更优</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>INSERT、UPDATE、DELETE</td>
+<td align="center"></td>
+<td align="center">InnoDB更优</td>
+</tr>
+<tr>
+<td>select count(*)</td>
+<td align="center">myisam更快，因为myisam内部维护了一个计数器，可以直接调取。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>索引的实现方式</td>
+<td align="center">B+树索引，myisam 是堆表</td>
+<td align="center">B+树索引，Innodb 是索引组织表</td>
+</tr>
+<tr>
+<td>哈希索引</td>
+<td align="center">不支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td>全文索引</td>
+<td align="center">支持</td>
+<td align="center">不支持</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>MyISAM是非事务安全的，而InnoDB是事务安全的。</p>
+</li>
+<li><p>MyISAM锁的粒度是表级的，而·InnoDB支持行级锁。</p>
+</li>
+<li><p>MyISAM支持全文类型索引，而InnoDB不支持全文索引。</p>
+</li>
+<li><p>MyISAM相对简单，效率上要优于InnoDB，小型应用可以考虑使用MyISAM。</p>
+</li>
+<li><p>MyISAM表保存成文件形式，跨平台使用更加方便。</p>
+</li>
+<li><p>MyISAM管理非事务表，提供高速存储和检索以及全文搜索能力，如果在应用中执行大量select操作，可选择。而InnoDB用于事务处理，具有ACID事务支持等特性，如果在应用中执行大量insert和update操作，可选择。</p>
+</li>
+<li><p>InnoDB支持外键（从A表一个列（外键）去检索B表的主键）</p>
+</li>
+<li><p>MyISAM一般是非聚集索引，InnoDB是聚集索引。</p>
+</li>
+</ol>
+<ul>
+<li>InnoDB的主键索引的叶子节点存储着行数据，因此主键索引非常高效。</li>
+<li>MyISAM索引的叶子节点存储的是行数据地址，需要再寻址一次才能得到数据。</li>
+<li>InnoDB非主键索引的叶子节点存储的是主键和其他带索引的列数据，因此查询时做到覆盖索引会非常高效。</li>
+</ul>
+<h3 id="InnoDB引擎的4大特性"><a href="#InnoDB引擎的4大特性" class="headerlink" title="InnoDB引擎的4大特性"></a>InnoDB引擎的4大特性</h3><ol>
+<li><p>插入缓冲（insert buffer)</p>
+</li>
+<li><p>二次写(double write)</p>
+</li>
+<li><p>自适应哈希索引(ahi)</p>
+</li>
+<li><p>预读(read ahead)</p>
+</li>
+</ol>
+<h3 id="存储引擎选择："><a href="#存储引擎选择：" class="headerlink" title="存储引擎选择："></a>存储引擎选择：</h3><p>​        如果没有特别的需求，使用默认的Innodb即可。</p>
+<p>MyISAM：以读写插入为主的应用程序，比如博客系统、新闻门户网站。</p>
+<p>Innodb：更新（删除）操作频率也高，或者要保证数据的完整性；并发量高，支持事务和外键。比如OA自动化办公系统。</p>
+<h2 id="9、聚集索引和非聚集索引（从物理角度分析索引）"><a href="#9、聚集索引和非聚集索引（从物理角度分析索引）" class="headerlink" title="9、聚集索引和非聚集索引（从物理角度分析索引）"></a>9、聚集索引和非聚集索引（从物理角度分析索引）</h2><p>innoDB中索引的组织形式是B+树，非叶子结点存key，叶子节点存key+data，叶子节点之间用指针联通。</p>
+<p>聚集索引：data存放是数据页。</p>
+<p>非聚集索引：data中存放的是主键的值，得到主键后还需要在聚集索引上再查询一次，在效率方面最好使用聚集索引，并给表设定唯一的主键。在数据索引存储有序情况下，可以大大提高效率。 ？？？</p>
+<h2 id="10、水平切分和垂直切分"><a href="#10、水平切分和垂直切分" class="headerlink" title="10、水平切分和垂直切分"></a>10、水平切分和垂直切分</h2><p>水平切分又称为Sharding，它是将同一个表中的记录拆分到多个结构的表中。</p>
+<p>垂直切分是将一张表按列切分为多个表，通常是按照列的关系密集程度进行切分，也可以·利用垂直切分将京城被使用的列和不经常使用的列切分多不同的表中。</p>
+<p>Sharding(切分)存在的问题</p>
+<p>（1）事务问题</p>
+<p>使用分布式事务来解决，比如XA接口。</p>
+<p>（2）连接</p>
+<p>可以将原来的连接分解成多个单表查询，然后在用户程序中进行了解。</p>
+<p>（3）ID唯一性</p>
+<p>使用全局唯一ID（GUID);为每个分片指定一个ID范围；分布式ID生成器（如Twitter的SnowFlake算法）。</p>
+<h2 id="11、主从复制原理、作用、实现。☆"><a href="#11、主从复制原理、作用、实现。☆" class="headerlink" title="11、主从复制原理、作用、实现。☆"></a>11、主从复制原理、作用、实现。☆</h2><h3 id="1、主从复制："><a href="#1、主从复制：" class="headerlink" title="1、主从复制："></a>1、主从复制：</h3><p>  Mysql内建的复制功能是构建大型，高性能应用程序的基础。将Mysql的数据分布到多个系统上去，这种分布的机制，是通过将Mysql的某一台主机的数据复制到其它主机（slaves）上，并重新执行一遍来实现的。复制过程中一个服务器充当主服务器，而一个或多个其它服务器充当从服务器。主服务器将更新写入二进制日志文件，并维护文件的一个索引以跟踪日志循环。这些日志可以记录发送到从服务器的更新。当一个从服务器连接主服务器时，它通知主服务器从服务器在日志中读取的最后一次成功更新的位置。从服务器接收从那时起发生的任何更新，然后封锁并等待主服务器通知新的更新。</p>
+<p>请注意当你进行复制时，所有对复制中的表的更新必须在主服务器上进行。否则，你必须要小心，以避免用户对主服务器上的表进行的更新与对从服务器上的表所进行的更新之间的冲突。</p>
+<h4 id="1-1-mysql支持的复制类型："><a href="#1-1-mysql支持的复制类型：" class="headerlink" title="1.1 mysql支持的复制类型："></a>1.1 mysql支持的复制类型：</h4><p>　　（１）：基于语句的复制：  在主服务器上执行的SQL语句，在从服务器上执行同样的语句。MySQL默认采用基于语句的复制，效率比较高。<br>            一旦发现没法精确复制时，   会自动选着基于行的复制。<br>　　（２）：基于行的复制：把改变的内容复制过去，而不是把命令在从服务器上执行一遍. 从mysql5.0开始支持<br>　　（３）：混合类型的复制: 默认采用基于语句的复制，一旦发现基于语句的无法精确的复制时，就会采用基于行的复制。</p>
+<h4 id="1-2-复制解决的问题"><a href="#1-2-复制解决的问题" class="headerlink" title="1.2 . 复制解决的问题"></a>1.2 . 复制解决的问题</h4><p>​         MySQL复制技术有以下一些特点：<br>​         (1)    数据分布 (Data distribution )<br>​         (2)    负载平衡(load balancing)<br>​         (3)    备份(Backups)<br>​         (4)    高可用性和容错行 High availability and failover </p>
+<h4 id="1-3-复制如何工作"><a href="#1-3-复制如何工作" class="headerlink" title="1.3 复制如何工作"></a>1.3 复制如何工作</h4><p>​        整体上来说，复制有3个步骤：   </p>
+<ol>
+<li>master将改变记录到二进制日志(binary log)中（这些记录叫做二进制日志事件，binary log events）；</li>
+<li>slave将master的binary log events拷贝到它的中继日志(relay log)；</li>
+<li>slave重做中继日志中的事件，将改变反映到它自己的数据。</li>
+</ol>
+<p>下图描述了复制的过程：</p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/aHR0cDovL2hpLmNzZG4ubmV0L2F0dGFjaG1lbnQvMjAxMjAyLzI4LzBfMTMzMDQzOTAxMFA3bEkuZ2lm" alt="img"></p>
+<p>​                    </p>
+<p>​    该过程的第一部分就是master记录二进制日志。在每个事务更新数据完成之前，master在二日志记录这些改变。MySQL将事务串行的写入二进制日志，即使事务中的语句都是交叉执行的。在事件写入二进制日志完成后，master通知存储引擎提交事务。</p>
+<p>   下一步就是slave将master的binary log拷贝到它自己的中继日志。首先，slave开始一个工作线程——I/O线程。I/O线程在master上打开一个普通的连接，然后开始binlog dump process。Binlog dump process从master的二进制日志中读取事件，如果已经跟上master，它会睡眠并等待master产生新的事件。I/O线程将这些事件写入中继日志。<br>    SQL slave thread（SQL从线程）处理该过程的最后一步。SQL线程从中继日志读取事件，并重放其中的事件而更新slave的数据，使其与master中的数据一致。只要该线程与I/O线程保持一致，中继日志通常会位于OS的缓存中，所以中继日志的开销很小。<br>    此外，在master中也有一个工作线程：和其它MySQL的连接一样，slave在master中打开一个连接也会使得master开始一个线程。复制过程有一个很重要的限制——复制在slave上是串行化的，也就是说master上的并行更新操作不能在slave上并行操作。</p>
+<h3 id="2、读写分离："><a href="#2、读写分离：" class="headerlink" title="2、读写分离："></a>2、读写分离：</h3><p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210511221448551.png" alt="image-20210511221448551"></p>
+<h2 id="12、数据库中char和varchar的区别："><a href="#12、数据库中char和varchar的区别：" class="headerlink" title="12、数据库中char和varchar的区别："></a>12、数据库中char和varchar的区别：</h2><p>（1）CHAR的长度是固定的，（不足补空格）而VARCHAR2的长度是可以变化的。</p>
+<p>（2）CHAR的效率比VARCHAR2的效率更高，但是VARCHAR更加节省空间。</p>
+<h2 id="13、数据库的热备份和冷备份。"><a href="#13、数据库的热备份和冷备份。" class="headerlink" title="13、数据库的热备份和冷备份。"></a>13、数据库的热备份和冷备份。</h2><h3 id="1、冷备份："><a href="#1、冷备份：" class="headerlink" title="1、冷备份："></a>1、冷备份：</h3><p>冷备份发生在数据库已经正常关闭的情况下，当正常关闭时会提供给我们一个完整的数据库。冷备份是将关系型文件拷贝到另外位置的一种说法。对于备份数据库信息而言，冷备份是最快和最安全的方法。</p>
+<h4 id="冷备份的优点："><a href="#冷备份的优点：" class="headerlink" title="冷备份的优点："></a>冷备份的优点：</h4><p>（1）是非常快速的备份方法（只需拷贝文件）</p>
+<p>（2）容易归档（简单拷贝即可）</p>
+<p>（3）容易恢复到某个时间点上（只需将文件在拷贝回去）</p>
+<p>（4）能与归档方法相结合，作数据库“最新状态”的恢复。</p>
+<p>（5）低度维护，高度安全。</p>
+<h4 id="冷备份的缺点："><a href="#冷备份的缺点：" class="headerlink" title="冷备份的缺点："></a>冷备份的缺点：</h4><p>（1）  单独使用时，只能提供到“某一个时间点上”的恢复。</p>
+<p>（2）在实施备份的全过程中，数据库必须要做备份而且不能做其它工作。也就是说，再冷备份过程中，数据库必须是“关闭”状态。</p>
+<p>（3）若磁盘空间有限，只能拷贝到磁带等其它外部存储设备上，速度会很慢。</p>
+<p>（4）不能按表或按用户恢复。</p>
+<h3 id="2、热备份（快）"><a href="#2、热备份（快）" class="headerlink" title="2、热备份（快）"></a>2、热备份（快）</h3><p>热备份是在数据库运行的情况下，备份数据库操作的sql语句，当数据库发生问题时，可以重新执行一遍备份的sql语句。</p>
+<h4 id="热备份的优点："><a href="#热备份的优点：" class="headerlink" title="热备份的优点："></a>热备份的优点：</h4><ol>
+<li><p>可以在表空间或者数据文件级进行备份，备份时间短</p>
+</li>
+<li><p>备份时数据库仍可使用。</p>
+</li>
+<li><p>可以达到秒集恢复（恢复到某一时间点上）。</p>
+</li>
+<li><p>可以对几乎所有数据库实体做恢复。</p>
+</li>
+<li><p>恢复是快速的，在大多数情况下在数据库仍工作时恢复。</p>
+</li>
+</ol>
+<h4 id="热备份的缺点"><a href="#热备份的缺点" class="headerlink" title="热备份的缺点:"></a>热备份的缺点:</h4><ol>
+<li><p>不能出错，否则后果严重。</p>
+</li>
+<li><p>若热备份不成功，所得结果不可用于时间点的恢复。</p>
+</li>
+<li><p>因难于维护，所以要特别仔细小心，不允许“以失败而告终”。</p>
+</li>
+</ol>
+<h2 id="14、数据库视图和存储过程。"><a href="#14、数据库视图和存储过程。" class="headerlink" title="14、数据库视图和存储过程。"></a>14、数据库视图和存储过程。</h2><h3 id="一、视图"><a href="#一、视图" class="headerlink" title="一、视图"></a>一、视图</h3><p><strong>视图是虚拟的表，它只包含使用时动态检索数据的查询。</strong></p>
+<h4 id="1、使用视图的好处"><a href="#1、使用视图的好处" class="headerlink" title="1、使用视图的好处"></a>1、使用视图的好处</h4><ol>
+<li><p>重用sql语句</p>
+</li>
+<li><p>简化复杂的SQL操作（可以方便的重用它而不必知道它的基本查询细节）</p>
+</li>
+<li><p>使用表的组成成分而不是整个表。</p>
+</li>
+<li><p>保护数据（可以给用户授予表的部分访问权限而不是整个表的访问权限）</p>
+</li>
+<li><p>更改数据格式和表示（视图可返回与底层表的表示和格式不同的数据）</p>
+</li>
+</ol>
+<p>PS：因为视图不包含数据，所以每次使用视图，都必须处理执行所需的任何一个检索，如果使用了多个联结和过滤创建了复杂的视图或嵌套视图，那么性能下降比较明显。</p>
+<h4 id="2、视图的规则和限制："><a href="#2、视图的规则和限制：" class="headerlink" title="2、视图的规则和限制："></a>2、视图的规则和限制：</h4><ol>
+<li>视图必须唯一命名（视图与别的视图或表不能有相同的名字）</li>
+<li>创建的视图数目没有限制</li>
+<li>为了创建视图，必须有足够的访问权限。</li>
+<li>视图可以嵌套</li>
+<li>order by 也可以用于视图，但如果该视图中的检索数据的select语句包含Order by ，那么该视图中的order by 将被覆盖</li>
+<li>视图不能索引，也不能有关联的触发器或默认器</li>
+<li>视图可以和表一起使用。</li>
+</ol>
+<h4 id="3、使用视图"><a href="#3、使用视图" class="headerlink" title="3、使用视图"></a>3、使用视图</h4><p>create view：创建视图。</p>
+<p>show create view viewname：查看创建视图的语句。</p>
+<p>drop view viewname：删除视图。</p>
+<h3 id="二、存储过程"><a href="#二、存储过程" class="headerlink" title="二、存储过程"></a>二、存储过程</h3><p>定义：为方便以后使用而保存的一条或者多条MySQL语句的集合，可将其视为批文件（虽然其作用不仅限于批处理）</p>
+<h4 id="1、为什么要使用存储过程（简单，安全，高性能）"><a href="#1、为什么要使用存储过程（简单，安全，高性能）" class="headerlink" title="1、为什么要使用存储过程（简单，安全，高性能）"></a>1、为什么要使用存储过程（简单，安全，高性能）</h4><ol>
+<li>通过把处理封装在容易使用的单元中，简化复杂的操作。</li>
+<li>不要求建立一些列处理步骤，保证了数据的完整性。</li>
+<li>简化对变动的管理。（如果列名，表名或业务逻辑变更，只需要改动存储过程的代码），这一点的延伸就是安全性。</li>
+<li>提高性能（使用存储过程比使用单独的SQL语句要快）</li>
+</ol>
+<h2 id="15、数据库操作（加索引、加锁）"><a href="#15、数据库操作（加索引、加锁）" class="headerlink" title="15、数据库操作（加索引、加锁）"></a>15、数据库操作（加索引、加锁）</h2><h3 id="mysql数据库索引类型和原理"><a href="#mysql数据库索引类型和原理" class="headerlink" title="mysql数据库索引类型和原理"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/owenma/p/8575646.html">mysql数据库索引类型和原理</a></h3><h3 id="1、MYSQL索引："><a href="#1、MYSQL索引：" class="headerlink" title="1、MYSQL索引："></a>1、MYSQL索引：</h3><p>索引是一种特殊的文件(InnoDB数据表上的索引是表空间的一个组成部分)，它们包含着对数据表里所有记录的引用指针。更通俗的说，数据库索引好比是一本书前面的目录，能加快数据库的查询速度。上述SQL语句，在没有索引的情况下，数据库会遍历全部200条数据后选择符合条件的；而有了相应的索引之后，数据库会直接在索引中查找符合条件的选项。如果我们把SQL语句换成“SELECT * FROM article WHERE id=2000000”，那么你是希望数据库按照顺序读取完200万行数据以后给你结果还是直接在索引中定位呢？上面的两个图片鲜明的用时对比已经给出了答案（注：一般数据库默认都会为主键生成索引）。</p>
+<p>索引分为聚簇索引和非聚簇索引两种，聚簇索引是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了；聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。</p>
+<h3 id="2、MYSQL索引的类型："><a href="#2、MYSQL索引的类型：" class="headerlink" title="2、MYSQL索引的类型："></a>2、MYSQL索引的类型：</h3><h4 id="1-普通索引"><a href="#1-普通索引" class="headerlink" title="1. 普通索引"></a>1. 普通索引</h4><p>这是最基本的索引，它没有任何限制，比如上文中为title字段创建的索引就是一个普通索引，MyIASM中默认的BTREE类型的索引，也是我们大多数情况下用到的索引。</p>
+<h4 id="2-唯一索引"><a href="#2-唯一索引" class="headerlink" title="2. 唯一索引"></a>2. 唯一索引</h4><p>与普通索引类似，不同的就是：索引列的值必须唯一，但允许有空值（注意和主键不同）。如果是组合索引，则列值的组合必须唯一，创建方法和普通索引类似。</p>
+<h4 id="3-全文索引（FULLTEXT）"><a href="#3-全文索引（FULLTEXT）" class="headerlink" title="3. 全文索引（FULLTEXT）"></a>3. 全文索引（FULLTEXT）</h4><p>MySQL从3.23.23版开始支持全文索引和全文检索，FULLTEXT索引仅可用于 MyISAM 表；他们可以从CHAR、VARCHAR或TEXT列中作为CREATE TABLE语句的一部分被创建，或是随后使用ALTER TABLE 或CREATE INDEX被添加。////对于较大的数据集，将你的资料输入一个没有FULLTEXT索引的表中，然后创建索引，其速度比把资料输入现有FULLTEXT索引的速度更为快。不过切记对于大容量的数据表，生成全文索引是一个非常消耗时间非常消耗硬盘空间的做法。</p>
+<p>工作原理：（关键词）</p>
+<p>1、索引程序从数据库读取数据，比如上面例子中的数据表，索引程序通过sql语句：select 文章id,文章标题，文章内容 from 文章表.获得文章的相关数据</p>
+<p>2、索引程序对需要索引的内容进行“分词”，而这里的分词就是调用分词程序啦！</p>
+<p>3、索引程序对分好词的一个个词条加入索引文件。</p>
+<p>在你写的代码里，原来到数据库－－－－like %xxx%－－－－－的语句</p>
+<p>就变成了到索引文件里去查找，从而找到相应的数据(这点相信你已经理解啦！)</p>
+<h4 id="4-空间索引"><a href="#4-空间索引" class="headerlink" title="4.空间索引"></a>4.空间索引</h4><p>在涉及LBS的服务开发过程中，经常需要存储地理空间的位置并进行一定计算(附近商家等需求)，本文主要介绍mysql对于LBS的支持。</p>
+<p>Mysql的空间扩展主要提供一下几个方面的功能：</p>
+<p>表示空间数值的数据类型</p>
+<p>操作空间数值的函数</p>
+<p>空间索引，用于提供访问空间列的速度</p>
+<p>其中前两点对InnoDB，MyISAM，NDB，ARCHIVE等mysql存储引擎都支持，第三点只有对InnoDB和MyISAM的支持，由于InnoDB的支持行锁以及事务的特性，现在基本上已经是默认存储引擎了，所以本文以下内容都默认使用InnoDB。</p>
+<h4 id="5-组合索引-多列索引-（最左前缀）"><a href="#5-组合索引-多列索引-（最左前缀）" class="headerlink" title="5.组合索引(多列索引)（最左前缀）"></a>5.组合索引(多列索引)（最左前缀）</h4><p>多个单列索引与单个多列索引的查询效果不同，因为执行查询时，MySQL只能使用一个索引，会从多个索引中选择一个限制最为严格的索引。</p>
+<p>平时用的SQL查询语句一般都有比较多的限制条件，所以为了进一步榨取MySQL的效率，就要考虑建立组合索引。例如上表中针对title和time建立一个组合索引：ALTER TABLE article ADD INDEX index_titme_time (title(50),time(10))。建立这样的组合索引，其实是相当于分别建立了下面两组组合索引：</p>
+<p>–title,time</p>
+<p>–title</p>
+<p>为什么没有time这样的组合索引呢？这是因为MySQL组合索引“最左前缀”的结果。简单的理解就是只从最左面的开始组合。并不是只要包含这两列的查询都会用到该组合索引，如下面的几个SQL所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">–使用到上面的索引</span><br><span class="line">SELECT * FROM article WHREE title&#x3D;&#39;测试&#39; AND time&#x3D;1234567890;</span><br><span class="line">SELECT * FROM article WHREE title&#x3D;&#39;测试&#39;;</span><br><span class="line">–不使用上面的索引</span><br><span class="line">SELECT * FROM article WHREE time&#x3D;1234567890;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、多个单列索引和联合索引的区别详解"><a href="#3、多个单列索引和联合索引的区别详解" class="headerlink" title="3、多个单列索引和联合索引的区别详解"></a>3、<a target="_blank" rel="noopener" href="https://blog.csdn.net/Abysscarry/article/details/80792876">多个单列索引和联合索引的区别详解</a></h3><h4 id="通俗理解："><a href="#通俗理解：" class="headerlink" title="通俗理解："></a>通俗理解：</h4><p>利用索引中的附加列，您可以缩小搜索的范围，但使用一个具有两列的索引 不同于使用两个单独的索引。复合索引的结构与电话簿类似，人名由姓和名构成，电话簿首先按姓氏对进行排序，然后按名字对有相同姓氏的人进行排序。如果您知道姓，电话簿将非常有用；如果您知道姓和名，电话簿则更为有用，但如果您只知道名不姓，电话簿将没有用处。</p>
+<p>所以说创建复合索引时，应该仔细考虑列的顺序。对索引中的所有列执行搜索或仅对前几列执行搜索时，复合索引非常有用；仅对后面的任意列执行搜索时，复合索引则没有用处。</p>
+<h4 id="重点："><a href="#重点：" class="headerlink" title="重点："></a>重点：</h4><p>多个单列索引在多条件查询时优化器会选择最优索引策略，可能只用一个索引，也可能将多个索引全用上！ 但多个单列索引底层会建立多个B+索引树，比较占用空间，也会浪费一定搜索效率，故如果只有多条件联合查询时最好建联合索引！</p>
+<h4 id="最左前缀原则："><a href="#最左前缀原则：" class="headerlink" title="最左前缀原则："></a>最左前缀原则：</h4><p>顾名思义是最左优先，以最左边的为起点任何连续的索引都能匹配上，<br>注：如果第一个字段是范围查询需要单独建一个索引<br>注：在创建联合索引时，要根据业务需求，where子句中使用最频繁的一列放在最左边。这样的话扩展性较好，比如 userid 经常需要作为查询条件，而 mobile 不常常用，则需要把 userid 放在联合索引的第一位置，即最左边</p>
+<h4 id="同时存在联合索引和单列索引（字段有重复的），这个时候查询mysql会怎么用索引呢？"><a href="#同时存在联合索引和单列索引（字段有重复的），这个时候查询mysql会怎么用索引呢？" class="headerlink" title="同时存在联合索引和单列索引（字段有重复的），这个时候查询mysql会怎么用索引呢？"></a>同时存在联合索引和单列索引（字段有重复的），这个时候查询mysql会怎么用索引呢？</h4><p>这个涉及到mysql本身的查询优化器策略了，当一个表有多条索引可走时, Mysql 根据查询语句的成本来选择走哪条索引；</p>
+<p>有人说where查询是按照从左到右的顺序，所以筛选力度大的条件尽量放前面。网上百度过，很多都是这种说法，但是据我研究，mysql执行优化器会对其进行优化，当不考虑索引时，where条件顺序对效率没有影响，真正有影响的是是否用到了索引！</p>
+<h4 id="联合索引本质："><a href="#联合索引本质：" class="headerlink" title="联合索引本质："></a>联合索引本质：</h4><p>当创建**(a,b,c)联合索引时，相当于创建了(a)单列索引<strong>，(a,b)联合索引以及</strong>(a,b,c)联合索引**<br>想要索引生效的话,只能使用 a和a,b和a,b,c三种组合；当然，我们上面测试过，a,c组合也可以，但实际上只用到了a的索引，c并没有用到！<br>注：这个可以结合上边的 通俗理解 来思考！</p>
+<h4 id="其他知识点："><a href="#其他知识点：" class="headerlink" title="其他知识点："></a>其他知识点：</h4><p>1、需要加索引的字段，要在where条件中<br>2、数据量少的字段不需要加索引；因为建索引有一定开销，如果数据量小则没必要建索引（速度反而慢）<br>3、避免在where子句中使用or来连接条件,因为如果俩个字段中有一个没有索引的话,引擎会放弃索引而产生全表扫描<br>4、联合索引比对每个列分别建索引更有优势，因为索引建立得越多就越占磁盘空间，在更新数据的时候速度会更慢。另外建立多列索引时，顺序也是需要注意的，应该将严格的索引放在前面，这样筛选的力度会更大，效率更高。</p>
+<h3 id="4、创建索引：（已在数据库中验证过）"><a href="#4、创建索引：（已在数据库中验证过）" class="headerlink" title="4、创建索引：（已在数据库中验证过）"></a>4、创建索引：（已在数据库中验证过）</h3><h4 id="（1）创建表指定索引："><a href="#（1）创建表指定索引：" class="headerlink" title="（1）创建表指定索引："></a>（1）创建表指定索引：</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">### 创建空间索引,创建一个表名为index1的表，在空间类型为GEOMETRY的字段上创建空间索引。空间索引的名称为Index1_sp</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> index1(</span><br><span class="line">	id <span class="type">INT</span>, SPACE GEOMETRY <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">	SPATIAL INDEX index1_sp(SPACE)</span><br><span class="line">	</span><br><span class="line">) ENGINE<span class="operator">=</span>MYISAM;</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）给表添加索引："><a href="#（2）给表添加索引：" class="headerlink" title="（2）给表添加索引："></a>（2）给表添加索引：</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#添加主键索引</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> index1 <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY (id)</span><br><span class="line">#添加唯一索引</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> index1 <span class="keyword">ADD</span> <span class="keyword">UNIQUE</span> (name)</span><br><span class="line">#添加全文索引</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> index1 <span class="keyword">ADD</span> FULLTEXT (cardId)</span><br><span class="line">#添加普通索引</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> index1 <span class="keyword">ADD</span> INDEX ordinaryKey (salary)</span><br><span class="line">#添加多列索引(组合索引) 最左前缀原则</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> index1 <span class="keyword">ADD</span> INDEX mulOrdinaryKey (age,salary)</span><br></pre></td></tr></table></figure>
+
+<p>得到效果如图所示:</p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/image-20210413191830534.png" alt="image-20210413191830534"></p>
+<h3 id="6、InnoDB是如何加锁的"><a href="#6、InnoDB是如何加锁的" class="headerlink" title="6、InnoDB是如何加锁的"></a>6、InnoDB是如何加锁的</h3><p>意向锁是InnoDB自动加的，不需要用户干预。对于UPDATE、SELECT和INSERT语句，InnoDB会自动给涉及数据集加排他锁（X），对于普通的SELECT语句，InnoDB不会加任何锁：事务可以通过以下语句显示给记录集加共享锁和排他锁。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*共享锁(S):需要数据依存关系来确认某行记录是否存在，并确保没有人对这个记录进行UPDATE或者DELETE操作。*/</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> ... LOCK <span class="keyword">IN</span> SHARE MODE</span><br><span class="line"><span class="comment">/*排他锁(X):但是如果当前事务也需要对该记录进行更新操作，则可能会造成死锁，对于锁定行记录后需要进行更新操作的应用，应该使用SELECT ... FOR UPDATE*/</span>　</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table_name <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> UPDATE</span><br></pre></td></tr></table></figure>
+
+<h3 id="7、InnoDB解决死锁"><a href="#7、InnoDB解决死锁" class="headerlink" title="7、InnoDB解决死锁"></a>7、InnoDB解决死锁</h3><p>InnoDB发现死锁后，会计算出两个事务各自插入，更新或者删除的数据量来判定两个事务的大小。也就是说哪个事务所改变的记录条数越多，在死锁中就越不会被回滚掉。</p>
+<h2 id="16、SQL实战练习："><a href="#16、SQL实战练习：" class="headerlink" title="16、SQL实战练习："></a>16、SQL实战练习：</h2><h3 id="牛客网SQL练习"><a href="#牛客网SQL练习" class="headerlink" title="牛客网SQL练习"></a><a target="_blank" rel="noopener" href="https://www.nowcoder.com/activity/oj?tab=1">牛客网SQL练习</a></h3><h3 id="经典SQL语句大全"><a href="#经典SQL语句大全" class="headerlink" title="经典SQL语句大全"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/znyyjk/article/details/52717336">经典SQL语句大全</a></h3><p>全部关键词顺序：select-from-where-group by-having-order by -limit</p>
+<h3 id="几种连接：内连接，左连接，右连接，全连接"><a href="#几种连接：内连接，左连接，右连接，全连接" class="headerlink" title="几种连接：内连接，左连接，右连接，全连接"></a>几种连接：内连接，左连接，右连接，全连接</h3><ol>
+<li>内连接：最常见的一种连接，只连接匹配行。</li>
+<li>左连接：返回左表的全部行和右表满足ON条件的行，如果左表的行在右表中没有匹配，那么这一行右表中对应的数据用NULL代替。</li>
+<li>右连接：返回右表的全部行和左表满足ON条件的行，如果右表的行在左表中没有匹配，那么这一行左表中对应的数据用NULL代替。</li>
+<li>全连接：会从左表和右表那里返回所有的行。如果其中一个表的数据行在另一个表中没有匹配的行，那么对面的数据用NULL代替。</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinPay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -431,7 +679,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -448,305 +696,125 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A08%E3%80%8BJUC%EF%BC%88java%20util%20concurrent%EF%BC%89%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A010%E3%80%8BRedis%E3%80%8ARedis%E3%80%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          《2021春招复习10》Redis《Redis》
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A08%E3%80%8BJUC%EF%BC%88java%20util%20concurrent%EF%BC%89%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《2021春招复习8》JUC（java util concurrent）《Java并发》</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A08%E3%80%8BJUC%EF%BC%88java%20util%20concurrent%EF%BC%89%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习8》JUC（java util concurrent）《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84ACID%E7%89%B9%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">1、数据库的ACID特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%9B%9B%E5%A4%A7%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E5%92%8C%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB%E5%92%8C%E5%B9%BB%E5%BD%B1%E8%AF%BB%E7%9A%84%E5%87%BA%E7%8E%B0%E5%8E%9F%E5%9B%A0%E3%80%82"><span class="toc-number">2.</span> <span class="toc-text">2、四大隔离级别和不可重复读和幻影读的出现原因。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">2.1.</span> <span class="toc-text">隔离级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%8F%E8%AF%BB%EF%BC%88dirty-read%EF%BC%89%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">脏读（dirty read）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB%EF%BC%88unrepeatable-read%EF%BC%89%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">不可重复读（unrepeatable read）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BB%E8%AF%BB%EF%BC%88phantom-read%EF%BC%89%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">幻读（phantom read）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%B0%81%E9%94%81%E7%9A%84%E7%B2%92%E5%BA%A6%E3%80%81%E9%94%81%E7%9A%84%E7%B1%BB%E5%9E%8B%E3%80%81MVCC"><span class="toc-number">3.</span> <span class="toc-text">3、封锁的粒度、锁的类型、MVCC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%B0%81%E9%94%81%E7%B2%92%E5%BA%A6"><span class="toc-number">3.1.</span> <span class="toc-text">1、封锁粒度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%B8%89%E7%BA%A7%E5%B0%81%E9%94%81%E5%8D%8F%E8%AE%AE%EF%BC%88%E7%90%86%E8%AE%BA%E4%B8%8A%E7%9A%84%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">2、三级封锁协议（理论上的）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E7%BA%A7%E5%B0%81%E9%94%81%E5%8D%8F%E8%AE%AE%EF%BC%9A"><span class="toc-number">3.2.1.</span> <span class="toc-text">一级封锁协议：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E7%BA%A7%E5%B0%81%E9%94%81%E5%8D%8F%E8%AE%AE%EF%BC%9A"><span class="toc-number">3.2.2.</span> <span class="toc-text">二级封锁协议：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%BA%A7%E5%B0%81%E9%94%81%E5%8D%8F%E8%AE%AE%EF%BC%9A"><span class="toc-number">3.2.3.</span> <span class="toc-text">三级封锁协议：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%94%81%E7%9A%84%E7%A7%8D%E7%B1%BB%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">3、锁的种类：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%AF%BB%E5%86%99%E9%94%81%EF%BC%9A"><span class="toc-number">3.3.1.</span> <span class="toc-text">（1）读写锁：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%92%E4%BB%96%E9%94%81-X%E9%94%81-%EF%BC%9A"><span class="toc-number">3.3.1.1.</span> <span class="toc-text">排他锁(X锁)：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E9%94%81-S%E9%94%81-%EF%BC%9A"><span class="toc-number">3.3.1.2.</span> <span class="toc-text">共享锁(S锁)：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-number">3.3.1.3.</span> <span class="toc-text">处理：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%84%8F%E5%90%91%E9%94%81%EF%BC%9A"><span class="toc-number">3.3.2.</span> <span class="toc-text">（2）意向锁：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%82%B2%E8%A7%82%E9%94%81%E5%92%8C%E4%B9%90%E8%A7%82%E9%94%81%EF%BC%9A"><span class="toc-number">3.3.3.</span> <span class="toc-text">（3）悲观锁和乐观锁：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81MVCC%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE%EF%BC%9AMysql-%E7%9A%84InnoDB%E4%BA%8B%E5%8A%A1%E6%96%B9%E9%9D%A2%E7%9A%84-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0-MVCC"><span class="toc-number">3.4.</span> <span class="toc-text">4、MVCC版本控制协议：Mysql 的InnoDB事务方面的 多版本并发控制如何实现 MVCC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.4.1.</span> <span class="toc-text">主要存储结构与实现过程：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%89%88%E6%9C%AC%E5%8F%B7%EF%BC%9A"><span class="toc-number">3.4.1.1.</span> <span class="toc-text">（1）版本号：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%9A%90%E8%97%8F%E7%9A%84%E5%88%97"><span class="toc-number">3.4.1.2.</span> <span class="toc-text">（2）隐藏的列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89Undo-%E6%97%A5%E5%BF%97"><span class="toc-number">3.4.1.3.</span> <span class="toc-text">（3）Undo 日志</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">3.4.1.4.</span> <span class="toc-text">（4）实现过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SELECT%EF%BC%9A"><span class="toc-number">3.4.1.5.</span> <span class="toc-text">SELECT：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#INSERT%EF%BC%9A"><span class="toc-number">3.4.1.6.</span> <span class="toc-text">INSERT：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DELETE%EF%BC%9A"><span class="toc-number">3.4.1.7.</span> <span class="toc-text">DELETE：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UPDATA%EF%BC%9A"><span class="toc-number">3.4.1.8.</span> <span class="toc-text">UPDATA：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81B-B-Tree%E5%8E%9F%E7%90%86%E3%80%81%E4%B8%8E%E5%85%B6%E4%BB%96%E6%9F%A5%E6%89%BE%E6%A0%91%E7%9A%84%E6%AF%94%E8%BE%83%E3%80%82"><span class="toc-number">4.</span> <span class="toc-text">4、B&#x2F;B+Tree原理、与其他查找树的比较。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%8D%9A%E5%AE%A2%EF%BC%9AMySQL%E7%B4%A2%E5%BC%95%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">4.1.</span> <span class="toc-text">参考博客：MySQL索引底层实现原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81B%E6%A0%91"><span class="toc-number">4.2.</span> <span class="toc-text">1、B树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81B-%E6%A0%91"><span class="toc-number">4.3.</span> <span class="toc-text">2、B+树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81B-%E6%A0%91%E7%9B%B8%E6%AF%94%E4%BA%8EB%E6%A0%91%E7%9A%84%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8A%BF%EF%BC%9A"><span class="toc-number">4.4.</span> <span class="toc-text">3、B+树相比于B树的查询优势：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E4%B8%8E%E7%BA%A2%E9%BB%91%E6%A0%91%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">4.5.</span> <span class="toc-text">4、与红黑树的比较</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81B-%E6%A0%91%E7%B4%A2%E5%BC%95%E5%92%8Chash%E7%B4%A2%E5%BC%95%E7%9A%84%E6%AF%94%E8%BE%83%E3%80%82"><span class="toc-number">5.</span> <span class="toc-text">5、B+树索引和hash索引的比较。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81MySQL%E7%B4%A2%E5%BC%95%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%88%E9%80%BB%E8%BE%91%E8%A7%92%E5%BA%A6%E7%9C%8B%E7%B4%A2%E5%BC%95-%E3%80%82"><span class="toc-number">6.</span> <span class="toc-text">6、MySQL索引优缺点（逻辑角度看索引)。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E7%B4%A2%E5%BC%95%EF%BC%9F"><span class="toc-number">6.1.</span> <span class="toc-text">一、什么是索引？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%B4%A2%E5%BC%95%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">6.2.</span> <span class="toc-text">二、索引的作用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="toc-number">6.3.</span> <span class="toc-text">三、优点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%BC%BA%E7%82%B9"><span class="toc-number">6.4.</span> <span class="toc-text">四、缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="toc-number">6.5.</span> <span class="toc-text">五、什么时候需要创建索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="toc-number">6.6.</span> <span class="toc-text">六、什么时候不需要创建索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%B4%A2%E5%BC%95%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">6.7.</span> <span class="toc-text">七、索引的分类：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81MYSQL%E4%BC%98%E5%8C%96"><span class="toc-number">7.</span> <span class="toc-text">7、MYSQL优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96"><span class="toc-number">7.1.</span> <span class="toc-text">1、索引优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%BB%BA%E7%AB%8B%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95"><span class="toc-number">7.1.1.</span> <span class="toc-text">(1)建立聚集索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%B8%B8%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BB%BA%E7%AB%8B%E7%B4%A2%E5%BC%95%E6%88%96%E8%80%85%E7%BB%84%E5%90%88%E7%B4%A2%E5%BC%95"><span class="toc-number">7.1.2.</span> <span class="toc-text">(2)常查询数据建立索引或者组合索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%9C%80%E5%B7%A6%E5%89%8D%E7%BC%80%E5%8E%9F%E5%88%99"><span class="toc-number">7.1.3.</span> <span class="toc-text">(3)最左前缀原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E8%BE%83%E9%95%BF%E7%9A%84%E6%95%B0%E6%8D%AE%E5%88%97%E5%BB%BA%E7%AB%8B%E5%89%8D%E7%BC%80%E7%B4%A2%E5%BC%95"><span class="toc-number">7.1.4.</span> <span class="toc-text">(4)较长的数据列建立前缀索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%B8%8D%E8%A6%81%E5%BB%BA%E7%AB%8B%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E7%B4%A2%E5%BC%95"><span class="toc-number">7.1.5.</span> <span class="toc-text">(5)不要建立无意义的索引</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96"><span class="toc-number">7.2.</span> <span class="toc-text">2、查询优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BD%BF%E7%94%A8Explain%E8%BF%9B%E8%A1%8C%E5%88%86%E6%9E%90"><span class="toc-number">7.2.1.</span> <span class="toc-text">（1）使用Explain进行分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E4%BC%98%E5%8C%96%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE"><span class="toc-number">7.2.2.</span> <span class="toc-text">（2）优化数据访问</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%EF%BC%89%E5%87%8F%E5%B0%91%E8%AF%B7%E6%B1%82%E7%9A%84%E6%95%B0%E6%8D%AE%E9%87%8F"><span class="toc-number">7.2.2.1.</span> <span class="toc-text">1）减少请求的数据量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%87%8F%E5%B0%91%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E6%89%AB%E6%8F%8F%E7%9A%84%E8%A1%8C%E6%95%B0"><span class="toc-number">7.2.2.2.</span> <span class="toc-text">2) 减少服务端的扫描的行数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%87%8D%E6%9E%84%E6%9F%A5%E8%AF%A2%E6%96%B9%E5%BC%8F%E3%80%82"><span class="toc-number">7.2.3.</span> <span class="toc-text">(3)重构查询方式。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%88%87%E5%88%86%E5%A4%A7%E6%9F%A5%E8%AF%A2"><span class="toc-number">7.2.3.1.</span> <span class="toc-text">1)切分大查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%88%86%E8%A7%A3%E5%A4%A7%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2"><span class="toc-number">7.2.3.2.</span> <span class="toc-text">2)分解大连接查询</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81MySQL%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8EMyISAM%E4%B8%8EInnoDB%E5%8C%BA%E5%88%AB"><span class="toc-number">8.</span> <span class="toc-text">8、MySQL存储引擎MyISAM与InnoDB区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8EStorage-engine%EF%BC%9A"><span class="toc-number">8.1.</span> <span class="toc-text">存储引擎Storage engine：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E6%9C%89%E4%BB%A5%E4%B8%8B%EF%BC%9A"><span class="toc-number">8.2.</span> <span class="toc-text">常用的存储引擎有以下：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyISAM%E7%B4%A2%E5%BC%95%E4%B8%8EInnoDB%E7%B4%A2%E5%BC%95%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">8.3.</span> <span class="toc-text">MyISAM索引与InnoDB索引的区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#InnoDB%E5%BC%95%E6%93%8E%E7%9A%844%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="toc-number">8.4.</span> <span class="toc-text">InnoDB引擎的4大特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E9%80%89%E6%8B%A9%EF%BC%9A"><span class="toc-number">8.5.</span> <span class="toc-text">存储引擎选择：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%EF%BC%88%E4%BB%8E%E7%89%A9%E7%90%86%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90%E7%B4%A2%E5%BC%95%EF%BC%89"><span class="toc-number">9.</span> <span class="toc-text">9、聚集索引和非聚集索引（从物理角度分析索引）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E6%B0%B4%E5%B9%B3%E5%88%87%E5%88%86%E5%92%8C%E5%9E%82%E7%9B%B4%E5%88%87%E5%88%86"><span class="toc-number">10.</span> <span class="toc-text">10、水平切分和垂直切分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86%E3%80%81%E4%BD%9C%E7%94%A8%E3%80%81%E5%AE%9E%E7%8E%B0%E3%80%82%E2%98%86"><span class="toc-number">11.</span> <span class="toc-text">11、主从复制原理、作用、实现。☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%EF%BC%9A"><span class="toc-number">11.1.</span> <span class="toc-text">1、主从复制：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-mysql%E6%94%AF%E6%8C%81%E7%9A%84%E5%A4%8D%E5%88%B6%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">11.1.1.</span> <span class="toc-text">1.1 mysql支持的复制类型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%A4%8D%E5%88%B6%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">11.1.2.</span> <span class="toc-text">1.2 . 复制解决的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E5%A4%8D%E5%88%B6%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="toc-number">11.1.3.</span> <span class="toc-text">1.3 复制如何工作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%EF%BC%9A"><span class="toc-number">11.2.</span> <span class="toc-text">2、读写分离：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%ADchar%E5%92%8Cvarchar%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">12.</span> <span class="toc-text">12、数据库中char和varchar的区别：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%83%AD%E5%A4%87%E4%BB%BD%E5%92%8C%E5%86%B7%E5%A4%87%E4%BB%BD%E3%80%82"><span class="toc-number">13.</span> <span class="toc-text">13、数据库的热备份和冷备份。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%86%B7%E5%A4%87%E4%BB%BD%EF%BC%9A"><span class="toc-number">13.1.</span> <span class="toc-text">1、冷备份：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B7%E5%A4%87%E4%BB%BD%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="toc-number">13.1.1.</span> <span class="toc-text">冷备份的优点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B7%E5%A4%87%E4%BB%BD%E7%9A%84%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="toc-number">13.1.2.</span> <span class="toc-text">冷备份的缺点：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%83%AD%E5%A4%87%E4%BB%BD%EF%BC%88%E5%BF%AB%EF%BC%89"><span class="toc-number">13.2.</span> <span class="toc-text">2、热备份（快）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%AD%E5%A4%87%E4%BB%BD%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="toc-number">13.2.1.</span> <span class="toc-text">热备份的优点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%AD%E5%A4%87%E4%BB%BD%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-number">13.2.2.</span> <span class="toc-text">热备份的缺点:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%86%E5%9B%BE%E5%92%8C%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E3%80%82"><span class="toc-number">14.</span> <span class="toc-text">14、数据库视图和存储过程。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%A7%86%E5%9B%BE"><span class="toc-number">14.1.</span> <span class="toc-text">一、视图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8%E8%A7%86%E5%9B%BE%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">14.1.1.</span> <span class="toc-text">1、使用视图的好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E8%A7%86%E5%9B%BE%E7%9A%84%E8%A7%84%E5%88%99%E5%92%8C%E9%99%90%E5%88%B6%EF%BC%9A"><span class="toc-number">14.1.2.</span> <span class="toc-text">2、视图的规则和限制：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8%E8%A7%86%E5%9B%BE"><span class="toc-number">14.1.3.</span> <span class="toc-text">3、使用视图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="toc-number">14.2.</span> <span class="toc-text">二、存储过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E7%AE%80%E5%8D%95%EF%BC%8C%E5%AE%89%E5%85%A8%EF%BC%8C%E9%AB%98%E6%80%A7%E8%83%BD%EF%BC%89"><span class="toc-number">14.2.1.</span> <span class="toc-text">1、为什么要使用存储过程（简单，安全，高性能）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%EF%BC%88%E5%8A%A0%E7%B4%A2%E5%BC%95%E3%80%81%E5%8A%A0%E9%94%81%EF%BC%89"><span class="toc-number">15.</span> <span class="toc-text">15、数据库操作（加索引、加锁）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8E%9F%E7%90%86"><span class="toc-number">15.1.</span> <span class="toc-text">mysql数据库索引类型和原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81MYSQL%E7%B4%A2%E5%BC%95%EF%BC%9A"><span class="toc-number">15.2.</span> <span class="toc-text">1、MYSQL索引：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81MYSQL%E7%B4%A2%E5%BC%95%E7%9A%84%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">15.3.</span> <span class="toc-text">2、MYSQL索引的类型：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%99%AE%E9%80%9A%E7%B4%A2%E5%BC%95"><span class="toc-number">15.3.1.</span> <span class="toc-text">1. 普通索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95"><span class="toc-number">15.3.2.</span> <span class="toc-text">2. 唯一索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%85%A8%E6%96%87%E7%B4%A2%E5%BC%95%EF%BC%88FULLTEXT%EF%BC%89"><span class="toc-number">15.3.3.</span> <span class="toc-text">3. 全文索引（FULLTEXT）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%A9%BA%E9%97%B4%E7%B4%A2%E5%BC%95"><span class="toc-number">15.3.4.</span> <span class="toc-text">4.空间索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E7%BB%84%E5%90%88%E7%B4%A2%E5%BC%95-%E5%A4%9A%E5%88%97%E7%B4%A2%E5%BC%95-%EF%BC%88%E6%9C%80%E5%B7%A6%E5%89%8D%E7%BC%80%EF%BC%89"><span class="toc-number">15.3.5.</span> <span class="toc-text">5.组合索引(多列索引)（最左前缀）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%A4%9A%E4%B8%AA%E5%8D%95%E5%88%97%E7%B4%A2%E5%BC%95%E5%92%8C%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E7%9A%84%E5%8C%BA%E5%88%AB%E8%AF%A6%E8%A7%A3"><span class="toc-number">15.4.</span> <span class="toc-text">3、多个单列索引和联合索引的区别详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E4%BF%97%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="toc-number">15.4.1.</span> <span class="toc-text">通俗理解：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E7%82%B9%EF%BC%9A"><span class="toc-number">15.4.2.</span> <span class="toc-text">重点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%B7%A6%E5%89%8D%E7%BC%80%E5%8E%9F%E5%88%99%EF%BC%9A"><span class="toc-number">15.4.3.</span> <span class="toc-text">最左前缀原则：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%97%B6%E5%AD%98%E5%9C%A8%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E5%92%8C%E5%8D%95%E5%88%97%E7%B4%A2%E5%BC%95%EF%BC%88%E5%AD%97%E6%AE%B5%E6%9C%89%E9%87%8D%E5%A4%8D%E7%9A%84%EF%BC%89%EF%BC%8C%E8%BF%99%E4%B8%AA%E6%97%B6%E5%80%99%E6%9F%A5%E8%AF%A2mysql%E4%BC%9A%E6%80%8E%E4%B9%88%E7%94%A8%E7%B4%A2%E5%BC%95%E5%91%A2%EF%BC%9F"><span class="toc-number">15.4.4.</span> <span class="toc-text">同时存在联合索引和单列索引（字段有重复的），这个时候查询mysql会怎么用索引呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E6%9C%AC%E8%B4%A8%EF%BC%9A"><span class="toc-number">15.4.5.</span> <span class="toc-text">联合索引本质：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9A"><span class="toc-number">15.4.6.</span> <span class="toc-text">其他知识点：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%EF%BC%9A%EF%BC%88%E5%B7%B2%E5%9C%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E9%AA%8C%E8%AF%81%E8%BF%87%EF%BC%89"><span class="toc-number">15.5.</span> <span class="toc-text">4、创建索引：（已在数据库中验证过）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%88%9B%E5%BB%BA%E8%A1%A8%E6%8C%87%E5%AE%9A%E7%B4%A2%E5%BC%95%EF%BC%9A"><span class="toc-number">15.5.1.</span> <span class="toc-text">（1）创建表指定索引：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%BB%99%E8%A1%A8%E6%B7%BB%E5%8A%A0%E7%B4%A2%E5%BC%95%EF%BC%9A"><span class="toc-number">15.5.2.</span> <span class="toc-text">（2）给表添加索引：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81InnoDB%E6%98%AF%E5%A6%82%E4%BD%95%E5%8A%A0%E9%94%81%E7%9A%84"><span class="toc-number">15.6.</span> <span class="toc-text">6、InnoDB是如何加锁的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81InnoDB%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81"><span class="toc-number">15.7.</span> <span class="toc-text">7、InnoDB解决死锁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16%E3%80%81SQL%E5%AE%9E%E6%88%98%E7%BB%83%E4%B9%A0%EF%BC%9A"><span class="toc-number">16.</span> <span class="toc-text">16、SQL实战练习：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%9B%E5%AE%A2%E7%BD%91SQL%E7%BB%83%E4%B9%A0"><span class="toc-number">16.1.</span> <span class="toc-text">牛客网SQL练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8SQL%E8%AF%AD%E5%8F%A5%E5%A4%A7%E5%85%A8"><span class="toc-number">16.2.</span> <span class="toc-text">经典SQL语句大全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E7%A7%8D%E8%BF%9E%E6%8E%A5%EF%BC%9A%E5%86%85%E8%BF%9E%E6%8E%A5%EF%BC%8C%E5%B7%A6%E8%BF%9E%E6%8E%A5%EF%BC%8C%E5%8F%B3%E8%BF%9E%E6%8E%A5%EF%BC%8C%E5%85%A8%E8%BF%9E%E6%8E%A5"><span class="toc-number">16.3.</span> <span class="toc-text">几种连接：内连接，左连接，右连接，全连接</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A07%E3%80%8B%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A07%E3%80%8B%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习7》线程同步的几种方式《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A06%E3%80%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A06%E3%80%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习6》基础概念《Java并发》</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:07:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/">《2021春招复习5》JVM《JVM》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A04%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E9%9B%86%E5%90%88%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:07:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A04%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E9%9B%86%E5%90%88%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC/">《2021春招复习4》Java基础《集合》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -770,8 +838,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

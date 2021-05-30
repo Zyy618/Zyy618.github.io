@@ -6,17 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Zyy‘s blog</title>
+  <title>《2021春招复习5》JVM《JVM》 | Zyy‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面朝大海，春暖花开">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zyy‘s blog">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="1、介绍JVM的内存区域（运行时数据区）。☆​        JVM中内存分为若干部分：堆、方法区、虚拟机栈、本地方法栈、程序计数器。其中堆和方法区是线程共享的部分，其他是线程隔离的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《2021春招复习5》JVM《JVM》">
+<meta property="og:url" content="http://example.com/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/index.html">
 <meta property="og:site_name" content="Zyy‘s blog">
-<meta property="og:description" content="面朝大海，春暖花开">
+<meta property="og:description" content="1、介绍JVM的内存区域（运行时数据区）。☆​        JVM中内存分为若干部分：堆、方法区、虚拟机栈、本地方法栈、程序计数器。其中堆和方法区是线程共享的部分，其他是线程隔离的。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/JVM%E6%9E%B6%E6%9E%84.jpg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy94aWNXWVRTSUN6UnZTeUFqMUtHUnVEa2ljem44MVpnVW1RaWF3c2xZZzRMdjhuMUZ6T0o5YkVtdmJDdlpJeGljc2dBc3pQaWE5RVpFa282WG81WUhhTklqN1N3LzY0MA">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/JVMprogress.jpg">
+<meta property="og:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/hotspot.jpg">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%8D%9A%E5%AE%A2%E7%85%A7%E7%89%87%5C%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B.png">
+<meta property="article:published_time" content="2021-05-20T13:07:20.000Z">
+<meta property="article:modified_time" content="2021-05-30T13:42:10.721Z">
 <meta property="article:author" content="Eric">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="2021春招复习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/zhao-yuanye/blog-photo/raw/master/JVM%E6%9E%B6%E6%9E%84.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Zyy‘s blog" type="application/atom+xml">
   
@@ -158,492 +168,232 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-《2021春招复习5》JVM《JVM》" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A015%E3%80%8B%E5%9C%BA%E6%99%AF%E9%A2%98%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:15:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A015%E3%80%8B%E5%9C%BA%E6%99%AF%E9%A2%98%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E3%80%8B/">《2021春招复习15》场景题《大数据》</a>
+    <h1 class="article-title" itemprop="name">
+      《2021春招复习5》JVM《JVM》
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:12:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A012%E3%80%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B/">《2021春招复习12》操作系统《操作系统》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A011%E3%80%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:11:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A011%E3%80%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B/">《2021春招复习11》计算机网络《计算机网络》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A010%E3%80%8BRedis%E3%80%8ARedis%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:10:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A010%E3%80%8BRedis%E3%80%8ARedis%E3%80%8B/">《2021春招复习10》Redis《Redis》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:09:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A09%E3%80%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%8AMySql%E3%80%8B/">《2021春招复习9》数据库《MySql》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A08%E3%80%8BJUC%EF%BC%88java%20util%20concurrent%EF%BC%89%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A08%E3%80%8BJUC%EF%BC%88java%20util%20concurrent%EF%BC%89%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习8》JUC（java util concurrent）《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A07%E3%80%8B%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A07%E3%80%8B%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习7》线程同步的几种方式《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A06%E3%80%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A06%E3%80%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/">《2021春招复习6》基础概念《Java并发》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/" class="archive-article-date">
+        
+        <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/" class="archive-article-date">
   	<time datetime="2021-05-20T13:07:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/">《2021春招复习5》JVM《JVM》</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、介绍JVM的内存区域（运行时数据区）。☆"><a href="#1、介绍JVM的内存区域（运行时数据区）。☆" class="headerlink" title="1、介绍JVM的内存区域（运行时数据区）。☆"></a>1、介绍JVM的内存区域（运行时数据区）。☆</h2><p>​        JVM中内存分为若干部分：堆、方法区、虚拟机栈、本地方法栈、程序计数器。其中<strong>堆和方法区是线程共享</strong>的部分，其他是线程隔离的。</p>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/JVM%E6%9E%B6%E6%9E%84.jpg" alt="**"></p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy94aWNXWVRTSUN6UnZTeUFqMUtHUnVEa2ljem44MVpnVW1RaWF3c2xZZzRMdjhuMUZ6T0o5YkVtdmJDdlpJeGljc2dBc3pQaWE5RVpFa282WG81WUhhTklqN1N3LzY0MA" alt="img"></p>
+<h3 id="1、堆"><a href="#1、堆" class="headerlink" title="1、堆"></a>1、堆</h3><p>​        Java堆是用来<strong>存放实例对象和数组对象</strong>的，由于存在逃逸分析技术（分析这个对象不会被其他方法或者线程调用),也可以分布在栈上，随着出栈而被销毁，同时，Java堆也是<strong>垃圾回收的主要区域</strong>，由于现在垃圾收集器基本都采用分代垃圾收集算法，所以Java堆还可以细分为：<strong>新生代和老年代</strong>。Java堆在物理上可以不连续，只要逻辑连续就好。在<strong>堆上分配对象</strong>的方法有：<strong>指针碰撞和空闲链表</strong>，<strong>前者是在堆内存规整的情境下，所有用过和空闲的内存中间有明确的分界线，而后者用空闲链表来记录内存的使用情况</strong>，规整是由垃圾回收器是否压缩整理决定的。空间不足抛出OutOfMemoryError.</p>
+<p>​        堆上对象的访问方式：通过栈上的reference数据来操作堆上的具体对象。目前主流的访问方式有使用句柄和直接指针两种。<strong>句柄</strong>的话，Java堆中将会划分出一块内存来作为<strong>句柄池</strong>，reference中存储的就是对象的句柄地址，而<strong>句柄中包括了对象实例数据和类型数据各自的具体地址信息</strong>。<strong>直接指针</strong>的话，reference中存储的直接就是<strong>对象的地址</strong>。前者稳定后者效率高。</p>
+<h3 id="2、方法区"><a href="#2、方法区" class="headerlink" title="2、方法区"></a>2、方法区</h3><p>​        方法区和Java堆一样，是各个线程共享的内存区域，它用于存储已被虚拟机加载的类信息、常量、静态变量、以及编辑器编译后的代码、运行时常量池等数据。其中<strong>运行时常量池，用于存放编译期产生的各种字面量和符号引用。（字面量：1.文本字符串2.八种基本类型的值3.被声明为final的常量等。符号引用：1.类和方法的全限定名2.字段的名称和描述符3.方法的名称和描述符。）运行时常量池相对于class常量池具有动态性，可以在运行期间利用intern方法将常量放入池中</strong>。空间不足抛出OutOfMemoryError。</p>
+<p>注：全限定名:<strong>全限定类名：</strong>就是类名全称，带包路径的用点隔开，例如: <code>java.lang.String。</code>即全限定名 = 包名+类型，<strong>非限定类名</strong>也叫短名，就是我们平时说的类名，不带包的，例如：String。</p>
+<p>​        非限定类名是相对于限定类名来说的，在Java中有很多类，不同的类之间会存在相同的函数或者方法，所以有时候就需要限定类名来调包。而如果不存在相同的函数或者方法 ，就可以使用非限定类名。</p>
+<h4 id="引申：方法区在虚拟机中具体实现是什么？-java7和java8有什么区别？"><a href="#引申：方法区在虚拟机中具体实现是什么？-java7和java8有什么区别？" class="headerlink" title="引申：方法区在虚拟机中具体实现是什么？ java7和java8有什么区别？"></a>引申：方法区在虚拟机中具体实现是什么？ java7和java8有什么区别？</h4><h3 id="3、虚拟机栈"><a href="#3、虚拟机栈" class="headerlink" title="3、虚拟机栈"></a>3、虚拟机栈</h3><p>​        虚拟机栈是<strong>Java方法执行的内存模型，线程私有，每个方法执行时都会创建一个栈帧，</strong>用于存储<strong>局部变量表、操作数栈、</strong>动态链接（运行时将方法区的符号引用转化为直接引用，真的可以调用了）和方法出口等信息，每个方法从调用直至执行结束，就对应着一个栈帧从虚拟机栈中入栈到出栈的过程。StackOverFlow:线程请求的栈深度大于虚拟机所允许的深度。OutOfMemoryError：如果虚拟机栈可以动态扩展，而扩展无法申请到足够的内存。</p>
+<h3 id="4、本地方法栈"><a href="#4、本地方法栈" class="headerlink" title="4、本地方法栈"></a>4、本地方法栈</h3><p>​        JVM调用本地方法（可以为其它语言提供接口）</p>
+<h3 id="5、程序计数器"><a href="#5、程序计数器" class="headerlink" title="5、程序计数器"></a>5、程序计数器</h3><p>​        <strong>记录当前线程所执行到的字节码的行号。每个线程都有一个程序计数器，唯一没有OutOfMemoryError情况的内存区域。</strong></p>
+<h3 id="6、运行时内存区域外规定的栈外内存："><a href="#6、运行时内存区域外规定的栈外内存：" class="headerlink" title="6、运行时内存区域外规定的栈外内存："></a>6、运行时内存区域外规定的<strong>栈外内存</strong>：</h3><p>​        直接使用<strong>Native函数库直接分配堆外内存</strong>，然后通过一个存储在Java堆中的<strong>DirectByteBuffer</strong>对象作为这块内存的<strong>引用进行操作</strong>。这样就能在一些场景中显著提高性能，因为避免了在Java堆和Native堆中来回复制数据。</p>
+<h2 id="２、简述永久代（PermGen-ˌdʒenəˈreɪʃn-）和源空间（MetaSpace-ˈmetə-）☆"><a href="#２、简述永久代（PermGen-ˌdʒenəˈreɪʃn-）和源空间（MetaSpace-ˈmetə-）☆" class="headerlink" title="２、简述永久代（PermGen [ˌdʒenəˈreɪʃn]）和源空间（MetaSpace [ˈmetə]）☆"></a>２、简述永久代（PermGen [ˌdʒenəˈreɪʃn]）和源空间（MetaSpace [ˈmetə]）☆</h2><p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/JVMprogress.jpg"></p>
+<h3 id="1、永久代"><a href="#1、永久代" class="headerlink" title="1、永久代"></a>1、永久代</h3><p>​        永久代是上述第一点钟<strong>方法区在hotspot</strong>的一种具体实现。由于方法区主要存储类的相关信息，所以对于动态生成类的情况比较容易出现永久代的内存溢出，抛出异常(Java.lang.OutOfMemoryError:PermGen space)。</p>
+<p>​        注释：hotspot(热点代码。为了提高热点代码的执行效率，在运行时，即时编译器（Just In Time Compiler ）会把这些代码编译成与本地平台相关的机器码，并进行各种层次的优化。)</p>
+<p>​        为了避免这类问题，Java7中的永久代中存储的部分数据已经开始转移到Java Heap或者Native Memory中了。比如，<strong>符号引用（Symbols）转移到了Native Memory;字符串常量池（interned strings）转移到了Java Heap中；类的静态变量（class statics）转移到了Java Heap</strong>。</p>
+<p>最终，在Java8中，Hotspot取消了永久代，源空间登上了舞台。</p>
+<h3 id="2、源空间"><a href="#2、源空间" class="headerlink" title="2、源空间"></a>2、源空间</h3><p>​        方法区同样存在于元空间（Metaspace),但是，元空间不再与堆连续，而是**存在于本地内存(Native memory)**。本地内存(native memory)，也称为C-Heap，是供JVM自身进程使用的。当Java Heap空间不足时会触发GC，但Native memory空间不够却不会触发GC。但是，默认情况下元空间是可以无限使用本地内存的，但是为了不让无限制扩展，JVM同样提供参数来限制大小。</p>
+<h3 id="3、为什么使用元空间替换永久代"><a href="#3、为什么使用元空间替换永久代" class="headerlink" title="3、为什么使用元空间替换永久代"></a>3、为什么使用元空间替换永久代</h3><ol>
+<li><strong>字符串存在永久代中</strong>，容易出现性<strong>能问题和内存溢出</strong>。</li>
+<li><strong>类及方法的信息等比较难确定其大小，</strong>因此第一次永久代的大小指定比较困难，大小容易出现永久代溢出，太大则容易导致老年代溢出。另外，使用PermSize和MaxPermSize设置永久代的大小就决定了永久代的上限，但是动态加载类容易出现OutOfMemory错误。所以，<strong>当使用元空间时，可以加载多少类的大小就不再由MaxPermSize控制，而由系统的实际可用空间来控制</strong>。</li>
+<li><strong>永久代会为GC带来不必要的复杂度，并且回收效率偏低</strong>。</li>
+<li>Oracle可能会将HotSpot和JRockit合二为一。JRockit从来没有所谓的永久代，也不需要开发员设置永久代的大小，并且运行良好，也不用担心运行性能。</li>
+</ol>
+<h2 id="3、如何判断对象已经死亡☆"><a href="#3、如何判断对象已经死亡☆" class="headerlink" title="3、如何判断对象已经死亡☆"></a>3、如何判断对象已经死亡☆</h2><p>引用计数法和可达性分析法：</p>
+<h3 id="1、引用计数法"><a href="#1、引用计数法" class="headerlink" title="1、引用计数法"></a>1、引用计数法</h3><p>​        每当有一个地方引用它，计数器就加1；当引用失效，计数器就减1；任何时候计数器为0的对象就是不可能再被使用的。目前主流的虚拟机中并没有选择这个算法来管理内存，其主要原因是它很难解决对象之间相互循环引用的问题。</p>
+<h3 id="2、可达性分析法"><a href="#2、可达性分析法" class="headerlink" title="2、可达性分析法"></a>2、可达性分析法</h3><p>​        这个算法的基本思想是通过一系列的称为“GC Roots”的对象作为起点，从这些节点开始向下搜索，节点所走过的路径称为引用链，当一个对象到GC Roots没有任何引用链相连的话，可以证明此对象是不可用的。</p>
+<p>​        可以作为GC ROOT 对象包括：虚拟机栈中的引用对象、方法区中类静态属性引用的对象、方法区中常量引用对象、本地方法中引用对象。</p>
+<h3 id="3、真的死了吗"><a href="#3、真的死了吗" class="headerlink" title="3、真的死了吗"></a>3、真的死了吗</h3><p>​        即使可达性分析法中不可达的对象，也并非是”非死不可”的，这时候它们暂时处于”缓刑阶段”，<strong>要真正宣告一个对象的死亡，至少要经历两次标记过程</strong>；可达性分析法中不可达的对象被第一次标记并且进行一次筛选，筛选的条件是此对象是否有必要执行finalize方法。当对象没有覆盖finalize方法，或者finalize方法已经被虚拟机调用过时，虚拟机将这两种情况视为<strong>没有必要执行</strong>。被判定为需要执行的对象将会被放在一个队列中进行<strong>第二次标记</strong>，除非这个对象与引用链上的任何一个对象建立关联，<strong>否则就会被真的回收</strong>。</p>
+<h2 id="4、简述强、软、弱、虚引用。"><a href="#4、简述强、软、弱、虚引用。" class="headerlink" title="4、简述强、软、弱、虚引用。"></a>4、简述强、软、弱、虚引用。</h2><h3 id="1、强引用"><a href="#1、强引用" class="headerlink" title="1、强引用"></a>1、强引用</h3><p>​        如果一个对象具有强引用，垃圾回收器绝不会回收它。当内存空间不足时，Java虚拟机宁愿抛出OutOf</p>
+<p>MemoryError错误，使程序异常终止。</p>
+<h3 id="2、软引用"><a href="#2、软引用" class="headerlink" title="2、软引用"></a>2、软引用</h3><p>​        如果内存空间足够，垃圾回收器就不会回收它，如果内存空间不足了，就会回收这些对象的内存。只要垃圾回收器没有回收它，该对象就可以被程序使用。软引用可用来实现内存敏感的高速缓存。</p>
+<h3 id="3、弱引用"><a href="#3、弱引用" class="headerlink" title="3、弱引用"></a>3、弱引用</h3><p>​        相对于软引用,弱引用关联的对象只能生存到下一次垃圾回收之前。</p>
+<h3 id="4、虚引用"><a href="#4、虚引用" class="headerlink" title="4、虚引用"></a>4、虚引用</h3><p>​        如果一个对象仅持有虚引用，那么它就和没有任何引用一样，在任何时候都可能被垃圾回收。</p>
+<p>虚引用主要用来跟踪对象被垃圾回收器回收的活动。虚引用与软引用和弱引用的一个区别在于：<strong>虚引用必须和引用队列联合使用。</strong>当垃圾回收器准备回收一个对象时，如果发现它还有虚引用，就会在回收对象内存之前，把这个虚引用加入到与之相关联的引用队列中。这样就可以通过判断引用队列中是否加入了虚引用来了解被引用的对象是否<strong>将要被垃圾回收器回收</strong>，可以做一些在回收之前的必要行动。</p>
+<p>虚与软、弱引用的区别：软、弱引用都是在引用对象被垃圾回收后，Java虚拟机才把引用加入到与之相关的引用队列中（后),而虚引用对象在垃圾回收前，Java虚拟机把引用加入到与之关联的引用队列中（前）。</p>
+<h2 id="5、简述垃圾回收算法和技术特点（GC）"><a href="#5、简述垃圾回收算法和技术特点（GC）" class="headerlink" title="5、简述垃圾回收算法和技术特点（GC）"></a>5、简述垃圾回收算法和技术特点（GC）</h2><h3 id="注释：JVM基础："><a href="#注释：JVM基础：" class="headerlink" title="注释：JVM基础："></a>注释：JVM基础：</h3><h4 id="新生代："><a href="#新生代：" class="headerlink" title="新生代："></a>新生代：</h4><p>​        新生代主要存放新创建的对象，垃圾回收会比较频繁。(稍微讲细一点就是即可，年轻代分成Eden（[ˈiːdn]） Space和Survivor（[sərˈvaɪvər] ） Space。当对象在堆创建时，将进入年轻代的Eden Space。垃圾回收器进行垃圾回收时，扫描Eden Space，如果对象仍然存活，则复制到Suvivor Space。)</p>
+<h4 id="老年代："><a href="#老年代：" class="headerlink" title="老年代："></a>老年代：</h4><p>​        年老代主要存放JVM认为生命周期比较长的对象（在扫描Suvivor Space时，如果对象已经经过了几次的扫描仍然存活，JVM认为其为一个持久化对象，则将其移到Old Gen。）</p>
+<h4 id="永久代："><a href="#永久代：" class="headerlink" title="永久代："></a>永久代：</h4><p>​        永久代主要存放类定义、字节码和常量等很少会变更的信息。</p>
+<p><img src="https://gitee.com/zhao-yuanye/blog-photo/raw/master/hotspot.jpg"></p>
+<h3 id="1、标记-清除算法"><a href="#1、标记-清除算法" class="headerlink" title="1、标记-清除算法"></a>1、标记-清除算法</h3><p>​        首先标记出所有需要回收的对象，在标记完成后统一回收所有被标记的对象。它是最基础的收集算法，会带来两个明显的问题：1， 效率问题 2，空间问题（标记清除后会产生大量不连续的碎片)。</p>
+<h3 id="2、复制算法（强行设置边界）"><a href="#2、复制算法（强行设置边界）" class="headerlink" title="2、复制算法（强行设置边界）"></a>2、复制算法（强行设置边界）</h3><p>​        将内存分为大小相同的两块，每次使用其中的一块。当这一块的内存使用完之后，就将还存活的对象复制到另一块去，然后再把使用空间一次清理掉。这样就使每次的内存回收都是对内存区间一半进行回收。但是，为了收集垃圾，将内存的使用量降低一半，成本较高。所以一般不会1:1划分边界，可以分一块较大的Eden空间和两块较小的Survivor空间，每次使用Eden空间和其中一块Survivor。当回收 时，将Eden和Survivor中还存活的对象一次性复制到另一块Survivor上，最后清理Eden和Survivor空间。大小比例一般是8:1:1，每次浪费10%的Survivor空间。但是这里有一个问题，就是如果存活大于10%在怎么办？这里采用一种分配担保策略，多出来的对象直接进入老年代。</p>
+<h3 id="3、标记-整理算法·"><a href="#3、标记-整理算法·" class="headerlink" title="3、标记-整理算法·"></a>3、标记-整理算法·</h3><p>​        标记过程仍然与‘标记-清除’算法一样，但后续不是直接对可回收对象回收而是让所有存活的对象向一段移动，然后直接清理掉段边界以外的内存。</p>
+<h3 id="4、分带收集方法（结合以上方法）"><a href="#4、分带收集方法（结合以上方法）" class="headerlink" title="4、分带收集方法（结合以上方法）"></a>4、分带收集方法（结合以上方法）</h3><p>​        一般都是Java堆分成新生代和老年代，这样我们就可以根据各个年代的特点选择合适的垃圾回收算法·。比如在新生代中，每次收集都会有大量的对象死去，所以可以选择复制算法，只需要付出少量对象的复制成本就可以完成每次垃圾收集。而老年代的对象存活几率是比较高的，所以我们可以选择“标记-整理”算法进行垃圾收集。</p>
+<h2 id="6、常见的垃圾收集器有哪些"><a href="#6、常见的垃圾收集器有哪些" class="headerlink" title="6、常见的垃圾收集器有哪些"></a>6、常见的垃圾收集器有哪些</h2><p>收集算法是内存回放的方法论，那么垃圾收集器就是内存回收的具体实现。</p>
+<p>（Serial 、Serial Old 、ParNew、Parallel Scavenge 、Parallel Old、CMS、G1）</p>
+<h3 id="1、Serial收集器："><a href="#1、Serial收集器：" class="headerlink" title="1、Serial收集器："></a>1、Serial收集器：</h3><p>​        单线程收集器，不仅仅意味着它只会使用一条垃圾收集线程去完成垃圾收集工作，重要的是它在进行垃圾收集工作的时候必须暂停其它所有的工作线程（”stop the World”）,直到它收集结束。</p>
+<h3 id="2、ParNew收集器："><a href="#2、ParNew收集器：" class="headerlink" title="2、ParNew收集器："></a>2、ParNew收集器：</h3><p>其实就是Serial收集器的多线程版本，随着CPU增加，可以显示出优势（并行)。</p>
+<p>并行与并发的区别：</p>
+<p>​        并行（Parallel):指多条垃圾收集线程并行工作，但此时用户线程仍然处于等待状态。</p>
+<p>​        并发（Concurrent):指用户线程与垃圾收集线程同时执行（但不一定是并行，可能会交替执行），用户程序在继续运行，而垃圾收集器运行在另一个CPU上。</p>
+<h3 id="3、Parallel-Scavenge（-ˈpaerəlel-ˈskaevɪndʒ-）收集器"><a href="#3、Parallel-Scavenge（-ˈpaerəlel-ˈskaevɪndʒ-）收集器" class="headerlink" title="3、Parallel Scavenge（[ˈpærəlel] [ˈskævɪndʒ]）收集器"></a>3、Parallel Scavenge（[ˈpærəlel] [ˈskævɪndʒ]）收集器</h3><p>​        是一个新生代收集器，使用<strong>复制算法</strong>，<strong>并行的多线程收集器</strong>。与ParNew类似，但是侧重点是吞吐量（CPU运行用户代码时间/CPU消耗的总时间)。可以设置参数来调整最大垃圾收集停顿时间和吞吐量的大小。</p>
+<p>//以上是新生代收集器，一般采用复制算法。    </p>
+<h3 id="4、Serial-Old："><a href="#4、Serial-Old：" class="headerlink" title="4、Serial Old："></a>4、Serial Old：</h3><p>​        是Serial收集器的老年代版本，单线程收集器。</p>
+<h3 id="5、Parallel-Old收集器："><a href="#5、Parallel-Old收集器：" class="headerlink" title="5、Parallel Old收集器："></a>5、Parallel Old收集器：</h3><p>是Parallel Scavenge收集器的老年代版本，使用多线程和“标记-整理”算法。在注重吞吐量以及CPU资源配合的场合，都可以优先考虑Parallel Scavenge收集器和Parallel Old收集器。</p>
+<h3 id="6、CMS-Concurrent-Mark-Sweep-收集器："><a href="#6、CMS-Concurrent-Mark-Sweep-收集器：" class="headerlink" title="6、CMS(Concurrent Mark Sweep)收集器："></a>6、CMS(Concurrent Mark Sweep)收集器：</h3><p>​        老年代收集器，采用<strong>标记-清除</strong>算法，是一种以获取最短回收停顿时间为目标的收集器。它非常符合在注重用户体验的应用上使用。整个过程有四个步骤：初始标记、并发标记、重新标记和并发清除。（Spark Streaming采用这个，最少停顿）</p>
+<h4 id="初始标记："><a href="#初始标记：" class="headerlink" title="初始标记："></a>初始标记：</h4><p>​        暂停所有的其它线程，并记录下直接与GC root相连的对象，速度很快。</p>
+<h4 id="并发标记："><a href="#并发标记：" class="headerlink" title="并发标记："></a>并发标记：</h4><p>​        同时开启GC和用户线程，从GC root继续向下进行标记，但是用户线程会继续更新对象的引用域。</p>
+<h4 id="重新标记："><a href="#重新标记：" class="headerlink" title="重新标记："></a>重新标记：</h4><p>​        重新标记阶段就是为了修正并发标记期间因为用户程序继续运行而导致标记产生变动的的那一部分对象的的标记记录，这个阶段的停顿时间一般会比初始标记阶段的时间稍长，远远比并发标记阶段时间短。</p>
+<h4 id="并发清除："><a href="#并发清除：" class="headerlink" title="并发清除："></a>并发清除：</h4><p>​        开启用户线程，同时GC线程开始对为标记的区域做清扫。</p>
+<p>优点是并发清除，低延迟。</p>
+<p>缺点：</p>
+<ol>
+<li>采用标记-清除，会产生碎片；</li>
+<li>无法处理浮动垃圾，在并发清除过程中，用户线程还在继续执行，还会不断产生垃圾，这部分只能等到下次GC时处理。        </li>
+<li>对CPU特别敏感，由于并发标记和并发清除是和用户线程并发执行，所以会导致用户程序变慢，总的吞吐量降低。</li>
+</ol>
+<h3 id="7、G1收集器："><a href="#7、G1收集器：" class="headerlink" title="7、G1收集器："></a>7、G1收集器：</h3><p>​        唯一一个同时可以用于年轻代和老年代的垃圾收集器，采用<strong>标记-整理</strong>算法，避免碎片。该收集器，将堆内存分为<strong>不同大小相等的region</strong>（ ？），并维护了一个优先列表，每次根据允许收集时间，优先选择回收价值最大的Region，把内存化整为零，但是由于引用关系的存在，仍然存在如何避免全局扫描问题，这里采用每一个region用一个remembered Set进行记录引用关系，避免可达性分析阶段的全区域垃圾扫描。</p>
+<p>G1：初始标记，并发标志，最终标记，筛选回收。</p>
+<p>初始标记，并发标志和CMS收集器相似，最终标记，将并发阶段对象变化记录在线程Remember Set Logs里面，最终把Recommend Set Logs的数据合并到Remembered Set中，这一阶段需要停顿线程，但是可并发执行。筛选回收，对每一个region的价值    和成本进行筛选，根据用户期望的GC停顿时间，得到最好的回收方案并回收。</p>
+<p>特点：并发性强，分代收集，标记整理进行空间整合，可以预测停顿时间。</p>
+<h2 id="7、吞吐量优先和响应优先的垃圾收集器如何选择？"><a href="#7、吞吐量优先和响应优先的垃圾收集器如何选择？" class="headerlink" title="7、吞吐量优先和响应优先的垃圾收集器如何选择？"></a>7、吞吐量优先和响应优先的垃圾收集器如何选择？</h2><h3 id="1、吞吐量优先："><a href="#1、吞吐量优先：" class="headerlink" title="1、吞吐量优先："></a>1、吞吐量优先：</h3><p>​        新生代采用Parallel Scavenge，老年代采用Parallel Old，并配置多个线程进行回收，设置参数来调整最大垃圾收集停顿时间和吞吐量的大小。</p>
+<h3 id="2、响应时间优先："><a href="#2、响应时间优先：" class="headerlink" title="2、响应时间优先："></a>2、响应时间优先：</h3><p>​        设置老年代的收集CMS（最短时间，spark streaming 采用这个),年轻代是ParNew(多线程)。</p>
+<h3 id="3、常用组合："><a href="#3、常用组合：" class="headerlink" title="3、常用组合："></a>3、常用组合：</h3><ul>
+<li><p>-XX:+UseSerialGC = Serial New (DefNew) + Serial Old</p>
+<p>​        小型程序。默认情况下不会是这种选项，HotSpot会根据计算及配置和JDK版本自动选择收集器</p>
+</li>
+<li><p>-XX:+UseParNewGC = ParNew + SerialOld</p>
+<p>​        这个组合已经很少用（在某些版本中已经废弃）</p>
+<p>​        <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/34962257/why-remove-support-for-parnewserialold-anddefnewcms-in-the-future">https://stackoverflow.com/questions/34962257/why-remove-support-for-parnewserialold-anddefnewcms-in-the-future</a></p>
+</li>
+<li><p>-XX:+UseConc(urrent)MarkSweepGC = ParNew + CMS + Serial Old</p>
+<p>​        (jdk1.8的命令是  UseConcMarkSweepGC，有的jdk版本是要加上红色字体部分的。Serial Old是替补）</p>
+</li>
+<li><p>-XX:+UseParallelGC = Parallel Scavenge + Parallel Old (1.8默认) 【PS + SerialOld】</p>
+</li>
+<li><p>-XX:+UseParallelOldGC = Parallel Scavenge + Parallel Old</p>
+</li>
+<li><p>-XX:+UseG1GC = G1 </p>
+</li>
+</ul>
+<h4 id="Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC"><a href="#Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC" class="headerlink" title="Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC"></a>Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC</h4><ul>
+<li><p>java +XX:+PrintCommandLineFlags -version</p>
+</li>
+<li><p>通过GC的日志来分辨</p>
+</li>
+</ul>
+<h4 id="Linux下1-8版本默认的垃圾回收器到底是什么？"><a href="#Linux下1-8版本默认的垃圾回收器到底是什么？" class="headerlink" title="Linux下1.8版本默认的垃圾回收器到底是什么？"></a>Linux下1.8版本默认的垃圾回收器到底是什么？</h4><ul>
+<li>1.8.0_181 默认（看不出来）Copy MarkCompact</li>
+<li> 1.8.0_222 默认 PS + PO</li>
+</ul>
+<h2 id="8、内存分配和回收策略。（对象何时进行老年代？）☆"><a href="#8、内存分配和回收策略。（对象何时进行老年代？）☆" class="headerlink" title="8、内存分配和回收策略。（对象何时进行老年代？）☆"></a>8、内存分配和回收策略。（对象何时进行老年代？）☆</h2><p>​        大多数情况下，对象在新生代中Eden区分配。当Eden区没有足够空间进行分配时，虚拟机将发起一次Minor GC。</p>
+<h3 id="1、Minor-GC和-Full-GC有什么不同呢？"><a href="#1、Minor-GC和-Full-GC有什么不同呢？" class="headerlink" title="1、Minor GC和 Full GC有什么不同呢？"></a>1、Minor GC和 Full GC有什么不同呢？</h3><p>Minor GC：指发生在新生代的垃圾收集动作，Minor GC 非常频繁，回收速度一般也比较快。</p>
+<p>Major GC:  指发生在老年代GC。</p>
+<p>Full GC:清理整个空间包括新生代和老年代。（下面两种一般很难区分，许多Major GC是由Minor GC触发的，major GC比Minor GC慢10倍以上）。</p>
+<h3 id="2、什么时候对象进行老年代？"><a href="#2、什么时候对象进行老年代？" class="headerlink" title="2、什么时候对象进行老年代？"></a>2、什么时候对象进行老年代？</h3><p>（1）大对象（需要大量内存连续的）直接进行老年代。</p>
+<p>（2）空间分配担保：新生成的对象放在Eden，当Eden被填满后，垃圾回收后存活的对象复制放入From（其中一个survivor),当From满了，回收后存活的对象被复制到To区域，Eden存活的也直接进入To区域，原From区域被清空，当To被填满后，如果之间存活的对象还活着，直接进行老年代（空间分配担保）。</p>
+<p>（3）年龄判定：年龄计数器会为对象记录年龄，每次经过一次GC仍然存活的，年龄+1，当超过设定的值，直接进入老年代。或者动态对象年龄判定，当如果Survivor空间中相同年龄所有对象大小的总和大于Survivor空间的一半，年龄大于或等于该年龄对象就可以直接进入老年代，无需达到要求的年龄。</p>
+<h3 id="3、空间分配担保"><a href="#3、空间分配担保" class="headerlink" title="3、空间分配担保"></a>3、空间分配担保</h3><p>​        安全的Minor GC：老年代中最大可用的连续空间大于新生代所有对象的空间；</p>
+<p>​        冒险的Minor GC：老年代中最大可用的连续空间大于历代晋升到老年代的平均水平且允许担保失败，如果小于平均值，则直接进行full GC，让老年代腾出空间。</p>
+<h2 id="9、如何进行GC调优"><a href="#9、如何进行GC调优" class="headerlink" title="9、如何进行GC调优"></a>9、如何进行GC调优</h2><p>​        可以结合自己项目实战出发，体现JVM调优。<a target="_blank" rel="noopener" href="https://www.cnblogs.com/ityouknow/p/7653129.html">如何优化Java GC「译」</a></p>
+<h3 id="1、可以说说GC是什么，（垃圾回收算法，收集器）"><a href="#1、可以说说GC是什么，（垃圾回收算法，收集器）" class="headerlink" title="1、可以说说GC是什么，（垃圾回收算法，收集器）"></a>1、可以说说GC是什么，（垃圾回收算法，收集器）</h3><h3 id="2、优化目标"><a href="#2、优化目标" class="headerlink" title="2、优化目标"></a>2、优化目标</h3><p>​        （1）将进入老年代的对象数量降到最低</p>
+<p>​        （2）减少FULL GC的执行时间</p>
+<p>​        （3）优化JVM参数:比如堆和栈的大小，设置垃圾收集器的模式。</p>
+<h3 id="3、优化策略"><a href="#3、优化策略" class="headerlink" title="3、优化策略"></a>3、优化策略</h3><p>（1）将新对象预留在新生代，由于Full GC 的成本远高于Minor GC，因此尽可能将对象分配在新生代，师姐项目中根据GC日志分析新生代空间大小分配是否合理，适当通过“-Xmn”命令调节新生代代销，最大限度降低新对象直接进入老年代的情况。</p>
+<p>（2）大对象进入老年代，虽然大部分情况下，将对象分排在新生代是合理的。但是对于大对象这种做法却值得商榷，大对象如果首次在新生代分配可能会出现空间不足导致很多年龄不够的小对象被分配的老年代，破坏新生代的对象结构，可能会出现频繁的full gc。因此，对于大对象，可以设置直接进入老年代（当然短命的大对象对于垃圾回收来说简直就是噩梦）。-XX：PretenureSize Threshold（[ˈtenjər] [ˈθreʃhoʊld]）可以设置直接进入老年代的对象大小。</p>
+<p>（3）合理设置进入老年代对象的年龄，-XX：MaxTenuringThreshold设置对象进入老年代的年龄大小，减少老年代的内存占用，降低 full gc 发生的频率。</p>
+<p>（4）设置稳定的堆大小，堆大小设置有两个参数：-Xms初始化堆大小，-Xmx最大堆大小。</p>
+<p>（5）如果满足下面的指标，则一般不需要进行GC优化。</p>
+<p>Minor GC执行时间不到50ms，Minor GC执行不频繁，约10s一次。</p>
+<p>Full GC执行时间不到1s，Full GC执行频率不算频繁，不低于10分钟1次。</p>
+<h2 id="10、虚拟机性能监控和故障处理工具"><a href="#10、虚拟机性能监控和故障处理工具" class="headerlink" title="10、虚拟机性能监控和故障处理工具"></a>10、虚拟机性能监控和故障处理工具</h2><p>​        jps：JVM Process Status Tool,显示指定系统内所有的HotSpot虚拟机进程。</p>
+<p>​        jstat：JVM Statistics Monitoring Tool ，用于收集HotSpot虚拟机各方面的运行数据。</p>
+<p>​        jinfo：Configuration Info for Java，显示虚拟机配置信息</p>
+<p>​        jmap：Memory Map for Java，生成虚拟机的内存转储快照（headdump文件）</p>
+<p>​        jhat：JVM Heap Dump Browser，用于分析heapdump文件，它会建立一个Http/HTML服务器，让用户可以在浏览器上查看分析结果。</p>
+<p>​        jstack：Stack Trace forJava，显示虚拟机的线程快照</p>
+<p>​        以上是命令行模式的。</p>
+<p>​        jvisualvm：可视化来监控Java应用程序性能和跟踪。</p>
+<h2 id="11、Class类文件的结构"><a href="#11、Class类文件的结构" class="headerlink" title="11、Class类文件的结构"></a>11、Class类文件的结构</h2><p>1、Class文件时Java虚拟机执行引擎的数据入口，也是Java技术体系的基础构成之一。</p>
+<p>包括：魔数和版本号、常量池（注意是运行时常量池的区别）、访问标志（类定义标志）、类索引、父类索引和接口索引的集合（确定一个类的继承关系）、字段表集合、方法表集合、属性表。</p>
+<p>2、字段表包含什么信息？</p>
+<p>字段的作用域（public private protected修饰符），是实例变量还是类变量（static修饰符）、可变性（final）、并发可见性（volatile修饰符，是否强制从主内存读写）、可否被序列化（transient修饰符）、字段数据类型、字段名称。</p>
+<h2 id="12、简述JVM中的类加载机制"><a href="#12、简述JVM中的类加载机制" class="headerlink" title="12、简述JVM中的类加载机制"></a>12、简述JVM中的类加载机制</h2><p>​        虚拟机把描述类的数据从class文件加载到内存，并对数据进行校验、转换解析和初始化。</p>
+<p>类加载进程：加载、验证、准备、解析和初始化。</p>
+<h3 id="1、加载"><a href="#1、加载" class="headerlink" title="1、加载"></a>1、加载</h3><p>​        通过类型的完全限定名，产生一个代表该类型的二进制数据流；解析这个二进制数据流的静态存储结构转化为方法区内的运行时数据结构；创建一个表示该类型的Java.lang.Class类的实例，作为方法区这个类的各种数据的访问入口。</p>
+<h3 id="2、验证"><a href="#2、验证" class="headerlink" title="2、验证"></a>2、验证</h3><p>​        为了确保Class文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。</p>
+<h3 id="3、准备"><a href="#3、准备" class="headerlink" title="3、准备"></a>3、准备</h3><p>​        正式为类变量（static修饰的）分配内存并设置类变量初始值的阶段，这些变量所使用的内存都将在方法区中进行分配。</p>
+<p>对于：public static int value=123；那么变量value在准备阶段过后的初始值为0而不是123，这时候尚未开始执行任何Java方法，把value赋值为123的动作将在初始化阶段才会被执行。</p>
+<h3 id="4、解析"><a href="#4、解析" class="headerlink" title="4、解析"></a>4、解析</h3><p>​        虚拟机将常量池内的符号引用替换为直接引用的过程。主要对类或接口、字段、类方法、接口方法的解析，主要是静态链接，方法主要是静态方法和私有方法。</p>
+<h3 id="5、初始化"><a href="#5、初始化" class="headerlink" title="5、初始化"></a>5、初始化</h3><p>​        开始真正执行定义的Java代码。执行clinit()方法，该方法会收集所有类变量的赋值动作和静态语句合并产生，首先会执行父类。</p>
+<h2 id="13、简述JVM中的类加载器以及双亲委派模型"><a href="#13、简述JVM中的类加载器以及双亲委派模型" class="headerlink" title="13、简述JVM中的类加载器以及双亲委派模型"></a>13、简述JVM中的类加载器以及双亲委派模型</h2><h3 id="1、启动类加载器-Bootstrap-ClassLoader-："><a href="#1、启动类加载器-Bootstrap-ClassLoader-：" class="headerlink" title="1、启动类加载器(Bootstrap ClassLoader)："></a>1、启动类加载器(Bootstrap ClassLoader)：</h3><p>​        这个类加载器负责将存放在\lib 目录中的，或者被-Xbootclasspath参数所指定的路径中的，并且是被虚拟机识别的（仅按照文件名识别，如rt.jar,名字不符合的类库即使放在lib目录中也不会被加载）类库加载到虚拟机中。</p>
+<h3 id="2、扩展类加载器（Extension-ClassLoader"><a href="#2、扩展类加载器（Extension-ClassLoader" class="headerlink" title="2、扩展类加载器（Extension ClassLoader) :"></a>2、扩展类加载器（Extension ClassLoader) :</h3><p>​        这个加载器有 实现，它负责加载\lib\ext目录中的，或者被Java.ext.dirs系统变量所指定的路径中的所有类库，开发者可以直接使用扩展类加载器。</p>
+<h3 id="3、应用程序类加载器（Application-ClassLoader"><a href="#3、应用程序类加载器（Application-ClassLoader" class="headerlink" title="3、应用程序类加载器（Application ClassLoader) :"></a>3、应用程序类加载器（Application ClassLoader) :</h3><p>​        这个类加载器由sun.misc.Launcher$ApptClassLoader实现，由于这个类加载器是ClassLoader中的getSystemClassLoader()方法的返回值，所以一般也称它为系统类加载器。他负责加载用户类路径（ClassPath)上指定的类库，开发者可以直接使用这个类加载器，要求除了顶层的启动类加载器外，其余的类加载器都应该有自己的父类加载器。这里父子关系通常是通过组合关系而不是继承关系来复用父加载器的代码。</p>
+<h3 id="4、双亲委派模型的工作过程：（一个是安全性，另一个就是性能；（避免重复加载-和-避免核心类被篡改））"><a href="#4、双亲委派模型的工作过程：（一个是安全性，另一个就是性能；（避免重复加载-和-避免核心类被篡改））" class="headerlink" title="4、双亲委派模型的工作过程：（一个是安全性，另一个就是性能；（避免重复加载 和 避免核心类被篡改））"></a>4、双亲委派模型的工作过程：（一个是安全性，另一个就是性能；（避免重复加载 和 避免核心类被篡改））</h3><p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%8D%9A%E5%AE%A2%E7%85%A7%E7%89%87%5C%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B.png"></p>
+<p>​        如果一个类加载器收到了类加载的请求，先把这个请求委派给父类加载器去完成(所以所有的加载请求最终都应该传送到顶层的启动类加载器中)，只有当父加载器反馈自己无法完成加载请求时，自加载器才会尝试自己去加载。（原因是：如果用户自己编写了一个称为Java.lang.object的类，并放在程序的ClassPath中，那系统中将会出现多个不同的Object类，Java类型体系中最基础的行为也就无法保证，应用程序也将会变得一片混乱）</p>
+<h3 id="5、如果自己写一个Java-lang-String会被加载吗"><a href="#5、如果自己写一个Java-lang-String会被加载吗" class="headerlink" title="5、如果自己写一个Java.lang.String会被加载吗?"></a>5、如果自己写一个Java.lang.String会被加载吗?</h3><p>​        不会。因为双亲委托机制是可以打破的，你完全可以自己写一个classLoader来加载自己写的Java.lang.String类，但是你会发现也不会加载成功，具体就是针对Java.*的开头的类，JVM的实现中已经保证了必须由bootstrap来加载。</p>
+<p>但是双亲委派也可以破坏掉，比如自定义一个string类但是包名不是Java.*,可以放在用户目录下进行加载。</p>
+<h3 id="6、双亲委派模型可以破坏吗？举例子"><a href="#6、双亲委派模型可以破坏吗？举例子" class="headerlink" title="6、双亲委派模型可以破坏吗？举例子"></a>6、双亲委派模型可以破坏吗？举例子</h3><p>可以破坏。</p>
+<h4 id="1、历史原因："><a href="#1、历史原因：" class="headerlink" title="1、历史原因："></a>1、历史原因：</h4><p>​        <strong>由于双亲委派模型是在JDK1.2之后才被引入的，而类加载器和抽象类java.lang.ClassLoader则在JDK1.0时代就已经存在，面对已经存在的用户自定义类加载器的实现代码，Java设计者引入双亲委派模型时不得不做出一些妥协。</strong>在此之前，用户去继承java.lang.ClassLoader的唯一目的就是为了重写loadClass()方法，因为虚拟机在进行类加载的时候会调用加载器的私有方法loadClassInternal()，而这个方法唯一逻辑就是去调用自己的loadClass()。</p>
+<h4 id="2、反向加载："><a href="#2、反向加载：" class="headerlink" title="2、反向加载："></a>2、反向加载：</h4><p>​        双亲委派模型的第二次“被破坏”是由这个模型自身的缺陷所导致的，双亲委派很好地解决了各个类加载器的基础类的同一问题（越基础的类由越上层的加载器进行加载），基础类之所以称为“基础”，是因为它们总是作为被用户代码调用的API，但是如果基础类又要调用回用户的代码，那该么办？</p>
+<p>​        为了解决这个问题，Java设计团队只好引入了一个不太优雅的设计：线程上下文类加载器(Thread Context ClassLoader)。这个类加载器可以通过java.lang.Thread类的setContextClassLoader()方法进行设置，如果创建线程时还未设置，他将会从父线程中继承一个，如果在应用程序的全局范围内都没有设置过的话，那这个类加载器默认就是应用程序类加载器。</p>
+<p>​        例子：原生的JDBC中Driver驱动本身只是一个接口，并没有具体的实现，具体的实现是由不同数据库类型去实现的。例如，MySQL的mysql-connector-.jar中的Driver类具体实现。 <strong>原生的JDBC中的类是放在rt.jar包的，是由启动类加载器进行类加载的，在JDBC中的Driver类中需要动态去加载不同数据库类型的Driver类，而mysql-connector-.jar中的Driver类是用户自己写的代码，那启动类加载器肯定是不能进行加载的，既然是自己编写的代码，那就需要由应用程序启动类去进行类加载。于是乎，这个时候就引入线程上下文件类加载器(Thread Context ClassLoader)。</strong>有了这个东西之后，程序就可以把原本需要由启动类加载器进行加载的类，由应用程序类加载器去进行加载了。（反向加载）</p>
+<h4 id="3、结构复杂化："><a href="#3、结构复杂化：" class="headerlink" title="3、结构复杂化："></a>3、结构复杂化：</h4><p><strong>双亲委派模型的第三次“被破坏”是由于用户对程序动态性的追求导致的，这里所说的“动态性”指的是当前一些非常“热门”的名词：代码热替换、模块热部署等，简答的说就是机器不用重启，只要部署上就能用。</strong><br>OSGi实现模块化热部署的关键则是它自定义的类加载器机制的实现。每一个程序模块(Bundle)都有一个自己的类加载器，当需要更换一个Bundle时，就把Bundle连同类加载器一起换掉以实现代码的热替换。在OSGi环境下，类加载器不再是双亲委派模型中的树状结构，而是进一步发展为更加复杂的网状结构。当受到类加载请求时，OSGi将按照下面的顺序进行类搜索：<br>1）将java.＊开头的类委派给父类加载器加载。<br>2）否则，将委派列表名单内的类委派给父类加载器加载。<br>3）否则，将Import列表中的类委派给Export这个类的Bundle的类加载器加载。<br>4）否则，查找当前Bundle的ClassPath，使用自己的类加载器加载。<br>5）否则，查找类是否在自己的Fragment Bundle中，如果在，则委派给Fragment Bundle的类加载器加载。<br>6）否则，查找Dynamic Import列表的Bundle，委派给对应Bundle的类加载器加载。<br>7）否则，类加载器失败。</p>
+<h2 id="14、简述JVM中静态分派和动态分派（引申：重载和重写）"><a href="#14、简述JVM中静态分派和动态分派（引申：重载和重写）" class="headerlink" title="14、简述JVM中静态分派和动态分派（引申：重载和重写）"></a>14、简述JVM中静态分派和动态分派（引申：重载和重写）</h2><h3 id="1、静态分派："><a href="#1、静态分派：" class="headerlink" title="1、静态分派："></a>1、静态分派：</h3><p>​        依赖<strong>静态类型</strong>定位方法的分派，发生在编译时期，典型应用为方法的重载。（重载的参数是通过静态类型确定的，直接调用父类）</p>
+<h3 id="2、动态分派："><a href="#2、动态分派：" class="headerlink" title="2、动态分派："></a>2、动态分派：</h3><p>​        在运行时期根据<strong>实际类型来确定方法的分派</strong>，发生在程序运行时，典型的应用是方法的重写，也是多态的一种体现。根据转型来确定是否调用父类还是子类的方法。</p>
+<h3 id="3、虚方法和非虚方法："><a href="#3、虚方法和非虚方法：" class="headerlink" title="3、虚方法和非虚方法："></a>3、虚方法和非虚方法：</h3><p>​        （1）非虚方法（所有static方法+final/private方法）通过<strong>invokespecial指令</strong>调用，对这个非虚方法的符号引用将转化为对应的直接引用，即转为直接引用方法，在编译完成时就确定唯一的调用方法。</p>
+<p>​        （2）虚方法是通过<strong>invokevirtual指令</strong>调用，且会有<strong>静态或者动态分派</strong>。具体先根据编译期时方法接收者和方法参数的静态类型来分派，再在运行期根据方法接收器的实际类型来分派（多态实现原理，可以理解为可被重写，一般指实例方法。）</p>
+<h2 id="15、JVM启动模式值client与server"><a href="#15、JVM启动模式值client与server" class="headerlink" title="15、JVM启动模式值client与server"></a>15、JVM启动模式值client与server</h2><p>​        指定JVM启动模式：JVM启动时，通过-server或者-client参数指定启动模式。</p>
+<h3 id="client模式和server模式的区别："><a href="#client模式和server模式的区别：" class="headerlink" title="client模式和server模式的区别："></a>client模式和server模式的区别：</h3><h4 id="（1）编译期方面："><a href="#（1）编译期方面：" class="headerlink" title="（1）编译期方面："></a>（1）编译期方面：</h4><p>​        当虚拟机运行在client模式是，使用的是一个代号为c1的轻量级编译器，而server模式启动时，虚拟机采用的是相对重量级，代号为c2的编译器；c2编译器比c1编译器编译的相对彻底，服务起来之后，性能更高。</p>
+<h4 id="（2）gc方面："><a href="#（2）gc方面：" class="headerlink" title="（2）gc方面："></a>（2）gc方面：</h4><p>​        client模式下的新生代 （Serial收集器）和老年代（serial Old）选择的是串行的gc。</p>
+<p>​        server模式下的新生代选择并行回收gc，老年代悬着并行gc。</p>
+<h4 id="（3）启动方面："><a href="#（3）启动方面：" class="headerlink" title="（3）启动方面："></a>（3）启动方面：</h4><p>​        client模式启动快，编译快，内存占用少，针对桌面应用程序设计，<strong>优化客户端环境的启动时间。</strong></p>
+<p>​        server模式启动慢，编译更完全，编译器是自适应编译器，效率高，针对服务器端应用设计，<strong>优化服务器环境的最大化程序执行速度。</strong></p>
+<h5 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h5><p>​        一般来说系统应用选择有两种方式：吞吐量优先和停顿时间优先，对于吞吐量优先的采用server默认的并行gc（Parallel Scavenge），对于停顿时间优先的悬着并发gc(CMS)。</p>
+<h2 id="16、JVM进程有哪些线程启动？"><a href="#16、JVM进程有哪些线程启动？" class="headerlink" title="16、JVM进程有哪些线程启动？"></a>16、JVM进程有哪些线程启动？</h2><h5 id="JVM进程启动会启动哪些线程？"><a href="#JVM进程启动会启动哪些线程？" class="headerlink" title="JVM进程启动会启动哪些线程？"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiangwangxiang/p/9094006.html">JVM进程启动会启动哪些线程？</a></h5><p>1-main                                           主线程，执行我们指定的启动类的main方法</p>
+<p>2-Reference Handler              处理引用的线程　</p>
+<p>3-Finalizer                                  调用对象的finalize方法的线程，就是垃圾回收的线程　</p>
+<p>4-Signal Dispatcher                分发处理发送给JVM信号的线程　　</p>
+<p>5-Attach Listener                    负责接收外部的命令的线程</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinPay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -659,7 +409,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -676,77 +426,125 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A05%E3%80%8BJVM%E3%80%8AJVM%E3%80%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A04%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E9%9B%86%E5%90%88%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
-  	<time datetime="2021-05-20T13:07:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A06%E3%80%8B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E3%80%8AJava%E5%B9%B6%E5%8F%91%E3%80%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          《2021春招复习6》基础概念《Java并发》
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A04%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E9%9B%86%E5%90%88%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《2021春招复习4》Java基础《集合》</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/20/%E3%80%8A2021%E6%98%A5%E6%8B%9B%E5%A4%8D%E4%B9%A04%E3%80%8BJava%E5%9F%BA%E7%A1%80%E3%80%8A%E9%9B%86%E5%90%88%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC/">《2021春招复习4》Java基础《集合》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习//" class="article-tag-list-link color4">2021春招复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/2021春招复习/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BB%8B%E7%BB%8DJVM%E7%9A%84%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%EF%BC%88%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%EF%BC%89%E3%80%82%E2%98%86"><span class="toc-number">1.</span> <span class="toc-text">1、介绍JVM的内存区域（运行时数据区）。☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%A0%86"><span class="toc-number">1.1.</span> <span class="toc-text">1、堆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%96%B9%E6%B3%95%E5%8C%BA"><span class="toc-number">1.2.</span> <span class="toc-text">2、方法区</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%B3%EF%BC%9A%E6%96%B9%E6%B3%95%E5%8C%BA%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-java7%E5%92%8Cjava8%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.2.1.</span> <span class="toc-text">引申：方法区在虚拟机中具体实现是什么？ java7和java8有什么区别？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88"><span class="toc-number">1.3.</span> <span class="toc-text">3、虚拟机栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%88"><span class="toc-number">1.4.</span> <span class="toc-text">4、本地方法栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.5.</span> <span class="toc-text">5、程序计数器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%BF%90%E8%A1%8C%E6%97%B6%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E5%A4%96%E8%A7%84%E5%AE%9A%E7%9A%84%E6%A0%88%E5%A4%96%E5%86%85%E5%AD%98%EF%BC%9A"><span class="toc-number">1.6.</span> <span class="toc-text">6、运行时内存区域外规定的栈外内存：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%92%E3%80%81%E7%AE%80%E8%BF%B0%E6%B0%B8%E4%B9%85%E4%BB%A3%EF%BC%88PermGen-%CB%8Cd%CA%92en%C9%99%CB%88re%C9%AA%CA%83n-%EF%BC%89%E5%92%8C%E6%BA%90%E7%A9%BA%E9%97%B4%EF%BC%88MetaSpace-%CB%88met%C9%99-%EF%BC%89%E2%98%86"><span class="toc-number">2.</span> <span class="toc-text">２、简述永久代（PermGen [ˌdʒenəˈreɪʃn]）和源空间（MetaSpace [ˈmetə]）☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%B0%B8%E4%B9%85%E4%BB%A3"><span class="toc-number">2.1.</span> <span class="toc-text">1、永久代</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%BA%90%E7%A9%BA%E9%97%B4"><span class="toc-number">2.2.</span> <span class="toc-text">2、源空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%85%83%E7%A9%BA%E9%97%B4%E6%9B%BF%E6%8D%A2%E6%B0%B8%E4%B9%85%E4%BB%A3"><span class="toc-number">2.3.</span> <span class="toc-text">3、为什么使用元空间替换永久代</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%AF%B9%E8%B1%A1%E5%B7%B2%E7%BB%8F%E6%AD%BB%E4%BA%A1%E2%98%86"><span class="toc-number">3.</span> <span class="toc-text">3、如何判断对象已经死亡☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">1、引用计数法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8F%AF%E8%BE%BE%E6%80%A7%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">2、可达性分析法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%9C%9F%E7%9A%84%E6%AD%BB%E4%BA%86%E5%90%97"><span class="toc-number">3.3.</span> <span class="toc-text">3、真的死了吗</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E7%AE%80%E8%BF%B0%E5%BC%BA%E3%80%81%E8%BD%AF%E3%80%81%E5%BC%B1%E3%80%81%E8%99%9A%E5%BC%95%E7%94%A8%E3%80%82"><span class="toc-number">4.</span> <span class="toc-text">4、简述强、软、弱、虚引用。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%BC%BA%E5%BC%95%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">1、强引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%BD%AF%E5%BC%95%E7%94%A8"><span class="toc-number">4.2.</span> <span class="toc-text">2、软引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%BC%B1%E5%BC%95%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text">3、弱引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%99%9A%E5%BC%95%E7%94%A8"><span class="toc-number">4.4.</span> <span class="toc-text">4、虚引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%AE%80%E8%BF%B0%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%E5%92%8C%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9%EF%BC%88GC%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">5、简述垃圾回收算法和技术特点（GC）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A%EF%BC%9AJVM%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">注释：JVM基础：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E7%94%9F%E4%BB%A3%EF%BC%9A"><span class="toc-number">5.1.1.</span> <span class="toc-text">新生代：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%80%81%E5%B9%B4%E4%BB%A3%EF%BC%9A"><span class="toc-number">5.1.2.</span> <span class="toc-text">老年代：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B8%E4%B9%85%E4%BB%A3%EF%BC%9A"><span class="toc-number">5.1.3.</span> <span class="toc-text">永久代：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%A0%87%E8%AE%B0-%E6%B8%85%E9%99%A4%E7%AE%97%E6%B3%95"><span class="toc-number">5.2.</span> <span class="toc-text">1、标记-清除算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%A4%8D%E5%88%B6%E7%AE%97%E6%B3%95%EF%BC%88%E5%BC%BA%E8%A1%8C%E8%AE%BE%E7%BD%AE%E8%BE%B9%E7%95%8C%EF%BC%89"><span class="toc-number">5.3.</span> <span class="toc-text">2、复制算法（强行设置边界）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%A0%87%E8%AE%B0-%E6%95%B4%E7%90%86%E7%AE%97%E6%B3%95%C2%B7"><span class="toc-number">5.4.</span> <span class="toc-text">3、标记-整理算法·</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%88%86%E5%B8%A6%E6%94%B6%E9%9B%86%E6%96%B9%E6%B3%95%EF%BC%88%E7%BB%93%E5%90%88%E4%BB%A5%E4%B8%8A%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-number">5.5.</span> <span class="toc-text">4、分带收集方法（结合以上方法）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">6.</span> <span class="toc-text">6、常见的垃圾收集器有哪些</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Serial%E6%94%B6%E9%9B%86%E5%99%A8%EF%BC%9A"><span class="toc-number">6.1.</span> <span class="toc-text">1、Serial收集器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81ParNew%E6%94%B6%E9%9B%86%E5%99%A8%EF%BC%9A"><span class="toc-number">6.2.</span> <span class="toc-text">2、ParNew收集器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Parallel-Scavenge%EF%BC%88-%CB%88paer%C9%99lel-%CB%88skaev%C9%AAnd%CA%92-%EF%BC%89%E6%94%B6%E9%9B%86%E5%99%A8"><span class="toc-number">6.3.</span> <span class="toc-text">3、Parallel Scavenge（[ˈpærəlel] [ˈskævɪndʒ]）收集器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81Serial-Old%EF%BC%9A"><span class="toc-number">6.4.</span> <span class="toc-text">4、Serial Old：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81Parallel-Old%E6%94%B6%E9%9B%86%E5%99%A8%EF%BC%9A"><span class="toc-number">6.5.</span> <span class="toc-text">5、Parallel Old收集器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81CMS-Concurrent-Mark-Sweep-%E6%94%B6%E9%9B%86%E5%99%A8%EF%BC%9A"><span class="toc-number">6.6.</span> <span class="toc-text">6、CMS(Concurrent Mark Sweep)收集器：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E6%A0%87%E8%AE%B0%EF%BC%9A"><span class="toc-number">6.6.1.</span> <span class="toc-text">初始标记：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E6%A0%87%E8%AE%B0%EF%BC%9A"><span class="toc-number">6.6.2.</span> <span class="toc-text">并发标记：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%A0%87%E8%AE%B0%EF%BC%9A"><span class="toc-number">6.6.3.</span> <span class="toc-text">重新标记：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E6%B8%85%E9%99%A4%EF%BC%9A"><span class="toc-number">6.6.4.</span> <span class="toc-text">并发清除：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81G1%E6%94%B6%E9%9B%86%E5%99%A8%EF%BC%9A"><span class="toc-number">6.7.</span> <span class="toc-text">7、G1收集器：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F%E4%BC%98%E5%85%88%E5%92%8C%E5%93%8D%E5%BA%94%E4%BC%98%E5%85%88%E7%9A%84%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%EF%BC%9F"><span class="toc-number">7.</span> <span class="toc-text">7、吞吐量优先和响应优先的垃圾收集器如何选择？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F%E4%BC%98%E5%85%88%EF%BC%9A"><span class="toc-number">7.1.</span> <span class="toc-text">1、吞吐量优先：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E4%BC%98%E5%85%88%EF%BC%9A"><span class="toc-number">7.2.</span> <span class="toc-text">2、响应时间优先：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%B8%B8%E7%94%A8%E7%BB%84%E5%90%88%EF%BC%9A"><span class="toc-number">7.3.</span> <span class="toc-text">3、常用组合：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E4%B8%AD%E6%B2%A1%E6%89%BE%E5%88%B0%E9%BB%98%E8%AE%A4GC%E7%9A%84%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%EF%BC%8C%E8%80%8Cwindows%E4%B8%AD%E4%BC%9A%E6%89%93%E5%8D%B0UseParallelGC"><span class="toc-number">7.3.1.</span> <span class="toc-text">Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux%E4%B8%8B1-8%E7%89%88%E6%9C%AC%E9%BB%98%E8%AE%A4%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">7.3.2.</span> <span class="toc-text">Linux下1.8版本默认的垃圾回收器到底是什么？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%92%8C%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5%E3%80%82%EF%BC%88%E5%AF%B9%E8%B1%A1%E4%BD%95%E6%97%B6%E8%BF%9B%E8%A1%8C%E8%80%81%E5%B9%B4%E4%BB%A3%EF%BC%9F%EF%BC%89%E2%98%86"><span class="toc-number">8.</span> <span class="toc-text">8、内存分配和回收策略。（对象何时进行老年代？）☆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Minor-GC%E5%92%8C-Full-GC%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%E5%91%A2%EF%BC%9F"><span class="toc-number">8.1.</span> <span class="toc-text">1、Minor GC和 Full GC有什么不同呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%AF%B9%E8%B1%A1%E8%BF%9B%E8%A1%8C%E8%80%81%E5%B9%B4%E4%BB%A3%EF%BC%9F"><span class="toc-number">8.2.</span> <span class="toc-text">2、什么时候对象进行老年代？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D%E6%8B%85%E4%BF%9D"><span class="toc-number">8.3.</span> <span class="toc-text">3、空间分配担保</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8CGC%E8%B0%83%E4%BC%98"><span class="toc-number">9.</span> <span class="toc-text">9、如何进行GC调优</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8F%AF%E4%BB%A5%E8%AF%B4%E8%AF%B4GC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%EF%BC%88%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%EF%BC%8C%E6%94%B6%E9%9B%86%E5%99%A8%EF%BC%89"><span class="toc-number">9.1.</span> <span class="toc-text">1、可以说说GC是什么，（垃圾回收算法，收集器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BC%98%E5%8C%96%E7%9B%AE%E6%A0%87"><span class="toc-number">9.2.</span> <span class="toc-text">2、优化目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5"><span class="toc-number">9.3.</span> <span class="toc-text">3、优化策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%92%8C%E6%95%85%E9%9A%9C%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">10.</span> <span class="toc-text">10、虚拟机性能监控和故障处理工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81Class%E7%B1%BB%E6%96%87%E4%BB%B6%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">11.</span> <span class="toc-text">11、Class类文件的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81%E7%AE%80%E8%BF%B0JVM%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6"><span class="toc-number">12.</span> <span class="toc-text">12、简述JVM中的类加载机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8A%A0%E8%BD%BD"><span class="toc-number">12.1.</span> <span class="toc-text">1、加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%AA%8C%E8%AF%81"><span class="toc-number">12.2.</span> <span class="toc-text">2、验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%87%86%E5%A4%87"><span class="toc-number">12.3.</span> <span class="toc-text">3、准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%A7%A3%E6%9E%90"><span class="toc-number">12.4.</span> <span class="toc-text">4、解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">12.5.</span> <span class="toc-text">5、初始化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81%E7%AE%80%E8%BF%B0JVM%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E4%BB%A5%E5%8F%8A%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B"><span class="toc-number">13.</span> <span class="toc-text">13、简述JVM中的类加载器以及双亲委派模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%90%AF%E5%8A%A8%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8-Bootstrap-ClassLoader-%EF%BC%9A"><span class="toc-number">13.1.</span> <span class="toc-text">1、启动类加载器(Bootstrap ClassLoader)：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%A9%E5%B1%95%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%EF%BC%88Extension-ClassLoader"><span class="toc-number">13.2.</span> <span class="toc-text">2、扩展类加载器（Extension ClassLoader) :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%EF%BC%88Application-ClassLoader"><span class="toc-number">13.3.</span> <span class="toc-text">3、应用程序类加载器（Application ClassLoader) :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B%EF%BC%9A%EF%BC%88%E4%B8%80%E4%B8%AA%E6%98%AF%E5%AE%89%E5%85%A8%E6%80%A7%EF%BC%8C%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%B0%B1%E6%98%AF%E6%80%A7%E8%83%BD%EF%BC%9B%EF%BC%88%E9%81%BF%E5%85%8D%E9%87%8D%E5%A4%8D%E5%8A%A0%E8%BD%BD-%E5%92%8C-%E9%81%BF%E5%85%8D%E6%A0%B8%E5%BF%83%E7%B1%BB%E8%A2%AB%E7%AF%A1%E6%94%B9%EF%BC%89%EF%BC%89"><span class="toc-number">13.4.</span> <span class="toc-text">4、双亲委派模型的工作过程：（一个是安全性，另一个就是性能；（避免重复加载 和 避免核心类被篡改））</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%A6%82%E6%9E%9C%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAJava-lang-String%E4%BC%9A%E8%A2%AB%E5%8A%A0%E8%BD%BD%E5%90%97"><span class="toc-number">13.5.</span> <span class="toc-text">5、如果自己写一个Java.lang.String会被加载吗?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E5%8F%AF%E4%BB%A5%E7%A0%B4%E5%9D%8F%E5%90%97%EF%BC%9F%E4%B8%BE%E4%BE%8B%E5%AD%90"><span class="toc-number">13.6.</span> <span class="toc-text">6、双亲委派模型可以破坏吗？举例子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%8E%86%E5%8F%B2%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="toc-number">13.6.1.</span> <span class="toc-text">1、历史原因：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%8F%8D%E5%90%91%E5%8A%A0%E8%BD%BD%EF%BC%9A"><span class="toc-number">13.6.2.</span> <span class="toc-text">2、反向加载：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E7%BB%93%E6%9E%84%E5%A4%8D%E6%9D%82%E5%8C%96%EF%BC%9A"><span class="toc-number">13.6.3.</span> <span class="toc-text">3、结构复杂化：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E7%AE%80%E8%BF%B0JVM%E4%B8%AD%E9%9D%99%E6%80%81%E5%88%86%E6%B4%BE%E5%92%8C%E5%8A%A8%E6%80%81%E5%88%86%E6%B4%BE%EF%BC%88%E5%BC%95%E7%94%B3%EF%BC%9A%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%EF%BC%89"><span class="toc-number">14.</span> <span class="toc-text">14、简述JVM中静态分派和动态分派（引申：重载和重写）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%9D%99%E6%80%81%E5%88%86%E6%B4%BE%EF%BC%9A"><span class="toc-number">14.1.</span> <span class="toc-text">1、静态分派：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8A%A8%E6%80%81%E5%88%86%E6%B4%BE%EF%BC%9A"><span class="toc-number">14.2.</span> <span class="toc-text">2、动态分派：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%99%9A%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%9E%E8%99%9A%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">14.3.</span> <span class="toc-text">3、虚方法和非虚方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81JVM%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E5%80%BCclient%E4%B8%8Eserver"><span class="toc-number">15.</span> <span class="toc-text">15、JVM启动模式值client与server</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#client%E6%A8%A1%E5%BC%8F%E5%92%8Cserver%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">15.1.</span> <span class="toc-text">client模式和server模式的区别：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%BC%96%E8%AF%91%E6%9C%9F%E6%96%B9%E9%9D%A2%EF%BC%9A"><span class="toc-number">15.1.1.</span> <span class="toc-text">（1）编译期方面：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89gc%E6%96%B9%E9%9D%A2%EF%BC%9A"><span class="toc-number">15.1.2.</span> <span class="toc-text">（2）gc方面：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%90%AF%E5%8A%A8%E6%96%B9%E9%9D%A2%EF%BC%9A"><span class="toc-number">15.1.3.</span> <span class="toc-text">（3）启动方面：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A%EF%BC%9A"><span class="toc-number">15.1.3.1.</span> <span class="toc-text">注释：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16%E3%80%81JVM%E8%BF%9B%E7%A8%8B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BA%BF%E7%A8%8B%E5%90%AF%E5%8A%A8%EF%BC%9F"><span class="toc-number">16.</span> <span class="toc-text">16、JVM进程有哪些线程启动？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#JVM%E8%BF%9B%E7%A8%8B%E5%90%AF%E5%8A%A8%E4%BC%9A%E5%90%AF%E5%8A%A8%E5%93%AA%E4%BA%9B%E7%BA%BF%E7%A8%8B%EF%BC%9F"><span class="toc-number">16.0.0.1.</span> <span class="toc-text">JVM进程启动会启动哪些线程？</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -770,8 +568,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
